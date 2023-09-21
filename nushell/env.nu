@@ -80,10 +80,3 @@ $env.NU_PLUGIN_DIRS = [
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/usr/local/bin' | prepend '/opt/homebrew/bin' | prepend '/run/current-system/sw/bin' | prepend '/Users/isabella/.nix-profile/bin/nix' | prepend '/Users/isabella/.local/bin' )
-$env.PATH = ($env.PATH | prepend '/Users/isabella/.cargo/bin' )
-$env.PATH = ($env.PATH | prepend '/sbin' | prepend '/usr/sbin' )
-$env.EMSDK = "/Users/isabella/Documents/emsdk"
-$env.CMAKE_GENERATOR = "Ninja Multi-Config"
-$env.DENO_INSTALL = "/Users/isabella/.deno"
-$env.PATH = ($env.PATH | prepend $"($env.DENO_INSTALL)/bin" )
