@@ -30,6 +30,9 @@
   };
   programs.neovim = {
     enable = true;
+    plugins = [
+      pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+    ];
   };
   home.stateVersion = "23.05";
 }
