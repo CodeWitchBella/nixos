@@ -87,4 +87,3 @@ $env.EMSDK = "/Users/isabella/Documents/emsdk"
 $env.CMAKE_GENERATOR = "Ninja Multi-Config"
 $env.DENO_INSTALL = "/Users/isabella/.deno"
 $env.PATH = ($env.PATH | prepend $"($env.DENO_INSTALL)/bin" )
-$env.EDITOR = "vim"

@@ -28,5 +28,8 @@
   programs.direnv = {
     enable = true;
   };
+  programs.neovim = {
+    enable = true;
+  };
   home.stateVersion = "23.05";
 }
