@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <home-manager/nixos>
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -93,31 +92,6 @@
     description = "Isabella Skořepová";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.nushell;
-  };
-  home-manager.users.isabella = { pkgs, ... }: {
-    nixpkgs.config.allowUnfree = true;
-    home.packages = with pkgs; [
-      firefox
-      _1password
-      _1password-gui
-      git
-      vscode
-    ];
-    programs.git = {
-      enable = true;
-      lfs.enable = true;
-      userName = "Isabella Skořepová";
-      userEmail = "isabella@skorepova.info";
-      extraConfig = {
-        init.defaultBranch = "main";
-      };
-    };
-    programs.ssh = {
-      enable = true;
-      matchBlocks."*".extraOptions = { identityAgent = "~/.1password/agent.sock"; };
-    };
-    programs.nushell.enable = true;
-    home.stateVersion = "23.05";
   };
 
   # Allow unfree packages
