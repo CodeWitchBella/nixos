@@ -6,6 +6,7 @@
     _1password-gui
     git
     vscode
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
   programs.git = {
     enable = true;
@@ -43,6 +44,11 @@
       "workbench.iconTheme" = "vscode-icons";
       "files.associations"."flake.lock" = "json";
       "editor.codeActionsOnSave"."source.fixAll.eslint" = true;
+      "editor.fontFamily" = "FiraCode Nerd Font";
+      "editor.fontLigatures" = true;
+      "window.titleBarStyle" = "custom";
+      "window.autoDetectColorScheme" = true;
+      "window.zoomLevel" = 1;
     };
     extensions = with pkgs.vscode-extensions; [
       # wmaurer.change-case
