@@ -49,6 +49,7 @@
       "window.titleBarStyle" = "custom";
       "window.autoDetectColorScheme" = true;
       "window.zoomLevel" = 1;
+      "git.confirmSync" = false;
     };
     extensions = with pkgs.vscode-extensions; [
       # wmaurer.change-case
