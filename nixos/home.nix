@@ -34,5 +34,30 @@
       pkgs.vimPlugins.nvim-treesitter.withAllGrammars
     ];
   };
+  programs.vscode = {
+    enable = true;
+    enableUpdateCheck = false;
+    enableExtensionUpdateCheck = false;
+    mutableExtensionsDir = false;
+    userSettings = {
+      "workbench.iconTheme" = "vscode-icons";
+      "files.associations"."flake.lock" = "json";
+      "editor.codeActionsOnSave"."source.fixAll.eslint" = true;
+    };
+    extensions = with pkgs.vscode-extensions; [
+      # wmaurer.change-case
+      mkhl.direnv
+      editorconfig.editorconfig
+      dbaeumer.vscode-eslint
+      waderyan.gitblame
+      bbenoist.nix
+      esbenp.prettier-vscode
+      stkb.rewrap
+      bradlc.vscode-tailwindcss
+      vscode-icons-team.vscode-icons
+      thenuprojectcontributors.vscode-nushell-lang
+      # arcanis.vscode-zipfs
+    ];
+  };
   home.stateVersion = "23.05";
 }
