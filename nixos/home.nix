@@ -20,6 +20,13 @@
     enable = true;
     matchBlocks."*".extraOptions = { identityAgent = "~/.1password/agent.sock"; };
   };
-  programs.nushell.enable = true;
+  programs.nushell = {
+    enable = true;
+    configFile.source = ../nushell/config.nu;
+    envFile.source = ../nushell/env.nu;
+  };
+  programs.direnv = {
+    enable = true;
+  };
   home.stateVersion = "23.05";
 }
