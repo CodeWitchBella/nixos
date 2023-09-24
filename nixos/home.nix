@@ -56,6 +56,7 @@
       "window.autoDetectColorScheme" = true;
       "window.zoomLevel" = 1;
       "git.confirmSync" = false;
+      "git.autofetch" = true;
     };
     extensions = with pkgs.vscode-extensions; [
       # wmaurer.change-case
