@@ -119,6 +119,16 @@
   #  wget
   ];
   environment.variables.EDITOR = "nvim";
+  environment.gnome.excludePackages = with pkgs.gnome; [
+    epiphany    # web browser
+    totem       # video player
+    geary       # email client
+    seahorse    # password manager
+    gnome-music
+    pkgs.gnome-tour
+    pkgs.gnome-console
+  ];
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
