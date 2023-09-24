@@ -57,6 +57,7 @@
       "window.zoomLevel" = 1;
       "git.confirmSync" = false;
       "git.autofetch" = true;
+      "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     };
     extensions = with pkgs.vscode-extensions; [
       # wmaurer.change-case
