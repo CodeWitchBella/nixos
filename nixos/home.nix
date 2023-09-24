@@ -27,6 +27,11 @@
     configFile.source = ../nushell/config.nu;
     envFile.source = ../nushell/env.nu;
   };
+  programs.starship = {
+    enable = true;
+    enableNushellIntegration = true;
+    settings = {};
+  };
   programs.direnv = {
     enable = true;
   };
@@ -66,6 +71,9 @@
       thenuprojectcontributors.vscode-nushell-lang
       # arcanis.vscode-zipfs
     ];
+  };
+  programs.wezterm = {
+    enable = true;
   };
   home.stateVersion = "23.05";
 }
