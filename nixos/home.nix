@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+  # https://rycee.gitlab.io/home-manager/options.html
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     firefox

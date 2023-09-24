@@ -17,6 +17,13 @@
     dates = "daily";
     options = "--delete-older-than 7d";
   };
+  system.autoUpgrade = {
+    enable = true;
+    flake = "${config.users.users.isabella.home}/nixos";
+    flags = [
+      "--update-input" "nixpkgs"
+    ];
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
