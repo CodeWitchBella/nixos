@@ -1,6 +1,6 @@
 # Nushell Config File
 #
-# version = 0.83.2
+# version = "0.85.0"
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
@@ -25,13 +25,13 @@ let dark_theme = {
     string: white
     nothing: white
     binary: white
-    cellpath: white
+    cell-path: white
     row_index: green_bold
     record: white
     list: white
     block: white
     hints: dark_gray
-    search_result: {bg: red fg: white}    
+    search_result: {bg: red fg: white}
     shape_and: purple_bold
     shape_binary: purple_bold
     shape_block: blue_bold
@@ -88,13 +88,13 @@ let light_theme = {
     string: dark_gray
     nothing: dark_gray
     binary: dark_gray
-    cellpath: dark_gray
+    cell-path: dark_gray
     row_index: green_bold
     record: white
     list: white
     block: white
     hints: dark_gray
-    search_result: {fg: white bg: red}    
+    search_result: {fg: white bg: red}
     shape_and: purple_bold
     shape_binary: purple_bold
     shape_block: blue_bold
@@ -158,14 +158,16 @@ $env.config = {
         mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
         index_mode: always # "always" show indexes, "never" show indexes, "auto" = show indexes when a table has "index" column
         show_empty: true # show 'empty list' and 'empty record' placeholders for command output
-        #padding: { left: 1, right: 1 } # a left right padding of each column in a table
+        padding: { left: 1, right: 1 } # a left right padding of each column in a table
         trim: {
             methodology: wrapping # wrapping or truncating
             wrapping_try_keep_words: true # A strategy used by the 'wrapping' methodology
             truncating_suffix: "..." # A suffix used by the 'truncating' methodology
         }
-        #header_on_separator: false # show header text on separator/border line
+        header_on_separator: false # show header text on separator/border line
     }
+
+    error_style: "fancy" # "fancy" or "plain" for screen reader-friendly error messages
 
     # datetime_format determines what a datetime rendered in the shell would look like.
     # Behavior without this configuration point will be to "humanize" the datetime display,
@@ -176,9 +178,6 @@ $env.config = {
     }
 
     explore: {
-        try: {
-            border_color: {fg: "white"}
-        },
         status_bar_background: {fg: "#1D1F21", bg: "#C4C9C6"},
         command_bar_text: {fg: "#C4C9C6"},
         highlight: {fg: "black", bg: "yellow"},
@@ -197,10 +196,6 @@ $env.config = {
             line_head_bottom: true,
             line_shift: true,
             line_index: true,
-        },
-        config: {
-            border_color: {fg: "white"}
-            cursor_color: {fg: "black", bg: "light_yellow"}
         },
     }
 
@@ -229,9 +224,9 @@ $env.config = {
     }
 
     cursor_shape: {
-        emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line (line is the default)
-        vi_insert: block # block, underscore, line , blink_block, blink_underscore, blink_line (block is the default)
-        vi_normal: underscore # block, underscore, line, blink_block, blink_underscore, blink_line (underscore is the default)
+        emacs: line # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (line is the default)
+        vi_insert: block # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (block is the default)
+        vi_normal: underscore # block, underscore, line, blink_block, blink_underscore, blink_line, inherit to skip setting cursor shape (underscore is the default)
     }
 
     color_config: $dark_theme # if you want a more interesting theme, you can replace the empty record with `$dark_theme`, `$light_theme` or another custom record
@@ -251,7 +246,7 @@ $env.config = {
         env_change: {
             PWD: [{|before, after| null }] # run if the PWD environment is different since the last repl input
         }
-        #display_output: "if (term size).columns >= 100 { table -e } else { table }" # run to display the output of a pipeline
+        display_output: "if (term size).columns >= 100 { table -e } else { table }" # run to display the output of a pipeline
         command_not_found: { null } # return an error message when a command is not found
     }
 
@@ -318,6 +313,7 @@ $env.config = {
                 until: [
                     { send: menu name: completion_menu }
                     { send: menunext }
+                    { edit: complete }
                 ]
             }
         }
@@ -766,6 +762,7 @@ $env.config = {
         }
     ]
 }
+
 $env.config = {
   hooks: {
     pre_prompt: [{ ||
@@ -775,3 +772,4 @@ $env.config = {
     }]
   }
 }
+
