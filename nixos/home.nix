@@ -41,6 +41,9 @@
       pkgs.vimPlugins.nvim-treesitter.withAllGrammars
     ];
   };
+  programs.helix = {
+    enable = true;
+  };
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
