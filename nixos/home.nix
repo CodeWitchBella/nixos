@@ -8,6 +8,7 @@
     git
     vscode
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    gnome.gnome-tweaks
   ];
   programs.git = {
     enable = true;
