@@ -6,7 +6,6 @@
     _1password
     _1password-gui
     git
-    vscode
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     gnome.gnome-tweaks
   ];
@@ -50,6 +49,7 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     mutableExtensionsDir = false;
+    package = pkgs.vscode.fhs;
     userSettings = {
       "workbench.iconTheme" = "vscode-icons";
       "files.associations"."flake.lock" = "json";
@@ -63,20 +63,13 @@
       "git.autofetch" = true;
       "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     };
-    extensions = with pkgs.vscode-extensions; [
-      # wmaurer.change-case
-      mkhl.direnv
-      editorconfig.editorconfig
-      dbaeumer.vscode-eslint
-      waderyan.gitblame
-      bbenoist.nix
-      esbenp.prettier-vscode
-      stkb.rewrap
-      bradlc.vscode-tailwindcss
-      vscode-icons-team.vscode-icons
-      thenuprojectcontributors.vscode-nushell-lang
-      # arcanis.vscode-zipfs
-    ];
+    # Installing extensions is not compatible with adding them ad-hoc and not all
+    # extensions are available in nixos.
+    # Instead, I just added the extensions to recommended in this repo so that it
+    # becomes one click install.
+    #extensions = with pkgs.vscode-extensions; [
+    #  mkhl.direnv
+    #];
   };
   programs.wezterm = {
     enable = true;
