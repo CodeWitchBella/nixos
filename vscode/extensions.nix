@@ -55,6 +55,12 @@
     sha256 = "1y168ar01zxdd2x73ddsckbzqq0iinax2zv3d95nhwp9asjnbpgn";
   }
   {
+    name = "even-better-toml";
+    publisher = "tamasfe";
+    version = "0.19.2";
+    sha256 = "0q9z98i446cc8bw1h1mvrddn3dnpnm2gwmzwv2s3fxdni2ggma14";
+  }
+  {
     name = "vscode-nushell-lang";
     publisher = "TheNuProjectContributors";
     version = "1.7.0";
