@@ -50,7 +50,16 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     mutableExtensionsDir = false;
-    package = pkgs.vscode.fhs;
+    #package = pkgs.vscode.fhs;
+    package = pkgs.vscode-with-extensions.override {
+      vscodeExtensions = map
+        (extension: pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+          mktplcRef = {
+            inherit (extension) name publisher version sha256;
+          };
+        })
+        (import ../vscode/extensions.nix).extensions;
+    } // { pname = "vscode"; };
     userSettings = {
       "workbench.iconTheme" = "vscode-icons";
       "files.associations"."flake.lock" = "json";
