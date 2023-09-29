@@ -133,6 +133,11 @@
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
+  i18n.inputMethod = {
+    enabled = "ibus";
+    ibus.engines = with pkgs.ibus-engines; [ uniemoji ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
