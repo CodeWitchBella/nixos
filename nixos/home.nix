@@ -18,6 +18,10 @@
     extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+      user.signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEGS4V/SauPK+C9moGX5gscGYYPNV5E6QNUyaZrL1eg0";
+      commit.gpgsign = true;
+      gpg.format = "ssh";
+      "gpg \"ssh\"".program = "op-ssh-sign";
     };
   };
   programs.ssh = {
