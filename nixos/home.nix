@@ -8,6 +8,7 @@
     git
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     gnome.gnome-tweaks
+    dig
   ];
   programs.git = {
     enable = true;
