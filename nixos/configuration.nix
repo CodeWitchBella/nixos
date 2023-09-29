@@ -116,6 +116,7 @@
   environment.systemPackages = with pkgs; [
     vim
     htop
+    gnomeExtensions.appindicator
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
@@ -130,6 +131,7 @@
     pkgs.gnome-console
   ];
   services.xserver.excludePackages = [ pkgs.xterm ];
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
