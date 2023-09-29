@@ -16,6 +16,7 @@
     userEmail = "isabella@skorepova.info";
     extraConfig = {
       init.defaultBranch = "main";
+      push.autoSetupRemote = true;
     };
   };
   programs.ssh = {
