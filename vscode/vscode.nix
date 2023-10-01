@@ -26,6 +26,7 @@
     "git.autofetch" = true;
     "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
   };
   # Installing extensions is not compatible with adding them ad-hoc and not all
   # extensions are available in nixos.
