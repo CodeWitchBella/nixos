@@ -28,11 +28,4 @@
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
   };
-  # Installing extensions is not compatible with adding them ad-hoc and not all
-  # extensions are available in nixos.
-  # Instead, I just added the extensions to recommended in this repo so that it
-  # becomes one click install.
-  #extensions = with pkgs.vscode-extensions; [
-  #  mkhl.direnv
-  #];
 }
