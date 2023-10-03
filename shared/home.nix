@@ -1,5 +1,6 @@
 { pkgs }:
 {
+  programs.vscode = import ../vscode/vscode.nix { inherit pkgs; };
   programs.git = {
     enable = true;
     lfs.enable = true;

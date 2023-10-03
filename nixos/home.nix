@@ -53,7 +53,6 @@
   programs.helix = {
     enable = true;
   };
-  programs.vscode = import ../vscode/vscode.nix { inherit pkgs; };
   programs.wezterm = {
     enable = true;
     extraConfig = ''
