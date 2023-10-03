@@ -1,6 +1,7 @@
 { pkgs, lib, ... }:
 {
   services.nix-daemon.enable = true;
+  services.activate-system.enable = true;
   
   programs.zsh.enable = true;
   #nixpkgs.config.allowUnfree = true;
@@ -65,8 +66,9 @@
 
   homebrew = {
     enable = true;
-    onActivation.autoUpdate = true;
+    onActivation.autoUpdate = false;
     onActivation.upgrade = true;
+    onActivation.cleanup = "uninstall";
     casks = [
       "discord"
       "firefox"
@@ -79,6 +81,15 @@
       "zoom"
       "1password"
     ];
+  };
+  system.defaults = {
+    dock = {
+      show-recents = false;
+      autohide = true;
+      static-only = true;
+    };
+    finder.AppleShowAllExtensions = true;
+    finder.QuitMenuItem = true;
   };
 }
 
