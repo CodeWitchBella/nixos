@@ -58,6 +58,7 @@
       enable = true;
       extraConfig = ''IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"'';
     };
+    programs.vscode = import ../vscode/vscode.nix { inherit pkgs; };
   };
 
   homebrew = {
@@ -72,7 +73,6 @@
       "rectangle"
       "spotify"
       "telegram"
-      "visual-studio-code"
       "vlc"
       "zoom"
       "1password"
