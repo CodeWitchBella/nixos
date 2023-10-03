@@ -18,4 +18,16 @@
       alias.fr = "!bash -c \"git fetch --prune ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
     };
   };
+  programs.nushell = {
+    enable = true;
+  };
+  programs.starship = {
+    enable = true;
+    enableNushellIntegration = true;
+    settings = {};
+  };
+  programs.direnv = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
 }

@@ -20,6 +20,7 @@ but I'll likely either stop using that if I stop using mac, or move it here too.
 3. Set hostname: `scutil --set IsabellaM2` (or setup new system in configuration)
 4. Clone the repo `git clone git@github.com:CodeWitchBella/nixos.git`
 5. Install this flake: `nix --extra-experimental-features nix-command --extra-experimental-features flakes run nix-darwin -- switch --flake ~/nixos`
+6. Set nushell as default: `chsh -s /run/current-system/sw/bin/nu`
 
 Now you can use everything as normal. Use the following to apply changes:
 

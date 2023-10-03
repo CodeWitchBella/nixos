@@ -29,18 +29,21 @@
     pkgs.htop
     pkgs.jq
     pkgs.gh
-    pkgs.nushell
     pkgs.awscli2
     pkgs.lastpass-cli
     pkgs.docker-compose
     pkgs.cachix
     pkgs.direnv
     pkgs.gnupg
+    pkgs.nushell
   ];
+  environment.shells = [pkgs.nushell];
+  environment.loginShell = pkgs.nushell;
 
   users.users.isabella = {
     name = "isabella";
     home = "/Users/isabella";
+    shell = pkgs.nushell;
   };
 
   system.stateVersion = 4;
@@ -50,11 +53,6 @@
     shared = import ../shared/home.nix { inherit pkgs; };
   in lib.recursiveUpdate shared {
     home.stateVersion = "23.11";
-    programs.nushell = {
-      enable = true;
-      envFile.source = ../nushell/env.nu;
-      configFile.source = ../nushell/config.nu;
-    };
     programs.ssh = {
       enable = true;
       extraConfig = ''IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"'';
@@ -62,6 +60,9 @@
     programs.vscode.userSettings = {
       "window.zoomLevel" = 0;
     };
+    programs.nushell.extraEnv = ''
+      $env.PATH = "/Users/isabella/.nix-profile/bin:/etc/profiles/per-user/isabella/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
+    '';
   };
 
   homebrew = {

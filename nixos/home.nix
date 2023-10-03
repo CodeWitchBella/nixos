@@ -31,16 +31,6 @@
     enable = true;
     matchBlocks."*".extraOptions = { identityAgent = "~/.1password/agent.sock"; };
   };
-  programs.nushell = {
-    enable = true;
-    configFile.source = ../nushell/config.nu;
-    envFile.source = ../nushell/env.nu;
-  };
-  programs.starship = {
-    enable = true;
-    enableNushellIntegration = true;
-    settings = {};
-  };
   programs.direnv = {
     enable = true;
   };
