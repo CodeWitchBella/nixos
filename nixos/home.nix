@@ -40,14 +40,5 @@
   programs.helix = {
     enable = true;
   };
-  programs.wezterm = {
-    enable = true;
-    extraConfig = ''
-      local custom = require 'custom';
-      local config = wezterm.config_builder();
-      custom.apply_to_config(config);
-      return config;
-    '';
-  };
   home.stateVersion = "23.05";
 }

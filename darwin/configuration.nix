@@ -65,6 +65,11 @@
     '';
   };
 
+  fonts.fontDir.enable = true;
+  fonts.fonts = [
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   homebrew = {
     enable = true;
     onActivation.autoUpdate = false;
