@@ -31,9 +31,6 @@
     enable = true;
     matchBlocks."*".extraOptions = { identityAgent = "~/.1password/agent.sock"; };
   };
-  programs.direnv = {
-    enable = true;
-  };
   programs.neovim = {
     enable = true;
     plugins = [
