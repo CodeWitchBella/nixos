@@ -92,10 +92,10 @@
     dock = {
       show-recents = false;
       autohide = true;
-      static-only = true;
+      # static-only = true;
     };
     finder.AppleShowAllExtensions = true;
-    finder.QuitMenuItem = true;
+    # finder.QuitMenuItem = true;
   };
 }
 
