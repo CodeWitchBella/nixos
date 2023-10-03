@@ -18,10 +18,11 @@
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
+      experimental-features = [ "nix-command" "flakes" ];
     };
   };
   nixpkgs.config.allowUnfree = true;
-  
+
   environment.systemPackages = [
     pkgs.curl
     pkgs.vim
@@ -67,6 +68,10 @@
       envFile.source = ../nushell/env.nu;
       configFile.source = ../nushell/config.nu;
     };
+    programs.ssh = {
+      enable = true;
+      extraConfig = ''IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"'';
+    };
   };
 
   homebrew = {
@@ -84,6 +89,7 @@
       "visual-studio-code"
       "vlc"
       "zoom"
+      "1password"
     ];
   };
 }
