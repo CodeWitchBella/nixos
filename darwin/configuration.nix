@@ -86,6 +86,7 @@
       "vlc"
       "zoom"
       "1password"
+      "logi-options-plus"
     ];
   };
   system.defaults = {
