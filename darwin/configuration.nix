@@ -87,6 +87,7 @@
       "zoom"
       "1password"
       "logi-options-plus"
+      "gimp"
     ];
   };
   system.defaults = {
