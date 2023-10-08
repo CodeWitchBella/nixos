@@ -88,6 +88,7 @@
       "1password"
       "logi-options-plus"
       "gimp"
+      "cloudflare-warp"
     ];
   };
   system.defaults = {
