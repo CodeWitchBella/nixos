@@ -28,5 +28,6 @@
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.rulers" = [80 120];
+    "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
   };
 }
