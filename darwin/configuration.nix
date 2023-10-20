@@ -89,6 +89,7 @@
       "logi-options-plus"
       "gimp"
       "cloudflare-warp"
+      "google-chrome"
     ];
   };
   system.defaults = {
