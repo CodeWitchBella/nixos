@@ -12,6 +12,8 @@
     gpg.format = "ssh";
     "gpg \"ssh\"".program = "op-ssh-sign";
     alias.frp = "!bash -c \"git fetch --prune ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`; git push --force\"";
-    alias.fr = "!bash -c \"git fetch --prune ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
+    alias.fr = "!bash -c \"git fetch --prune ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\""; 
+    rebase.autostash = true;
+    pull.rebase = true;
   };
 }
