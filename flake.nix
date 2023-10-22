@@ -7,8 +7,11 @@
     };
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
+    asahiFirmware = {
+      url = "git+file:/etc/nixos/firmware?ref=main";
+    };
   };
-  outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, asahiFirmware, ... }: {
     darwinConfigurations."IsabellaM2" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
@@ -22,6 +25,18 @@
         ./nixos/configuration.nix
         home-manager.nixosModules.home-manager
         {
+          home-manager.users.isabella = import ./nixos/home.nix;
+        }
+      ];
+    };
+    nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        ./asahi/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          hardware.asahi.peripheralFirmwareDirectory = asahiFirmware;
+          networking.hostName = "IsblAsahi";
           home-manager.users.isabella = import ./nixos/home.nix;
         }
       ];
