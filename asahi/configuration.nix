@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # Include the necessary packages and configuration for Apple Silicon support
-      ./apple-silicon-support
     ];
  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
