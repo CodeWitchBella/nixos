@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "asahiFirmware": {
+    "asahi-firmware": {
       "locked": {
         "lastModified": 1697988426,
         "narHash": "sha256-ERoViJF8ois2Weu3NX9cDtpvPeCIr+1kPWBG/sxskuo=",
@@ -74,7 +74,7 @@
     },
     "root": {
       "inputs": {
-        "asahiFirmware": "asahiFirmware",
+        "asahi-firmware": "asahi-firmware",
         "darwin": "darwin",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
