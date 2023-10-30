@@ -77,6 +77,12 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  hardware.sane = {
+    enable = true;
+    snapshot = true;
+  };
+  hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
+  services.ipp-usb.enable=true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -104,7 +110,7 @@
   users.users.isabella = {
     isNormalUser = true;
     description = "Isabella Skořepová";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
     shell = pkgs.nushell;
   };
 
