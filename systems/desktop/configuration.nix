@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../shared/configuration.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -31,7 +32,6 @@
   boot.supportedFilesystems = [ "ntfs" ];
   boot.loader.systemd-boot.configurationLimit = 120;
 
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary

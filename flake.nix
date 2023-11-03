@@ -21,37 +21,38 @@
         ./darwin/configuration.nix
       ];
     };
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./nixos/configuration.nix
+        ./systems/desktop/configuration.nix
         home-manager.nixosModules.home-manager
         {
-          home-manager.users.isabella = import ./nixos/home.nix;
+          networking.hostName = "IsblDesktop";
+          home-manager.users.isabella = import ./systems/personal/home.nix;
         }
       ];
     };
     nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
-        ./asahi/configuration.nix
+        ./systems/asahi/configuration.nix
         home-manager.nixosModules.home-manager
         nixos-apple-silicon.nixosModules.apple-silicon-support
         {
           hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
           networking.hostName = "IsblAsahi";
-          home-manager.users.isabella = import ./nixos/home.nix;
+          home-manager.users.isabella = import ./systems/personal/home.nix;
         }
       ];
     };
     nixosConfigurations."IsblWork" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
-        ./work/configuration.nix
+        ./systems/work/configuration.nix
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblWork";
-          home-manager.users.isabella = import ./work/home.nix;
+          home-manager.users.isabella = import ./systems/work/home.nix;
         }
       ];
     };

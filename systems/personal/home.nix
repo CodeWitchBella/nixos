@@ -8,7 +8,7 @@ in lib.recursiveUpdate shared {
     _1password-gui
   ];
   programs.git.extraConfig = {
-    "gpg \"ssh\"".program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+    "gpg \"ssh\"".program = "op-ssh-sign";
   };
   programs.ssh = {
     enable = true;

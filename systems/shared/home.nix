@@ -1,14 +1,7 @@
 { pkgs }:
 {
-  programs.vscode = import ../vscode/vscode.nix { inherit pkgs; };
+  programs.vscode = import ../../vscode/vscode.nix { inherit pkgs; };
   programs.git = import ./git.nix { inherit pkgs; };
-  home.packages = with pkgs; [
-    firefox
-    git
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    gnome.gnome-tweaks
-    dig
-  ];
   programs.nushell = {
     enable = true;
     extraConfig = ''
