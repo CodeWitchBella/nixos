@@ -28,10 +28,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.supportedFilesystems = [ "ntfs" ];
-  boot.loader.systemd-boot.configurationLimit = 120;
 
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -68,21 +65,12 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "cz";
+    layout = "us";
     xkbVariant = "";
   };
 
-  # Configure console keymap
-  console.keyMap = "cz-lat2";
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  hardware.sane = {
-    enable = true;
-    snapshot = true;
-  };
-  hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
-  services.ipp-usb.enable=true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -110,9 +98,17 @@
   users.users.isabella = {
     isNormalUser = true;
     description = "Isabella Skořepová";
-    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.nushell;
   };
+
+  # Enable automatic login for the user.
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "isabella";
+
+  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -123,6 +119,7 @@
     vim
     htop
     gnomeExtensions.appindicator
+    ungoogled-chromium
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [
@@ -135,8 +132,8 @@
     pkgs.gnome-console
   ];
   services.xserver.excludePackages = [ pkgs.xterm ];
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
-
+  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+  
   i18n.inputMethod = {
     enabled = "ibus";
     ibus.engines = with pkgs.ibus-engines; [ uniemoji ];

@@ -4,15 +4,12 @@ in lib.recursiveUpdate shared {
   # https://rycee.gitlab.io/home-manager/options.html
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    firefox
     _1password
     _1password-gui
-    git
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    gnome.gnome-tweaks
-    dig
   ];
-  programs.git = (import ./git.nix {});
+  programs.git.extraConfig = {
+    "gpg \"ssh\"".program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+  };
   programs.ssh = {
     enable = true;
     matchBlocks."*".extraOptions = { identityAgent = "~/.1password/agent.sock"; };

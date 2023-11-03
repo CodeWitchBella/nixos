@@ -44,5 +44,16 @@
         }
       ];
     };
+    nixosConfigurations."IsblWork" = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        ./work/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          networking.hostName = "IsblWork";
+          home-manager.users.isabella = import ./work/home.nix;
+        }
+      ];
+    };
   };
 }
