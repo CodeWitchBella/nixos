@@ -15,8 +15,8 @@
   {
     name = "vscode-tailwindcss";
     publisher = "bradlc";
-    version = "0.11.17";
-    sha256 = "0ssqy93cq99h9pwz5m6yz0pn8hljp2r4nha28q238jb0v1jn7ijp";
+    version = "0.11.29";
+    sha256 = "024fq21q0y7gm6wwwphqh5pyzfp5rahq27hkabn4qixd529zg4i5";
   }
   {
     name = "vscode-eslint";
@@ -45,8 +45,14 @@
   {
     name = "prisma";
     publisher = "Prisma";
-    version = "5.4.2";
-    sha256 = "0zhx97gfx62jg1n060g2lh1bm08976238qdalycriym9xmwx6ynj";
+    version = "5.5.2";
+    sha256 = "0jn11x1mv2lf1rxb2cq9jdi4f6r1y6wzvzr3avy4mfnbc4aw8xyd";
+  }
+  {
+    name = "rust-analyzer";
+    publisher = "rust-lang";
+    version = "0.4.1718";
+    sha256 = "1b6vc86n6nhfxi435pi0j00qpsr0xbji65kxr7rwgsx3i1r17spi";
   }
   {
     name = "rewrap";
@@ -63,8 +69,8 @@
   {
     name = "vscode-nushell-lang";
     publisher = "TheNuProjectContributors";
-    version = "1.7.0";
-    sha256 = "1v9jb7cr8adh7608673nwqdgyjap08i645piisxqdgs3gbxjcv7d";
+    version = "1.7.1";
+    sha256 = "0iv1x0djyc5hsbd7f8afx4gy11dkflafjyr4lr83ghdbnvr1jn96";
   }
   {
     name = "vscode-mdx";
@@ -75,8 +81,8 @@
   {
     name = "vscode-icons";
     publisher = "vscode-icons-team";
-    version = "12.5.0";
-    sha256 = "0fqawpfwqmj7hiv1g20z3zhs2rv3a9insqd93ad9416mhj89mcry";
+    version = "12.6.0";
+    sha256 = "0d0p2v2dl8g4x5sv5cj85rpjpgq2mmk3dxdnqqfkvfz2lf2n2aab";
   }
   {
     name = "gitblame";
