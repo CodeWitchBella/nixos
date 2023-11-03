@@ -49,12 +49,6 @@
     sha256 = "0jn11x1mv2lf1rxb2cq9jdi4f6r1y6wzvzr3avy4mfnbc4aw8xyd";
   }
   {
-    name = "rust-analyzer";
-    publisher = "rust-lang";
-    version = "0.4.1718";
-    sha256 = "1b6vc86n6nhfxi435pi0j00qpsr0xbji65kxr7rwgsx3i1r17spi";
-  }
-  {
     name = "rewrap";
     publisher = "stkb";
     version = "17.8.0";
