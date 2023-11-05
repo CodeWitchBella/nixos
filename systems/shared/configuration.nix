@@ -44,6 +44,7 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     gnome.gnome-tweaks
     dig
+    mesa-demos
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [
