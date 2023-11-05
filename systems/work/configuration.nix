@@ -10,21 +10,6 @@
       ./hardware-configuration.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.auto-optimise-store = true;
-  nix.gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 7d";
-  };
-  system.autoUpgrade = {
-    enable = true;
-    flake = "${config.users.users.isabella.home}/nixos";
-    flags = [
-      "--update-input" "nixpkgs"
-    ];
-  };
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -37,38 +22,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Prague";
-  #time.timeZone = "America/New_York";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "cs_CZ.UTF-8";
-    LC_IDENTIFICATION = "cs_CZ.UTF-8";
-    LC_MEASUREMENT = "cs_CZ.UTF-8";
-    LC_MONETARY = "cs_CZ.UTF-8";
-    LC_NAME = "cs_CZ.UTF-8";
-    LC_NUMERIC = "cs_CZ.UTF-8";
-    LC_PAPER = "cs_CZ.UTF-8";
-    LC_TELEPHONE = "cs_CZ.UTF-8";
-    LC_TIME = "cs_CZ.UTF-8";
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "";
-  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -88,56 +41,6 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  services.flatpak.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.isabella = {
-    isNormalUser = true;
-    description = "Isabella Skořepová";
-    extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.nushell;
-  };
-
-  # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "isabella";
-
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim
-    htop
-    gnomeExtensions.appindicator
-    ungoogled-chromium
-  ];
-  environment.variables.EDITOR = "nvim";
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    epiphany    # web browser
-    totem       # video player
-    geary       # email client
-    seahorse    # password manager
-    gnome-music
-    pkgs.gnome-tour
-    pkgs.gnome-console
-  ];
-  services.xserver.excludePackages = [ pkgs.xterm ];
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
-  
-  i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ uniemoji ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -8,23 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../shared/configuration.nix
+      ../personal/configuration.nix
     ];
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.auto-optimise-store = true;
-  nix.gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 7d";
-  };
-  system.autoUpgrade = {
-    enable = true;
-    flake = "${config.users.users.isabella.home}/nixos";
-    flags = [
-      "--update-input" "nixpkgs"
-    ];
-  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -41,9 +26,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "Europe/Prague";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -58,31 +40,6 @@
     LC_TELEPHONE = "cs_CZ.UTF-8";
     LC_TIME = "cs_CZ.UTF-8";
   };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "cz";
-    xkbVariant = "";
-  };
-
-  # Configure console keymap
-  console.keyMap = "cz-lat2";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  hardware.sane = {
-    enable = true;
-    snapshot = true;
-  };
-  hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
-  services.ipp-usb.enable=true;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -99,47 +56,6 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  services.flatpak.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.isabella = {
-    isNormalUser = true;
-    description = "Isabella Skořepová";
-    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
-    shell = pkgs.nushell;
-  };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim
-    htop
-    gnomeExtensions.appindicator
-  ];
-  environment.variables.EDITOR = "nvim";
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    epiphany    # web browser
-    totem       # video player
-    geary       # email client
-    seahorse    # password manager
-    gnome-music
-    pkgs.gnome-tour
-    pkgs.gnome-console
-  ];
-  services.xserver.excludePackages = [ pkgs.xterm ];
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
-
-  i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ uniemoji ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are

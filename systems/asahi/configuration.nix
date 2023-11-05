@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../personal/configuration.nix
     ];
  
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -51,16 +52,11 @@
   services.xserver = {
     enable = true;
     displayManager = {
-      sddm.enable = true;
       defaultSession = "plasmawayland";
     };
     desktopManager.plasma5.enable = true;
   };
   
-
-  # Configure keymap in X11
-  # services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -68,36 +64,6 @@
   # Enable sound.
   # sound.enable = true;
   # hardware.pulseaudio.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  # users.users.alice = {
-  #   isNormalUser = true;
-  #   extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  #   packages = with pkgs; [
-  #     firefox
-  #     tree
-  #   ];
-  # };
-  users.users.isabella = {
-    isNormalUser = true;
-    description = "Isabella Skorepova";
-    extraGroups = [ "wheel" ];
-    # shell = pkgs.nushell;
-  };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    gitFull
-    htop
-  ];
-
-  environment.variables.EDITOR = "vim";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
