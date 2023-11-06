@@ -32,5 +32,6 @@
     "editor.rulers" = [80 120];
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
+    "vsicons.dontShowNewVersionMessage" = true;
   };
 }
