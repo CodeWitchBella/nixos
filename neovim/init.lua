@@ -5,10 +5,10 @@
 =====================================================================
 
 I started from [kickstart][1] just with the difference that I source some things
-from nixvim. Originally I wanted to source more, but that proved dificult, so
-the current plan is to use nix for as little as possible.s
+from home-manager's neovim support. Originally I wanted to source more, but that
+proved dificult, so the current plan is to use nix for as little as possible.
 
-This file is loaded from nixvim config directly instead of being entered into
+This file is loaded from nix config directly instead of being entered into
 the nix store.
 
 [1]: https://github.com/nvim-lua/kickstart.nvim
@@ -112,14 +112,7 @@ require('lazy').setup({
     },
   },
 
-  --{
-  --  -- Theme inspired by Atom
-  --  'navarasu/onedark.nvim',
-  --  priority = 1000,
-  --  config = function()
-  --    vim.cmd.colorscheme 'onedark'
-  --  end,
-  --},
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   {
     -- Set lualine as statusline
@@ -191,6 +184,8 @@ require('lazy').setup({
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
 }, {})
+
+vim.cmd.colorscheme "catppuccin-frappe"
 
 -- [[ Setting options ]]
 -- See `:help vim.o`

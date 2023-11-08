@@ -29,4 +29,6 @@
   home.file = {
     ".config/wezterm/custom.lua".source = config.lib.file.mkOutOfStoreSymlink (builtins.toPath ../../wezterm/custom.lua);
   };
+
+  programs.neovim = import ../../neovim/neovim.nix { inherit pkgs; };
 }

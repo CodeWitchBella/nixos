@@ -12,17 +12,13 @@
       url = "github:tpwrules/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     systems.url = "github:nix-systems/x86_64-linux";
     flake-utils = {
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
   };
-  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, nixvim, flake-utils, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, flake-utils, ... }: {
     darwinConfigurations."IsabellaM2" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
@@ -34,7 +30,6 @@
       system = "x86_64-linux";
       modules = [
         ./systems/desktop/configuration.nix
-        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblDesktop";
@@ -46,7 +41,6 @@
       system = "aarch64-linux";
       modules = [
         ./systems/asahi/configuration.nix
-        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         nixos-apple-silicon.nixosModules.apple-silicon-support
         {
@@ -60,7 +54,6 @@
       system = "x86_64-linux";
       modules = [
         ./systems/work/configuration.nix
-        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblWork";
