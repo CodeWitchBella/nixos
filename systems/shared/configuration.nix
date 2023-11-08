@@ -49,6 +49,7 @@
     zoxide
     bat
     fd
+    zellij
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [
