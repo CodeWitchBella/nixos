@@ -12,8 +12,12 @@
       url = "github:tpwrules/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, nixvim, ... }: {
     darwinConfigurations."IsabellaM2" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
@@ -49,6 +53,7 @@
       system = "x86_64-linux";
       modules = [
         ./systems/work/configuration.nix
+        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblWork";
