@@ -1,5 +1,5 @@
-{ pkgs, lib, ... }: let
-  shared = import ../shared/home.nix { inherit pkgs; };
+{ pkgs, lib, config, ... }: let
+  shared = import ../shared/home.nix { inherit pkgs lib config; };
 in lib.recursiveUpdate shared {
   # https://rycee.gitlab.io/home-manager/options.html
   nixpkgs.config.allowUnfree = true;

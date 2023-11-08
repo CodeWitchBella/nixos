@@ -8,12 +8,5 @@
         enable = true;
     };
     plugins.lsp.servers.tsserver.enable = true;
-    keymaps = [
-        {
-            action = "require('telescope.builtin').find_files";
-            key = "<leader>ff";
-            mode = "n";
-            lua = true;
-        }
-    ];
+    extraConfigLua = "dofile('/home/isabella/nixos/neovim/init.lua')";
 }

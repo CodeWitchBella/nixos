@@ -29,6 +29,7 @@
       system = "x86_64-linux";
       modules = [
         ./systems/desktop/configuration.nix
+        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblDesktop";
@@ -40,6 +41,7 @@
       system = "aarch64-linux";
       modules = [
         ./systems/asahi/configuration.nix
+        nixvim.nixosModules.nixvim
         home-manager.nixosModules.home-manager
         nixos-apple-silicon.nixosModules.apple-silicon-support
         {

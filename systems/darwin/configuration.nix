@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 {
   services.nix-daemon.enable = true;
   services.activate-system.enable = true;
@@ -50,7 +50,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.isabella = {pkgs,...}: let
-    shared = import ../shared/home.nix { inherit pkgs; };
+    shared = import ../shared/home.nix { inherit pkgs lib config; };
   in lib.recursiveUpdate shared {
     home.stateVersion = "23.11";
     programs.ssh = {
