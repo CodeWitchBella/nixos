@@ -46,6 +46,7 @@
     gnome.gnome-tweaks
     dig
     mesa-demos
+    zoxide
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [

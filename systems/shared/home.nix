@@ -6,6 +6,7 @@
     enable = true;
     extraConfig = ''
       $env.config.show_banner = false
+      source ~/nixos/nushell/zoxide.nu
     '';
   };
   programs.starship = {
