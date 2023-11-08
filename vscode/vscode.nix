@@ -31,6 +31,7 @@
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.rulers" = [ 80 120 ];
+    "diffEditor.ignoreTrimWhitespace" = false;
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
