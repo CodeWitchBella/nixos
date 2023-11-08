@@ -12,3 +12,4 @@ for input in $inputs {
 }
 
 nu vscode/gen-extensions.nu
+nix fmt

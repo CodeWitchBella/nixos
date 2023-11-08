@@ -6,11 +6,12 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../personal/configuration.nix
     ];
- 
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
@@ -19,7 +20,7 @@
     enable = true;
     settings.General.EnableNetworkConfiguration = true;
   };
-  
+
   #hardware.asahi.pkgsSystem = "x86_64-linux";
   hardware.asahi.addEdgeKernelConfig = true;
   hardware.asahi.withRust = true;

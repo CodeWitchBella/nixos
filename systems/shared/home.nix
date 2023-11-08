@@ -11,7 +11,7 @@
   programs.starship = {
     enable = true;
     enableNushellIntegration = true;
-    settings = {};
+    settings = { };
   };
   programs.direnv = {
     enable = true;

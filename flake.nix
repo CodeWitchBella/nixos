@@ -68,5 +68,6 @@
         }
       ];
     };
-  } // (flake-utils.lib.eachDefaultSystem (system: { formatter = nixpkgs.legacyPackages.${system}.alejandra; }));
+  }
+  // (flake-utils.lib.eachDefaultSystem (system: { formatter = nixpkgs.legacyPackages.${system}.nixpkgs-fmt; }));
 }

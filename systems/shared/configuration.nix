@@ -12,7 +12,8 @@
     enable = true;
     flake = "${config.users.users.isabella.home}/nixos";
     flags = [
-      "--update-input" "nixpkgs"
+      "--update-input"
+      "nixpkgs"
     ];
   };
 
@@ -48,17 +49,17 @@
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [
-    epiphany    # web browser
-    totem       # video player
-    geary       # email client
-    seahorse    # password manager
+    epiphany # web browser
+    totem # video player
+    geary # email client
+    seahorse # password manager
     gnome-music
     pkgs.gnome-tour
     pkgs.gnome-console
   ];
   services.xserver.excludePackages = [ pkgs.xterm ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
-  
+
   i18n.inputMethod = {
     enabled = "ibus";
     ibus.engines = with pkgs.ibus-engines; [ uniemoji ];

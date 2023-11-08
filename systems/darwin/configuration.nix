@@ -2,12 +2,12 @@
 {
   services.nix-daemon.enable = true;
   services.activate-system.enable = true;
-  
+
   programs.zsh.enable = true;
   #nixpkgs.config.allowUnfree = true;
   networking.hostName = "IsabellaM2";
   security.pam.enableSudoTouchIdAuth = true;
- 
+
   nix = {
     settings = {
       auto-optimise-store = true;
@@ -37,7 +37,7 @@
     pkgs.gnupg
     pkgs.nushell
   ];
-  environment.shells = [pkgs.nushell];
+  environment.shells = [ pkgs.nushell ];
   environment.loginShell = pkgs.nushell;
 
   users.users.isabella = {
@@ -49,24 +49,26 @@
   system.stateVersion = 4;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.isabella = {pkgs,...}: let
-    shared = import ../shared/home.nix { inherit pkgs lib config; };
-  in lib.recursiveUpdate shared {
-    home.stateVersion = "23.11";
-    programs.ssh = {
-      enable = true;
-      extraConfig = ''IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"'';
+  home-manager.users.isabella = { pkgs, ... }:
+    let
+      shared = import ../shared/home.nix { inherit pkgs lib config; };
+    in
+    lib.recursiveUpdate shared {
+      home.stateVersion = "23.11";
+      programs.ssh = {
+        enable = true;
+        extraConfig = ''IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"'';
+      };
+      programs.git.extraConfig = {
+        "gpg \"ssh\"".program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      };
+      programs.vscode.userSettings = {
+        "window.zoomLevel" = 0;
+      };
+      programs.nushell.extraEnv = ''
+        $env.PATH = "/Users/isabella/.nix-profile/bin:/etc/profiles/per-user/isabella/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
+      '';
     };
-    programs.git.extraConfig = {
-      "gpg \"ssh\"".program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
-    };
-    programs.vscode.userSettings = {
-      "window.zoomLevel" = 0;
-    };
-    programs.nushell.extraEnv = ''
-      $env.PATH = "/Users/isabella/.nix-profile/bin:/etc/profiles/per-user/isabella/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin"
-    '';
-  };
 
   fonts.fontDir.enable = true;
   fonts.fonts = [

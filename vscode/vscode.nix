@@ -4,17 +4,18 @@
   enableExtensionUpdateCheck = false;
   mutableExtensionsDir = false;
   #package = pkgs.vscode.fhs;
-  package = pkgs.vscode-with-extensions.override {
-    vscodeExtensions = with pkgs.vscode-extensions; [
-      rust-lang.rust-analyzer
-    ] ++ (map
-    (extension: pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-      mktplcRef = {
-        inherit (extension) name publisher version sha256;
-      };
-    })
-    (import ../vscode/extensions.nix).extensions);
-  } // { pname = "vscode"; };
+  package = pkgs.vscode-with-extensions.override
+    {
+      vscodeExtensions = with pkgs.vscode-extensions; [
+        rust-lang.rust-analyzer
+      ] ++ (map
+        (extension: pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+          mktplcRef = {
+            inherit (extension) name publisher version sha256;
+          };
+        })
+        (import ../vscode/extensions.nix).extensions);
+    } // { pname = "vscode"; };
   userSettings = {
     "workbench.iconTheme" = "vscode-icons";
     "files.associations"."flake.lock" = "json";
@@ -29,7 +30,7 @@
     "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-    "editor.rulers" = [80 120];
+    "editor.rulers" = [ 80 120 ];
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
