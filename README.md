@@ -9,11 +9,10 @@ but I'll likely either stop using that if I stop using mac, or move it here too.
 1. install nixos
 2. git clone this repo to ~/nixos
 3. `ln -s /home/isabella/nixos/flake.nix /etc/nixos/`
-4. `ln -s ~/nixos/wezterm/custom.lua ~/.config/wezterm/custom.lua`
-5. `nixos-rebuild switch`
-6. configure 1password to run on start in Tweaks
+4. `nixos-rebuild switch`
+5. configure 1password to run on start in Tweaks
 
-## Getting started MacOS 
+## Getting started MacOS
 
 1. Install homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 2. Install nix: `sh <(curl -L https://nixos.org/nix/install)`
