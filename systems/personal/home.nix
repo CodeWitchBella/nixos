@@ -16,12 +16,6 @@ lib.recursiveUpdate shared {
     enable = true;
     matchBlocks."*".extraOptions = { identityAgent = "~/.1password/agent.sock"; };
   };
-  programs.neovim = {
-    enable = true;
-    plugins = [
-      pkgs.vimPlugins.nvim-treesitter.withAllGrammars
-    ];
-  };
   programs.helix = {
     enable = true;
   };
