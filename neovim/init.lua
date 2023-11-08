@@ -13,7 +13,7 @@ having lua.
 This file is loaded from nixvim config directly instead of being entered into
 the nix store.
 
-[1]: https://raw.githubusercontent.com/nvim-lua/kickstart.nvim
+[1]: https://github.com/nvim-lua/kickstart.nvim
 --]]
 
 -- Set <space> as the leader key

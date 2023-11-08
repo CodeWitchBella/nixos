@@ -31,6 +31,7 @@
         mason-lspconfig-nvim
         neodev-nvim
         cmp-nvim-lsp
+        cmp_luasnip
         luasnip
     ];
     colorscheme = "catppuccin";
@@ -40,6 +41,5 @@
         # Highlight, edit, and navigate code
         treesitter.enable = true;
     };
-    plugins.lsp.servers.tsserver.enable = true;
     extraConfigLua = "dofile('/home/isabella/nixos/neovim/init.lua')";
 }
