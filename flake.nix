@@ -16,8 +16,13 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    systems.url = "github:nix-systems/x86_64-linux";
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.systems.follows = "systems";
+    };
   };
-  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, nixvim, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, nixvim, flake-utils, ... }: {
     darwinConfigurations."IsabellaM2" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
@@ -63,5 +68,5 @@
         }
       ];
     };
-  };
+  } // (flake-utils.lib.eachDefaultSystem (system: { formatter = nixpkgs.legacyPackages.${system}.alejandra; }));
 }
