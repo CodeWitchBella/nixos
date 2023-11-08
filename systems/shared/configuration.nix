@@ -47,6 +47,8 @@
     dig
     mesa-demos
     zoxide
+    bat
+    fd
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [
