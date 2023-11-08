@@ -43,10 +43,28 @@
     sha256 = "06lp4qgnksklgc6nvx1l9z38y7apbx0a6v886nd15aq9rq8my0ka";
   }
   {
+    name = "python";
+    publisher = "ms-python";
+    version = "2023.21.13121012";
+    sha256 = "17mqprc6gcy8wrq6yarlvcx2kbdrhx0p7byswrxlg09mx918r5n0";
+  }
+  {
+    name = "vscode-pylance";
+    publisher = "ms-python";
+    version = "2023.11.11";
+    sha256 = "05ciibswhmn2mbhnkc9g42ys4lh42khr873awc6cwdcywjd118ij";
+  }
+  {
     name = "prisma";
     publisher = "Prisma";
     version = "5.5.2";
     sha256 = "0jn11x1mv2lf1rxb2cq9jdi4f6r1y6wzvzr3avy4mfnbc4aw8xyd";
+  }
+  {
+    name = "rust-analyzer";
+    publisher = "rust-lang";
+    version = "0.4.1724";
+    sha256 = "078jn1ahqg4lgnz7rhr305183zz5p7fhm8hqksg3hq98lxb35sj3";
   }
   {
     name = "rewrap";
@@ -78,29 +96,3 @@
     version = "12.6.0";
     sha256 = "0d0p2v2dl8g4x5sv5cj85rpjpgq2mmk3dxdnqqfkvfz2lf2n2aab";
   }
-  {
-    name = "gitblame";
-    publisher = "waderyan";
-    version = "10.5.1";
-    sha256 = "119rf52xnxz0cwvvjjfc5m5iv19288cxz33xzr79b67wyfd79hl9";
-  }
-  {
-    name = "change-case";
-    publisher = "wmaurer";
-    version = "1.0.0";
-    sha256 = "0dxsdahyivx1ghxs6l9b93filfm8vl5q2sa4g21fiklgdnaf7pxl";
-  }
-  {
-    name = "vscode-pylance";
-    publisher = "ms-python";
-    version = "2023.11.10";
-    sha256 = "sha256-Tl9x1/ZcQp3SQGh7QlvXx8cHP0hfzLcW4PA1wiX3XcQ=";
-  }
-  {
-    name = "python";
-    publisher = "ms-python";
-    version = "2023.20.0";
-    sha256 = "sha256-SxgD3t2hVqyaG5d/HqYFGhrK3cMrfJVuo2YWVo/Gd+M=";
-  }
-];
-}
