@@ -96,3 +96,17 @@
     version = "12.6.0";
     sha256 = "0d0p2v2dl8g4x5sv5cj85rpjpgq2mmk3dxdnqqfkvfz2lf2n2aab";
   }
+  {
+    name = "gitblame";
+    publisher = "waderyan";
+    version = "10.5.1";
+    sha256 = "119rf52xnxz0cwvvjjfc5m5iv19288cxz33xzr79b67wyfd79hl9";
+  }
+  {
+    name = "change-case";
+    publisher = "wmaurer";
+    version = "1.0.0";
+    sha256 = "0dxsdahyivx1ghxs6l9b93filfm8vl5q2sa4g21fiklgdnaf7pxl";
+  }
+];
+}
