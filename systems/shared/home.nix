@@ -21,14 +21,11 @@
   programs.wezterm = {
     enable = true;
     extraConfig = ''
-      local custom = require 'custom';
+      local custom = dofile('/home/isabella/nixos/wezterm/custom.lua');
       local config = wezterm.config_builder();
       custom.apply_to_config(config);
       return config;
     '';
-  };
-  home.file = {
-    ".config/wezterm/custom.lua".source = config.lib.file.mkOutOfStoreSymlink (builtins.toPath ../../wezterm/custom.lua);
   };
 
   programs.neovim = import ../../neovim/neovim.nix { inherit pkgs; };
