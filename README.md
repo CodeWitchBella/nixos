@@ -6,8 +6,8 @@ but I'll likely either stop using that if I stop using mac, or move it here too.
 
 ## Getting Started
 
-1. install nixos
-2. git clone this repo to ~/nixos
+1. install nixos with user named `isabella`
+2. git clone this repo to ~/nixos (some parts of this config assume this path)
 3. `ln -s /home/isabella/nixos/flake.nix /etc/nixos/`
 4. `nixos-rebuild switch`
 5. configure 1password to run on start in Tweaks
