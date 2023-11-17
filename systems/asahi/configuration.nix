@@ -27,6 +27,20 @@
   hardware.asahi.useExperimentalGPUDriver = true;
   #hardware.asahi.experimentalGPUInstallMode = "overlay";
 
+  environment.systemPackages = with pkgs; [
+    input-remapper
+  ];
+
+  boot.initrd.systemd.enable = true;
+  boot.initrd.verbose = false;
+  boot.plymouth = {
+    enable = true;
+    theme = "bgrt";
+  };
+  boot.consoleLogLevel = 0;
+  boot.kernelParams = [ "quiet" "udev.log_level=0" ];
+
+
   # networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
