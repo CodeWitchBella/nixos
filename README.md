@@ -29,6 +29,9 @@ darwin-rebuild switch --flake ~/nixos/flake.nix
 
 ## Getting Started Asahi
 
+<details>
+<summary>This is long. Click to expand.</summary>
+
 (it's written from memory so might be incomplete somewhere)
 
 1. Boot into the installer. [guide](https://github.com/tpwrules/nixos-apple-silicon/blob/main/docs/uefi-standalone.md)
@@ -130,3 +133,11 @@ reboot
 - `sudo ln -s /home/isabella/nixos/flake.nix /etc/nixos/`
 - `sudo nixos-rebuild switch --impure`
 - reboot
+
+</details>
+
+To apply changes:
+
+```sh
+sudo nixos-rebuild switch --impure
+```
