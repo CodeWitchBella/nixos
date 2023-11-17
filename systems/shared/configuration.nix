@@ -50,6 +50,7 @@
     bat
     fd
     zellij
+    usbutils
   ];
   environment.variables.EDITOR = "nvim";
   environment.gnome.excludePackages = with pkgs.gnome; [
