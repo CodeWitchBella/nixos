@@ -2,10 +2,10 @@
   "nodes": {
     "asahi-firmware": {
       "locked": {
-        "lastModified": 1697988426,
-        "narHash": "sha256-ERoViJF8ois2Weu3NX9cDtpvPeCIr+1kPWBG/sxskuo=",
+        "lastModified": 1700177567,
+        "narHash": "sha256-ScWash60kdIxgw2wxVn0aotysCrsmBxh+QpCZlOVI/8=",
         "ref": "main",
-        "rev": "fa4dcc62dc12c8d6357b3938ab4f629a77c047a0",
+        "rev": "8bd0b562887c916e619ed6f45e4b6dbbb350afcd",
         "revCount": 2,
         "type": "git",
         "url": "file:/etc/nixos/firmware"
