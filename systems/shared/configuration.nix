@@ -53,6 +53,7 @@
     usbutils
   ];
   environment.variables.EDITOR = "nvim";
+  environment.shells = [ pkgs.nushell ];
   environment.gnome.excludePackages = with pkgs.gnome; [
     epiphany # web browser
     totem # video player
