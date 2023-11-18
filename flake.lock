@@ -115,16 +115,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1699690378,
-        "narHash": "sha256-JKShrhN5zQTDt3G95oroybbS+UR6OMPKBG2kWMB1fOE=",
-        "owner": "NixOS",
+        "lastModified": 1699692131,
+        "narHash": "sha256-Phh/CdY2ncYerZnmNJdzEwp9aPfLi9asa0svD/eyAxE=",
+        "owner": "LunNova",
         "repo": "nixpkgs",
-        "rev": "d40361134a407a930e383d7474aca84351b30703",
+        "rev": "a95b6e10f195190fc8be7916feb2e82f929044e7",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "owner": "LunNova",
+        "ref": "lunnova/input-remapper-2.x",
         "repo": "nixpkgs",
         "type": "github"
       }

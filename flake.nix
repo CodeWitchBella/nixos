@@ -1,6 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:LunNova/nixpkgs/lunnova/input-remapper-2.x";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,7 +47,7 @@
         {
           hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
           networking.hostName = "IsblAsahi";
-          home-manager.users.isabella = import ./systems/personal/home.nix;
+          home-manager.users.isabella = import ./systems/asahi/home.nix;
         }
       ];
     };
