@@ -27,10 +27,6 @@
   hardware.asahi.useExperimentalGPUDriver = true;
   #hardware.asahi.experimentalGPUInstallMode = "overlay";
 
-  environment.systemPackages = with pkgs; [
-    input-remapper
-  ];
-
   boot.initrd.systemd.enable = true;
   boot.initrd.verbose = false;
   boot.plymouth = {
