@@ -33,5 +33,9 @@
     pulse.enable = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    beekeeper-studio
+  ];
+
   system.stateVersion = "23.05";
 }
