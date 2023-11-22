@@ -8,6 +8,9 @@
       $env.config.show_banner = false
       source ~/nixos/nushell/zoxide.nu
     '';
+    extraEnv = ''
+      $env.EDITOR = "nvim"
+    '';
   };
   programs.starship = {
     enable = true;
