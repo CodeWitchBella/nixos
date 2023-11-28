@@ -51,6 +51,7 @@
     fd
     zellij
     usbutils
+    wl-clipboard
   ];
   environment.variables.EDITOR = "nvim";
   environment.shells = [ pkgs.nushell ];
