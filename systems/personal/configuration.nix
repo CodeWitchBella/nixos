@@ -8,6 +8,9 @@
     enable = true;
     snapshot = true;
   };
+  environment.systemPackages = with pkgs; [
+    gimp
+  ];
   hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
   services.ipp-usb.enable = true;
 }
