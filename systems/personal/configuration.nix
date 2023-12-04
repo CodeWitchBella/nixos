@@ -11,6 +11,9 @@
   environment.systemPackages = with pkgs; [
     gimp
     krita
+    vlc
+    ffmpeg
+    obs-studio
   ];
   hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
   services.ipp-usb.enable = true;
