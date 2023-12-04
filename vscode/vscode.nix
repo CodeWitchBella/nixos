@@ -8,6 +8,7 @@
     {
       vscodeExtensions = with pkgs.vscode-extensions; [
         rust-lang.rust-analyzer
+        kamadorueda.alejandra
       ] ++ (map
         (extension: pkgs.vscode-utils.buildVscodeMarketplaceExtension {
           mktplcRef = {
