@@ -14,7 +14,11 @@
             inherit (extension) name publisher version sha256;
           };
         })
-        (import ../vscode/extensions.nix).extensions);
+        (
+          builtins.filter
+          (ext: ext.name != "rust-analyzer")
+          (import ../vscode/extensions.nix).extensions)
+        );
     } // { pname = "vscode"; };
   userSettings = {
     "workbench.iconTheme" = "vscode-icons";

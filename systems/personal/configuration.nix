@@ -10,6 +10,7 @@
   };
   environment.systemPackages = with pkgs; [
     gimp
+    krita
   ];
   hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
   services.ipp-usb.enable = true;
