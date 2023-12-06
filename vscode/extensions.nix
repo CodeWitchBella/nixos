@@ -52,20 +52,26 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2023.21.13141007";
-      sha256 = "1ba1r8hmpqahcafky5scnc2clyc1ja0g8xkhvmi295gc28s53rda";
+      version = "2023.23.13391009";
+      sha256 = "0kk3kgzq7nh5b7h3a4jvsvj66279ad44jgwdzxnw05lljhar3afa";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2023.11.12";
-      sha256 = "1sz5jdnc52h8vskcb1v8dk1w8hx3l8lfj8fd4428xc23g8z5rxz3";
+      version = "2023.11.102";
+      sha256 = "0mi2vnkil68fkvlvlwl034msp3v9lzqs0si0iqfx9c62sdlql7lf";
     }
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "5.5.2";
-      sha256 = "0jn11x1mv2lf1rxb2cq9jdi4f6r1y6wzvzr3avy4mfnbc4aw8xyd";
+      version = "5.6.0";
+      sha256 = "0r630xjsfm0fld85s88x12rwsn3aq292ns0pvfq6nmxmlsiq61v0";
+    }
+    {
+      name = "rust-analyzer";
+      publisher = "rust-lang";
+      version = "0.4.1758";
+      sha256 = "1bi0506ckw3xgixcqpnqpj6gk92340rxg7hgac532v6ms9x5vsch";
     }
     {
       name = "rewrap";
