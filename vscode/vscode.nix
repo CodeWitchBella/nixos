@@ -16,9 +16,9 @@
         })
         (
           builtins.filter
-          (ext: ext.name != "rust-analyzer")
-          (import ../vscode/extensions.nix).extensions)
-        );
+            (ext: ext.name != "rust-analyzer")
+            (import ../vscode/extensions.nix).extensions)
+      );
     } // { pname = "vscode"; };
   userSettings = {
     "workbench.iconTheme" = "vscode-icons";

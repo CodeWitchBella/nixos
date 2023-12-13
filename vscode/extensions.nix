@@ -16,8 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.30";
-      sha256 = "1xbcvs2i079xiah679cjczansfrgr2cp44xvydq04ndv1fyp4b6l";
+      version = "0.11.31";
+      sha256 = "1xxyn7p58lzbf8w9ink5gxv3g0fa1gka5kv86fsn235j9hjwjxxa";
     }
     {
       name = "vscode-eslint";
@@ -52,26 +52,26 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2023.23.13391009";
-      sha256 = "0kk3kgzq7nh5b7h3a4jvsvj66279ad44jgwdzxnw05lljhar3afa";
+      version = "2023.23.13471011";
+      sha256 = "1z0dwn3ks87jfigr5kangnmmkd8k768qb3mbzdx45qg7123kz42q";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2023.11.102";
-      sha256 = "0mi2vnkil68fkvlvlwl034msp3v9lzqs0si0iqfx9c62sdlql7lf";
+      version = "2023.11.104";
+      sha256 = "10w5zadxn9c0lcsydly3vkjrl6is0220qg3zjjbwpdygr2cbppi5";
     }
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "5.6.0";
-      sha256 = "0r630xjsfm0fld85s88x12rwsn3aq292ns0pvfq6nmxmlsiq61v0";
+      version = "5.7.0";
+      sha256 = "1wiahsdwd8jmrfd0zlrjwqv2776hyk008n5dadaz865hjv2rl6gn";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1758";
-      sha256 = "1bi0506ckw3xgixcqpnqpj6gk92340rxg7hgac532v6ms9x5vsch";
+      version = "0.4.1768";
+      sha256 = "1gsi4igngs7bf5w5n9x8l7pwkf28vzp4bxy2ppay8qm2l3vdkqzq";
     }
     {
       name = "rewrap";
@@ -106,8 +106,8 @@
     {
       name = "gitblame";
       publisher = "waderyan";
-      version = "10.5.1";
-      sha256 = "119rf52xnxz0cwvvjjfc5m5iv19288cxz33xzr79b67wyfd79hl9";
+      version = "10.6.0";
+      sha256 = "1v8b41ckv73i472wx0w7f5df2xk8b3h3px2hhby3xswkybn93fh0";
     }
     {
       name = "change-case";
