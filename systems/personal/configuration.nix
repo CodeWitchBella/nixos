@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
 {
-  imports = [ ../shared/configuration.nix ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [../shared/configuration.nix];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -16,6 +19,6 @@
     obs-studio
     localsend
   ];
-  hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
+  hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
 }

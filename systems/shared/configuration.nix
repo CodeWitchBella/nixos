@@ -1,7 +1,9 @@
-{ config, pkgs, ... }:
-
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  config,
+  pkgs,
+  ...
+}: {
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
@@ -21,7 +23,7 @@
   users.users.isabella = {
     isNormalUser = true;
     description = "Isabella Skořepová";
-    extraGroups = [ "networkmanager" "wheel" "scanner" "lp" ];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp"];
     shell = pkgs.nushell;
   };
 
@@ -30,7 +32,6 @@
 
   # services
   services.flatpak.enable = true;
-
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -42,7 +43,7 @@
     ungoogled-chromium
     firefox
     gitFull
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override {fonts = ["FiraCode"];})
     gnome.gnome-tweaks
     dig
     mesa-demos
@@ -54,7 +55,7 @@
     wl-clipboard
   ];
   environment.variables.EDITOR = "nvim";
-  environment.shells = [ pkgs.nushell ];
+  environment.shells = [pkgs.nushell];
   environment.gnome.excludePackages = with pkgs.gnome; [
     epiphany # web browser
     totem # video player
@@ -64,18 +65,17 @@
     pkgs.gnome-tour
     pkgs.gnome-console
   ];
-  services.xserver.excludePackages = [ pkgs.xterm ];
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
+  services.xserver.excludePackages = [pkgs.xterm];
+  services.udev.packages = with pkgs; [gnome.gnome-settings-daemon]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
   i18n.inputMethod = {
     enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [ uniemoji ];
+    ibus.engines = with pkgs.ibus-engines; [uniemoji];
   };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
 
   # Enable the X11 windowing system.
   services.xserver = {
@@ -95,7 +95,6 @@
     # Enable touchpad support (enabled default in most desktopManager).
     libinput.enable = true;
   };
-
 
   # Set your time zone.
   time.timeZone = "Europe/Prague";

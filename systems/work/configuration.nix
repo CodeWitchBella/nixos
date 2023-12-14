@@ -1,12 +1,13 @@
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../shared/configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../shared/configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

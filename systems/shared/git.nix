@@ -1,4 +1,4 @@
-{ ... }: {
+{...}: {
   enable = true;
   lfs.enable = true;
   userName = "Isabella Skořepová";

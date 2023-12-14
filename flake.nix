@@ -21,7 +21,15 @@
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
   };
-  outputs = inputs@{ nixpkgs, home-manager, darwin, asahi-firmware, nixos-apple-silicon, flake-utils, ... }: {
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    darwin,
+    asahi-firmware,
+    nixos-apple-silicon,
+    flake-utils,
+    ...
+  }: {
     darwinConfigurations."IsabellaM2" = darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       modules = [
@@ -64,8 +72,6 @@
         }
       ];
     };
-  }
-  // (flake-utils.lib.eachDefaultSystem (system: {
-    formatter = inputs.alejandra.defaultPackage.${system};
-  }));
+    formatter.aarch64-linux = inputs.alejandra.defaultPackage.aarch64-linux;
+  };
 }

@@ -1,16 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../personal/configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ../personal/configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -32,7 +33,6 @@
   };
   services.sshd.enable = false;
 
-
   networking.wireless.iwd = {
     enable = true;
     settings.General.EnableNetworkConfiguration = true;
@@ -51,7 +51,7 @@
     theme = "bgrt";
   };
   boot.consoleLogLevel = 0;
-  boot.kernelParams = [ "quiet" "udev.log_level=0" ];
+  boot.kernelParams = ["quiet" "udev.log_level=0"];
 
   services.input-remapper.enable = true;
 
@@ -62,6 +62,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-
 }
-

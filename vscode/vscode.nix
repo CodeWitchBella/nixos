@@ -1,26 +1,33 @@
-{ pkgs }: {
+{pkgs}: {
   enable = true;
   enableUpdateCheck = false;
   enableExtensionUpdateCheck = false;
   mutableExtensionsDir = false;
   #package = pkgs.vscode.fhs;
-  package = pkgs.vscode-with-extensions.override
+  package =
+    pkgs.vscode-with-extensions.override
     {
-      vscodeExtensions = with pkgs.vscode-extensions; [
-        rust-lang.rust-analyzer
-        kamadorueda.alejandra
-      ] ++ (map
-        (extension: pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-          mktplcRef = {
-            inherit (extension) name publisher version sha256;
-          };
-        })
-        (
-          builtins.filter
+      vscodeExtensions = with pkgs.vscode-extensions;
+        [
+          rust-lang.rust-analyzer
+          kamadorueda.alejandra
+        ]
+        ++ (
+          map
+          (extension:
+            pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+              mktplcRef = {
+                inherit (extension) name publisher version sha256;
+              };
+            })
+          (
+            builtins.filter
             (ext: ext.name != "rust-analyzer")
-            (import ../vscode/extensions.nix).extensions)
-      );
-    } // { pname = "vscode"; };
+            (import ../vscode/extensions.nix).extensions
+          )
+        );
+    }
+    // {pname = "vscode";};
   userSettings = {
     "workbench.iconTheme" = "vscode-icons";
     "files.associations"."flake.lock" = "json";
@@ -35,7 +42,7 @@
     "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-    "editor.rulers" = [ 80 120 ];
+    "editor.rulers" = [80 120];
     "diffEditor.ignoreTrimWhitespace" = false;
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;

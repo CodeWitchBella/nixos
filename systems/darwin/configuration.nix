@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ... }:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   services.nix-daemon.enable = true;
   services.activate-system.enable = true;
 
@@ -18,7 +22,7 @@
       trusted-public-keys = [
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
     };
   };
   nixpkgs.config.allowUnfree = true;
@@ -37,7 +41,7 @@
     pkgs.gnupg
     pkgs.nushell
   ];
-  environment.shells = [ pkgs.nushell ];
+  environment.shells = [pkgs.nushell];
   environment.loginShell = pkgs.nushell;
 
   users.users.isabella = {
@@ -49,10 +53,9 @@
   system.stateVersion = 4;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.isabella = { pkgs, ... }:
-    let
-      shared = import ../shared/home.nix { inherit pkgs lib config; };
-    in
+  home-manager.users.isabella = {pkgs, ...}: let
+    shared = import ../shared/home.nix {inherit pkgs lib config;};
+  in
     lib.recursiveUpdate shared {
       home.stateVersion = "23.11";
       programs.ssh = {
@@ -72,7 +75,7 @@
 
   fonts.fontDir.enable = true;
   fonts.fonts = [
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (pkgs.nerdfonts.override {fonts = ["FiraCode"];})
   ];
 
   homebrew = {
@@ -107,4 +110,3 @@
     # finder.QuitMenuItem = true;
   };
 }
-

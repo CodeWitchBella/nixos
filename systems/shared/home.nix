@@ -1,7 +1,10 @@
-{ pkgs, lib, config }:
 {
-  programs.vscode = import ../../vscode/vscode.nix { inherit pkgs; };
-  programs.git = import ./git.nix { inherit pkgs; };
+  pkgs,
+  lib,
+  config,
+}: {
+  programs.vscode = import ../../vscode/vscode.nix {inherit pkgs;};
+  programs.git = import ./git.nix {inherit pkgs;};
   programs.nushell = {
     enable = true;
     extraConfig = ''
@@ -15,7 +18,7 @@
   programs.starship = {
     enable = true;
     enableNushellIntegration = true;
-    settings = { };
+    settings = {};
   };
   programs.direnv = {
     enable = true;
@@ -31,5 +34,5 @@
     '';
   };
 
-  programs.neovim = import ../../neovim/neovim.nix { inherit pkgs; };
+  programs.neovim = import ../../neovim/neovim.nix {inherit pkgs;};
 }
