@@ -35,6 +35,7 @@
 
   environment.systemPackages = with pkgs; [
     beekeeper-studio
+    thunderbird
   ];
 
   system.stateVersion = "23.05";
