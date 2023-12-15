@@ -37,8 +37,11 @@
   environment.systemPackages = with pkgs; [
     beekeeper-studio
     thunderbird
-    podman
   ];
+
+  virtualisation.podman = {
+    enable = true;
+  };
 
   system.stateVersion = "23.05";
 }
