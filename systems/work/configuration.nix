@@ -37,6 +37,7 @@
   environment.systemPackages = with pkgs; [
     beekeeper-studio
     thunderbird
+    podman
   ];
 
   system.stateVersion = "23.05";
