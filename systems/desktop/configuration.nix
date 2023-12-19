@@ -59,6 +59,10 @@
     #media-session.enable = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    localsend # no localsend on arm64
+  ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

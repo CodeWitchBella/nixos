@@ -17,7 +17,6 @@
     vlc
     ffmpeg
     obs-studio
-    localsend
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
