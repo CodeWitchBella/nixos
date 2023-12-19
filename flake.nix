@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +24,7 @@
   };
   outputs = inputs @ {
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     darwin,
     asahi-firmware,
@@ -48,8 +50,13 @@
         }
       ];
     };
-    nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";
+      specialArgs = {
+        pkgs-unstable = import nixpkgs-unstable {
+          system = system;
+        };
+      };
       modules = [
         ./systems/asahi/configuration.nix
         home-manager.nixosModules.home-manager
