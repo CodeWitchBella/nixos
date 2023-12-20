@@ -16,8 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.31";
-      sha256 = "1xxyn7p58lzbf8w9ink5gxv3g0fa1gka5kv86fsn235j9hjwjxxa";
+      version = "0.11.32";
+      sha256 = "1if02xnmsv001wbqhk5z8y5ripl9s26bih5p571npn3pdfqsz1f5";
     }
     {
       name = "vscode-eslint";
@@ -38,6 +38,12 @@
       sha256 = "01s0vi2h917mqfpdrhqhp2ijwkibw95yk2js0l587wvajbbry2s9";
     }
     {
+      name = "alejandra";
+      publisher = "kamadorueda";
+      version = "1.0.0";
+      sha256 = "1ncjzhrc27c3cwl2cblfjvfg23hdajasx8zkbnwx5wk6m2649s88";
+    }
+    {
       name = "kdl";
       publisher = "kdl-org";
       version = "1.3.1";
@@ -52,26 +58,26 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2023.23.13471011";
-      sha256 = "1z0dwn3ks87jfigr5kangnmmkd8k768qb3mbzdx45qg7123kz42q";
+      version = "2023.23.13541005";
+      sha256 = "1rir25hf09ig70py57j6aaqd12a3g16kxx8271m2q92s26ldgvpv";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2023.11.104";
-      sha256 = "10w5zadxn9c0lcsydly3vkjrl6is0220qg3zjjbwpdygr2cbppi5";
+      version = "2023.12.100";
+      sha256 = "1h0y86j7c0wkzmkcv2d7ba9mcsn1z3lvcykq31wzvb0bi75ssbd9";
     }
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "5.7.0";
-      sha256 = "1wiahsdwd8jmrfd0zlrjwqv2776hyk008n5dadaz865hjv2rl6gn";
+      version = "5.7.1";
+      sha256 = "0w2dkg4h7zy1izmy4w8d74hramj96ac6p048kq6xc0ldj1fmf6zb";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1768";
-      sha256 = "1gsi4igngs7bf5w5n9x8l7pwkf28vzp4bxy2ppay8qm2l3vdkqzq";
+      version = "0.4.1776";
+      sha256 = "1pczxls9x1jc135sl6vac47p2l2ccg04cpiav316rfxbjrfjjw0p";
     }
     {
       name = "rewrap";
@@ -94,8 +100,8 @@
     {
       name = "vscode-mdx";
       publisher = "unifiedjs";
-      version = "1.5.0";
-      sha256 = "1vq2b3krvxccskh417zmz3inniqr1scz53bg49dp1q14axqy42sk";
+      version = "1.6.1";
+      sha256 = "1yj452d45k2pdx22f60nw6r7d2n3vckv5yisw3b228c3nxviwpjc";
     }
     {
       name = "vscode-icons";

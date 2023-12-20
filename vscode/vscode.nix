@@ -22,7 +22,7 @@
             })
           (
             builtins.filter
-            (ext: ext.name != "rust-analyzer")
+            (ext: ext.name != "rust-analyzer" && ext.name != "alejandra")
             (import ../vscode/extensions.nix).extensions
           )
         );
