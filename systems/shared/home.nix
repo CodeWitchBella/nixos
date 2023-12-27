@@ -2,8 +2,9 @@
   pkgs,
   lib,
   config,
+  host,
 }: {
-  programs.vscode = import ../../vscode/vscode.nix {inherit pkgs;};
+  programs.vscode = import ../../vscode/vscode.nix {inherit pkgs host;};
   programs.git = import ./git.nix {inherit pkgs;};
   programs.nushell = {
     enable = true;

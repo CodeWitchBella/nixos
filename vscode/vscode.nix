@@ -1,4 +1,7 @@
-{pkgs}: {
+{
+  pkgs,
+  host,
+}: {
   enable = true;
   enableUpdateCheck = false;
   enableExtensionUpdateCheck = false;
@@ -21,9 +24,23 @@
               };
             })
           (
-            builtins.filter
-            (ext: ext.name != "rust-analyzer" && ext.name != "alejandra")
-            (import ../vscode/extensions.nix).extensions
+            (
+              builtins.filter
+              (
+                ext:
+                  ext.name
+                  != "rust-analyzer"
+                  && ext.name != "alejandra"
+                  # atlassian crap only on work machine
+                  && ext.name != "atlascode"
+              )
+              (import ../vscode/extensions.nix).extensions
+            )
+            ++ (
+              if host == "work"
+              then (import ../vscode/extensions-work.nix).extensions
+              else []
+            )
           )
         );
     }

@@ -4,7 +4,10 @@
   config,
   ...
 }: let
-  shared = import ../shared/home.nix {inherit pkgs lib config;};
+  shared = import ../shared/home.nix {
+    inherit pkgs lib config;
+    host = "work";
+  };
 in
   lib.recursiveUpdate shared {
     # https://rycee.gitlab.io/home-manager/options.html

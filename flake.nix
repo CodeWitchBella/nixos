@@ -80,5 +80,6 @@
       ];
     };
     formatter.aarch64-linux = inputs.alejandra.defaultPackage.aarch64-linux;
+    formatter.x86_64-linux = inputs.alejandra.defaultPackage.x86_64-linux;
   };
 }
