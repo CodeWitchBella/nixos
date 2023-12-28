@@ -4,7 +4,10 @@
   config,
   ...
 }: let
-  shared = import ../personal/home.nix {inherit pkgs lib config;};
+  shared = import ../personal/home.nix {
+    inherit pkgs lib config;
+    host = "asahi";
+  };
 in
   lib.recursiveUpdate shared {
     home.file.".config/input-remapper-2/config.json".source = ./input-remapper/config.json;

@@ -10,7 +10,7 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     asahi-firmware.url = "git+file:/etc/nixos/firmware?ref=main";
     nixos-apple-silicon = {
-      url = "github:tpwrules/nixos-apple-silicon/wip";
+      url = "github:tpwrules/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/x86_64-linux";
@@ -46,7 +46,7 @@
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblDesktop";
-          home-manager.users.isabella = import ./systems/personal/home.nix;
+          home-manager.users.isabella = import ./systems/desktop/home.nix;
         }
       ];
     };

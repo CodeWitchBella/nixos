@@ -2,9 +2,12 @@
   pkgs,
   lib,
   config,
+  host,
   ...
 }: let
-  shared = import ../shared/home.nix {inherit pkgs lib config;};
+  shared = import ../shared/home.nix {
+    inherit pkgs lib config host;
+  };
 in
   lib.recursiveUpdate shared {
     # https://rycee.gitlab.io/home-manager/options.html

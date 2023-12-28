@@ -54,7 +54,10 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.isabella = {pkgs, ...}: let
-    shared = import ../shared/home.nix {inherit pkgs lib config;};
+    shared = import ../shared/home.nix {
+      inherit pkgs lib config;
+      host = "darwin";
+    };
   in
     lib.recursiveUpdate shared {
       home.stateVersion = "23.11";
