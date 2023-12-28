@@ -64,5 +64,27 @@
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
+    "atlascode.bitbucket.enabled" = false;
+    "redhat.telemetry.enabled" = false;
+    "atlascode.jira.jqlList" = [
+      {
+        "id" = "37c659fb-4276-47d1-8322-f2c5728d4424";
+        "siteId" = "6b7e7661-4a41-4d17-a5e2-ffc6e0719bd4";
+        "name" = "my tickets in current sprint";
+        "query" = "sprint in openSprints() and assignee = currentUser()";
+        "enabled" = true;
+        "monitor" = true;
+      }
+      {
+        "id" = "25dc507b-83b4-4b8e-9f1d-aaedc5b3284b";
+        "siteId" = "6b7e7661-4a41-4d17-a5e2-ffc6e0719bd4";
+        "name" = "my tickets in backlog";
+        "query" = "sprint is empty and assignee = currentUser()";
+        "enabled" = true;
+        "monitor" = true;
+      }
+    ];
+    "atlascode.jira.todoIssues.enabled" = false;
+    "atlascode.jira.startWorkBranchTemplate.customTemplate" = "isbl/{{{issuekey}}}-{{{summary}}}";
   };
 }
