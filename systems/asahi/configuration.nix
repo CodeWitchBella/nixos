@@ -17,6 +17,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
 
+  sound.enable = true;
   services.nix-serve = {
     enable = false;
     secretKeyFile = "/var/cache-priv-key.pem";
