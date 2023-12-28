@@ -48,7 +48,7 @@
   userSettings = {
     "workbench.iconTheme" = "vscode-icons";
     "files.associations"."flake.lock" = "json";
-    "editor.codeActionsOnSave"."source.fixAll.eslint" = true;
+    "editor.codeActionsOnSave"."source.fixAll.eslint" = "explicit";
     "editor.fontFamily" = "FiraCode Nerd Font";
     "editor.fontLigatures" = true;
     "window.titleBarStyle" = "custom";
