@@ -17,7 +17,6 @@
     vlc
     ffmpeg
     obs-studio
-    bitwarden
     bitwarden-cli
     rbw
   ];
