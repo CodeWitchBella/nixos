@@ -44,6 +44,12 @@
       sha256 = "01s0vi2h917mqfpdrhqhp2ijwkibw95yk2js0l587wvajbbry2s9";
     }
     {
+      name = "highlight-string-code";
+      publisher = "iuyoy";
+      version = "0.4.5";
+      sha256 = "0svx1qh988sah7xw00qgh37l9sjy3b856vapiirlka2i9drnfiar";
+    }
+    {
       name = "alejandra";
       publisher = "kamadorueda";
       version = "1.0.0";
@@ -80,10 +86,16 @@
       sha256 = "0w2dkg4h7zy1izmy4w8d74hramj96ac6p048kq6xc0ldj1fmf6zb";
     }
     {
+      name = "vscode-yaml";
+      publisher = "redhat";
+      version = "1.14.0";
+      sha256 = "0pww9qndd2vsizsibjsvscz9fbfx8srrj67x4vhmwr581q674944";
+    }
+    {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1784";
-      sha256 = "196appp0rf2azdaws1vgqmanh5x6byfpfk63sz9yv5zz3jj17r4i";
+      version = "0.4.1792";
+      sha256 = "1wmpb68q09clpxvp7dnjc4xx9kivch7y2j30pi88va1hkbrngfi7";
     }
     {
       name = "rewrap";
@@ -126,12 +138,6 @@
       publisher = "wmaurer";
       version = "1.0.0";
       sha256 = "0dxsdahyivx1ghxs6l9b93filfm8vl5q2sa4g21fiklgdnaf7pxl";
-    }
-    {
-      name = "highlight-string-code";
-      publisher = "iuyoy";
-      version = "0.4.5";
-      sha256 = "sha256-WUVnc0tRqElzjFdtU9AaXupEz4APA8D7gUojlCAOfWs=";
     }
   ];
 }
