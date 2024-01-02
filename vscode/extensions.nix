@@ -127,5 +127,11 @@
       version = "1.0.0";
       sha256 = "0dxsdahyivx1ghxs6l9b93filfm8vl5q2sa4g21fiklgdnaf7pxl";
     }
+    {
+      name = "highlight-string-code";
+      publisher = "iuyoy";
+      version = "0.4.5";
+      sha256 = "sha256-WUVnc0tRqElzjFdtU9AaXupEz4APA8D7gUojlCAOfWs=";
+    }
   ];
 }
