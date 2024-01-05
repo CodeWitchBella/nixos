@@ -16,8 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.36";
-      sha256 = "10v1y77glh4njvnxsn968n8amj2caxllw9mc27c62aqmcs4qa3rp";
+      version = "0.11.37";
+      sha256 = "17af7yvg33b36fd2lvw3xqcdf4cldm2kr83q9n7fmk9vbn7fy18a";
     }
     {
       name = "vscode-eslint";
@@ -36,12 +36,6 @@
       publisher = "esbenp";
       version = "10.1.0";
       sha256 = "01s0vi2h917mqfpdrhqhp2ijwkibw95yk2js0l587wvajbbry2s9";
-    }
-    {
-      name = "highlight-string-code";
-      publisher = "iuyoy";
-      version = "0.4.5";
-      sha256 = "0svx1qh988sah7xw00qgh37l9sjy3b856vapiirlka2i9drnfiar";
     }
     {
       name = "alejandra";
@@ -70,8 +64,8 @@
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2023.12.101";
-      sha256 = "0i8gjrr5l5q9x9pd55gj4vd20fgajljiaib3qs05p9hxnqfj11xj";
+      version = "2023.12.102";
+      sha256 = "0n7ki321qy9vqhdafyqn4pakqdyl0kxclrh21rnmyl4x47q8kj83";
     }
     {
       name = "prisma";
@@ -80,16 +74,10 @@
       sha256 = "0w2dkg4h7zy1izmy4w8d74hramj96ac6p048kq6xc0ldj1fmf6zb";
     }
     {
-      name = "vscode-yaml";
-      publisher = "redhat";
-      version = "1.14.0";
-      sha256 = "0pww9qndd2vsizsibjsvscz9fbfx8srrj67x4vhmwr581q674944";
-    }
-    {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1792";
-      sha256 = "1wmpb68q09clpxvp7dnjc4xx9kivch7y2j30pi88va1hkbrngfi7";
+      version = "0.4.1795";
+      sha256 = "042n0hcg5sp2myb2v5fillq93n43dfslxvkprw2sc70m8xxm24vj";
     }
     {
       name = "rewrap";
