@@ -27,4 +27,5 @@ in
       enable = true;
     };
     home.stateVersion = "23.05";
+    home.file.".config/rbw/config.json".text = ''{"email":"me@isbl.cz","base_url":"https://vault.isbl.cz/","identity_url":null,"notifications_url":null,"lock_timeout":3600,"sync_interval":3600,"pinentry":"pinentry","client_cert_path":null}'';
   }

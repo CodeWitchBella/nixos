@@ -19,6 +19,8 @@
     obs-studio
     bitwarden-cli
     rbw
+    pinentry
+    pinentry-gnome
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;

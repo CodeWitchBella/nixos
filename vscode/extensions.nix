@@ -8,12 +8,6 @@
       sha256 = "0wvrqnsiqsxb0a7hyccri85f5pfh9biifq4x2bllpl8mg79l5m68";
     }
     {
-      name = "atlascode";
-      publisher = "atlassian";
-      version = "3.0.9";
-      sha256 = "1jabiylhf9jig50m4jrljp4z0yiwd7mvyh92w1z736a6n168axvb";
-    }
-    {
       name = "Nix";
       publisher = "bbenoist";
       version = "1.0.1";
