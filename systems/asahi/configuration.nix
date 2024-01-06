@@ -56,6 +56,19 @@
 
   #services.input-remapper.enable = true;
 
+  systemd.services.swap-keys = {
+    wantedBy = ["multi-user.target"];
+    enable = true;
+    serviceConfig = {
+      User = "root";
+      Group = "root";
+    };
+    script = ''
+      echo 1 > /sys/module/hid_apple/parameters/swap_fn_leftctrl
+      echo 1 > /sys/module/hid_apple/parameters/swap_opt_cmd
+    '';
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
