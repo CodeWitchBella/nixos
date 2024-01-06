@@ -54,7 +54,7 @@
   boot.consoleLogLevel = 0;
   boot.kernelParams = ["quiet" "udev.log_level=0"];
 
-  services.input-remapper.enable = true;
+  #services.input-remapper.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
