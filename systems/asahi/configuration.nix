@@ -17,6 +17,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
 
+  boot.kernelModules = ["hid-apple"];
   boot.extraModprobeConfig = ''
     options hid_apple swap_opt_cmd=1
     options hid_apple swap_fn_leftctrl=1
