@@ -86,6 +86,7 @@
     ];
     "atlascode.jira.todoIssues.enabled" = false;
     "atlascode.jira.startWorkBranchTemplate.customTemplate" = "isbl/{{{issuekey}}}-{{{summary}}}";
+    "python.analysis.typeCheckingMode" = "strict";
     "yaml.schemas"."file:///nix/store/3wvs2g85k4qxp6nl7ndhn1gcr582fc4m-vscode-extension-atlassian-atlascode-3.0.9/share/vscode/extensions/atlassian.atlascode/resources/schemas/pipelines-schema.json" = "bitbucket-pipelines.yml";
   };
 }
