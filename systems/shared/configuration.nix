@@ -53,6 +53,12 @@
     zellij
     usbutils
     wl-clipboard
+
+    libreoffice-qt
+    hunspell
+    hunspellDicts.cs_CZ
+    hunspellDicts.en_US-large
+    hunspellDicts.en_GB-large
   ];
   environment.variables.EDITOR = "nvim";
   environment.shells = [pkgs.nushell];
