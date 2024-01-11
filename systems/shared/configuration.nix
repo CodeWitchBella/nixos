@@ -11,7 +11,7 @@
     options = "--delete-older-than 7d";
   };
   system.autoUpgrade = {
-    enable = true;
+    enable = false;
     flake = "${config.users.users.isabella.home}/nixos";
     flags = [
       "--update-input"
