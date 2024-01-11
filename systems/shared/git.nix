@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   enable = true;
   lfs.enable = true;
   userName = "Isabella Skořepová";
@@ -14,5 +14,6 @@
     alias.fr = "!bash -c \"git fetch --prune ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
     rebase.autostash = true;
     pull.rebase = true;
+    "gpg \"ssh\"".program = "${pkgs.openssh}/bin/ssh-keygen";
   };
 }
