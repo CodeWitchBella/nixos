@@ -121,5 +121,11 @@
       version = "1.0.0";
       sha256 = "0dxsdahyivx1ghxs6l9b93filfm8vl5q2sa4g21fiklgdnaf7pxl";
     }
+    {
+      name = "vscode-sqlfluff";
+      publisher = "dorzey";
+      version = "2.4.4";
+      sha256 = "sha256-401biBU3kF5EA4MzOLIJVs7lorDE+vg/UoD9+5VEkO4=";
+    }
   ];
 }
