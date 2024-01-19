@@ -21,6 +21,7 @@
     rbw
     pinentry
     pinentry-gnome
+    super-slicer-latest
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
