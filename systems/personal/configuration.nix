@@ -22,6 +22,7 @@
     pinentry
     pinentry-gnome
     super-slicer-latest
+    cura
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
