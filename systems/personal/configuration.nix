@@ -23,6 +23,7 @@
     pinentry-gnome
     super-slicer-latest
     cura
+    openscad
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
