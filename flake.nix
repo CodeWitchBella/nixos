@@ -57,16 +57,18 @@
           system = system;
         };
       };
-      modules = [
-        ./systems/asahi/configuration.nix
-        home-manager.nixosModules.home-manager
-        nixos-apple-silicon.nixosModules.apple-silicon-support
-        {
-          hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
-          networking.hostName = "IsblAsahi";
-          home-manager.users.isabella = import ./systems/asahi/home.nix;
-        }
-      ];
+      modules =
+        (import ./modules/modules.nix)
+        ++ [
+          ./systems/asahi/configuration.nix
+          home-manager.nixosModules.home-manager
+          nixos-apple-silicon.nixosModules.apple-silicon-support
+          {
+            hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
+            networking.hostName = "IsblAsahi";
+            home-manager.users.isabella = import ./systems/asahi/home.nix;
+          }
+        ];
     };
     nixosConfigurations."IsblWork" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
