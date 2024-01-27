@@ -17,11 +17,11 @@ in
       _1password-gui
     ];
     programs.git.extraConfig = {
-      "gpg \"ssh\"".program = "op-ssh-sign";
+      #"gpg \"ssh\"".program = "op-ssh-sign";
     };
     programs.ssh = {
       enable = true;
-      matchBlocks."*".extraOptions = {identityAgent = "~/.1password/agent.sock";};
+      #matchBlocks."*".extraOptions = {identityAgent = "~/.1password/agent.sock";};
     };
     programs.helix = {
       enable = true;
