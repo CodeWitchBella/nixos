@@ -127,5 +127,11 @@
       version = "2.4.4";
       sha256 = "sha256-401biBU3kF5EA4MzOLIJVs7lorDE+vg/UoD9+5VEkO4=";
     }
+    {
+      name = "openscad-language-support";
+      publisher = "leathong";
+      version = "1.2.5";
+      sha256 = "sha256-/CLxBXXdUfYlT0RaGox1epHnyAUlDihX1LfT5wGd2J8=";
+    }
   ];
 }
