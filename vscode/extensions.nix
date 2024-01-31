@@ -56,6 +56,12 @@
       sha256 = "1a302y4xkqng5pbiyzxlr3mpl1r9g4813m14gzzjh6wsmj3z4rni";
     }
     {
+      name = "openscad-language-support";
+      publisher = "Leathong";
+      version = "1.2.5";
+      sha256 = "17yqkl0yglxpsibjh3i50p4fg4bsfn61lnj49wjzclfxfl2z28pw";
+    }
+    {
       name = "direnv";
       publisher = "mkhl";
       version = "0.16.0";
@@ -82,8 +88,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1820";
-      sha256 = "177912nwmx4fbvavxl1hp1d5p9ag1v310i3b7nzcmgsyyjwy48vy";
+      version = "0.4.1821";
+      sha256 = "0bg2hf9vzsldw0gbdgf15bh0phrlb1mf3plb1j7yfimql2wpc5j7";
     }
     {
       name = "rewrap";
