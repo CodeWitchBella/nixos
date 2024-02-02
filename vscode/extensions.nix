@@ -16,8 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.39";
-      sha256 = "1l3iqkyj876ydg6qb0zzibbdx3603q46ivnyxgg0hc024fz47vzq";
+      version = "0.11.40";
+      sha256 = "10z3gj6jcyszsg6nkqdsfvkl7jhcw5p55122g9515v20vdwqwg4y";
     }
     {
       name = "vscode-eslint";
@@ -70,26 +70,26 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2023.25.10221012";
-      sha256 = "14bkvlflib4wky6lw1hq0i01ymzf5349cl4d9minaam2lq0451i0";
+      version = "2024.0.0";
+      sha256 = "0sy1z2r6b0m1lkivjyrcf41dbgj9m5zkjy6yncpji1hisjcbgq6n";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.1.101";
-      sha256 = "09w0mkf6y1qnaxbmlx3p91n2mpp22fp9y12q1plkapblvz6kxixz";
+      version = "2024.1.104";
+      sha256 = "00h7iri4xn01k6pmxlmzvhsasljl5jnpc7y4q8njc5v37illgzyv";
     }
     {
       name = "prisma";
       publisher = "Prisma";
-      version = "5.8.1";
-      sha256 = "0mws09n65jyg6wx78b4agijfs0z4mlzd1i0yibnd2j4mf6jhv4wy";
+      version = "5.9.1";
+      sha256 = "0danydrxq4qcjvlb86m486x6xqhyhbxxlwrg4gr18b9afzlcdp0v";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1821";
-      sha256 = "0bg2hf9vzsldw0gbdgf15bh0phrlb1mf3plb1j7yfimql2wpc5j7";
+      version = "0.4.1827";
+      sha256 = "0qbmqlc1qnxgxnp1a61nj2jsmnn9wi25nypjar5iw8ikyvm91dl4";
     }
     {
       name = "rewrap";
@@ -112,8 +112,8 @@
     {
       name = "vscode-mdx";
       publisher = "unifiedjs";
-      version = "1.7.0";
-      sha256 = "0gxss9w66yj7vmhmb5221qmjinx3ncix6297xxnaxivfkyp0ypc5";
+      version = "1.7.1";
+      sha256 = "1chmb2552i5nil53xaa4i9n6vcz80rrzfppxbzbnq0npn1r5yl32";
     }
     {
       name = "vscode-icons";
@@ -124,8 +124,8 @@
     {
       name = "gitblame";
       publisher = "waderyan";
-      version = "10.7.1";
-      sha256 = "1mj2axr1i152k4y96vl5r5dxc3l6h1khyi7afa7jbjjga5jqr26b";
+      version = "10.8.0";
+      sha256 = "080hks0zh3f2h8g6y5nvh7xnlp2h53dzs3kqrwn20kl2imbrxrjw";
     }
     {
       name = "change-case";
