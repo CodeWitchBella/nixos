@@ -41,14 +41,16 @@
     };
     nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [
-        ./systems/desktop/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          networking.hostName = "IsblDesktop";
-          home-manager.users.isabella = import ./systems/desktop/home.nix;
-        }
-      ];
+      modules =
+        (import ./modules/modules.nix)
+        ++ [
+          ./systems/desktop/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            networking.hostName = "IsblDesktop";
+            home-manager.users.isabella = import ./systems/desktop/home.nix;
+          }
+        ];
     };
     nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";

@@ -63,6 +63,8 @@
     bitwarden # missing aarch64 and it does not really do much anyways
   ];
 
+  isbl.cosmic.enable = true;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
