@@ -57,4 +57,4 @@ alias zi = __zoxide_zi
 #
 #   source ~/.zoxide.nu
 #
-# Note: zoxide only supports Nushell v0.73.0 and above.
+# Note: zoxide only supports Nushell v0.86.0+.
