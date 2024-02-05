@@ -53,6 +53,7 @@
     zellij
     usbutils
     wl-clipboard
+    inkscape
 
     libreoffice-qt
     hunspell
