@@ -62,6 +62,8 @@
     hunspellDicts.en_US-large
     hunspellDicts.en_GB-large
   ];
+  virtualisation.podman.enable = true;
+
   environment.variables.EDITOR = "nvim";
   environment.shells = [pkgs.nushell];
   environment.gnome.excludePackages = with pkgs.gnome; [
