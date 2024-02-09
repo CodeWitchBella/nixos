@@ -70,14 +70,20 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.0.0";
-      sha256 = "0sy1z2r6b0m1lkivjyrcf41dbgj9m5zkjy6yncpji1hisjcbgq6n";
+      version = "2024.1.10391007";
+      sha256 = "1zdg08w2sp2zllxnhsx9d5mxs7vn767q3y6dfy0h07cgjgbxkkpw";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.1.104";
-      sha256 = "00h7iri4xn01k6pmxlmzvhsasljl5jnpc7y4q8njc5v37illgzyv";
+      version = "2024.2.1";
+      sha256 = "1a5d6gdavbb3m9p68201vn5bd5q7j8q8gv4s4459d2qzllvz2mr2";
+    }
+    {
+      name = "remote-ssh";
+      publisher = "ms-vscode-remote";
+      version = "0.109.2024020215";
+      sha256 = "10zzajbckdvyj1912s9lcc74qjdcfdj16phcb9gmms0jbcwwsg4v";
     }
     {
       name = "prisma";
@@ -88,8 +94,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1827";
-      sha256 = "0qbmqlc1qnxgxnp1a61nj2jsmnn9wi25nypjar5iw8ikyvm91dl4";
+      version = "0.4.1834";
+      sha256 = "1syfvxdfay2kkfjgk16sq8i8nl5f3ayzz32z907i2cdxca17yqwm";
     }
     {
       name = "rewrap";
@@ -124,8 +130,8 @@
     {
       name = "gitblame";
       publisher = "waderyan";
-      version = "10.8.0";
-      sha256 = "080hks0zh3f2h8g6y5nvh7xnlp2h53dzs3kqrwn20kl2imbrxrjw";
+      version = "10.9.0";
+      sha256 = "05ikbw71jki82crr960wfnvsl2d73pi9ilh14qpg87q06500wg22";
     }
     {
       name = "change-case";

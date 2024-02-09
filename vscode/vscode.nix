@@ -14,6 +14,7 @@
         [
           rust-lang.rust-analyzer
           kamadorueda.alejandra
+          ms-vscode-remote.remote-ssh
         ]
         ++ (
           map
@@ -33,6 +34,7 @@
                   && ext.name != "alejandra"
                   # atlassian crap only on work machine
                   && ext.name != "atlascode"
+                  && ext.name != "remote-ssh"
               )
               (import ../vscode/extensions.nix).extensions
             )
