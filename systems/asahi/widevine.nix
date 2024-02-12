@@ -44,11 +44,11 @@ final: prev: let
       COPY_CONFIGS=0 INSTALL_BASE="$out" DISTFILES_BASE="file://$src" widevine-installer
     '';
   };
-  chromiumWV =
-    prev.runCommand "chromium-wv" {version = prev.chromium.version;}
+  ungoogled-chromiumWV =
+    prev.runCommand "chromium-wv" {version = prev.ungoogled-chromium.version;}
     ''
       mkdir -p $out
-      cp -a ${prev.chromium.browser}/* $out/
+      cp -a ${prev.ungoogled-chromium.browser}/* $out/
       chmod u+w $out/libexec/chromium
       cp -Lr ${widevine}/WidevineCdm $out/libexec/chromium/
     '';
@@ -57,7 +57,7 @@ in {
   firefox = prev.firefox.overrideAttrs (old: {
     extraPrefsFiles = ["${widevine-installer}/conf/gmpwidevine.js"];
   });
-  chromium = prev.chromium.overrideAttrs (old: {
-    buildCommand = builtins.replaceStrings ["${prev.chromium.browser}"] ["${chromiumWV}"] old.buildCommand;
+  ungoogled-chromium = prev.ungoogled-chromium.overrideAttrs (old: {
+    buildCommand = builtins.replaceStrings ["${prev.ungoogled-chromium.browser}"] ["${ungoogled-chromiumWV}"] old.buildCommand;
   });
 }
