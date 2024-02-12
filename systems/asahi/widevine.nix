@@ -16,8 +16,10 @@ final: prev: let
 
     installPhase = ''
       mkdir -p "$out/bin"
+      mkdir -p "$out/conf"
       cp widevine-installer "$out/bin/"
       cp widevine_fixup.py "$out/bin/"
+      cp conf/gmpwidevine.js "$out/conf/"
       echo "$(which unsquashfs)"
       sed -e "s|unsquashfs|$(which unsquashfs)|" -i "$out/bin/widevine-installer"
       sed -e "s|python3|$(which python3)|" -i "$out/bin/widevine-installer"
@@ -51,6 +53,10 @@ final: prev: let
       cp -Lr ${widevine}/WidevineCdm $out/libexec/chromium/
     '';
 in {
+  widevine = widevine;
+  firefox = prev.firefox.overrideAttrs (old: {
+    extraPrefsFiles = ["${widevine-installer}/conf/gmpwidevine.js"];
+  });
   chromium = prev.chromium.overrideAttrs (old: {
     buildCommand = builtins.replaceStrings ["${prev.chromium.browser}"] ["${chromiumWV}"] old.buildCommand;
   });

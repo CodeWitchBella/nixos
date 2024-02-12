@@ -16,6 +16,7 @@
   nixpkgs.overlays = [
     (import ./widevine.nix)
   ];
+  environment.sessionVariables.MOZ_GMP_PATH = ["${pkgs.widevine}/gmp-widevinecdm/system-installed"];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
