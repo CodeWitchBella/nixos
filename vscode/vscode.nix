@@ -57,7 +57,8 @@
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
-    "python.analysis.typeCheckingMode" = "strict";
+    "mypy-type-checker.importStrategy" = "fromEnvironment";
+    "python.analysis.typeCheckingMode" = "off";
     "python.analysis.diagnosticMode" = "workspace";
     "python.analysis.autoImportCompletions" = true;
     "python.analysis.inlayHints.variableTypes" = true;
