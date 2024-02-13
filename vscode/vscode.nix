@@ -58,6 +58,14 @@
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
     "python.analysis.typeCheckingMode" = "strict";
+    "python.analysis.diagnosticMode" = "workspace";
+    "python.analysis.autoImportCompletions" = true;
+    "python.analysis.inlayHints.variableTypes" = true;
+    "python.analysis.inlayHints.functionReturnTypes" = true;
+    "python.analysis.inlayHints.callArgumentNames" = "all";
+    "python.analysis.inlayHints.pytestParameters" = true;
+    "python.analysis.fixAll" = ["source.unusedImports" "source.convertImportFormat"];
+    "python.analysis.autoFormatStrings" = true;
     "[yaml]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "workbench.tree.enableStickyScroll" = true;
   };
