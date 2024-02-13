@@ -59,5 +59,6 @@
     "vsicons.dontShowNewVersionMessage" = true;
     "python.analysis.typeCheckingMode" = "strict";
     "[yaml]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "workbench.tree.enableStickyScroll" = true;
   };
 }
