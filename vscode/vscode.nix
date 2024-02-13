@@ -25,24 +25,15 @@
               };
             })
           (
+            builtins.filter
             (
-              builtins.filter
-              (
-                ext:
-                  ext.name
-                  != "rust-analyzer"
-                  && ext.name != "alejandra"
-                  # atlassian crap only on work machine
-                  && ext.name != "atlascode"
-                  && ext.name != "remote-ssh"
-              )
-              (import ../vscode/extensions.nix).extensions
+              ext:
+                ext.name
+                != "rust-analyzer"
+                && ext.name != "alejandra"
+                && ext.name != "remote-ssh"
             )
-            ++ (
-              if host == "work"
-              then (import ../vscode/extensions-work.nix).extensions
-              else []
-            )
+            (import ../vscode/extensions.nix).extensions
           )
         );
     }
@@ -66,30 +57,7 @@
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
-    "atlascode.bitbucket.enabled" = false;
-    "redhat.telemetry.enabled" = false;
-    "atlascode.jira.jqlList" = [
-      {
-        "id" = "37c659fb-4276-47d1-8322-f2c5728d4424";
-        "siteId" = "6b7e7661-4a41-4d17-a5e2-ffc6e0719bd4";
-        "name" = "my tickets in current sprint";
-        "query" = "sprint in openSprints() and assignee = currentUser()";
-        "enabled" = true;
-        "monitor" = true;
-      }
-      {
-        "id" = "25dc507b-83b4-4b8e-9f1d-aaedc5b3284b";
-        "siteId" = "6b7e7661-4a41-4d17-a5e2-ffc6e0719bd4";
-        "name" = "my tickets in backlog";
-        "query" = "sprint is empty and assignee = currentUser()";
-        "enabled" = true;
-        "monitor" = true;
-      }
-    ];
-    "atlascode.jira.todoIssues.enabled" = false;
-    "atlascode.jira.startWorkBranchTemplate.customTemplate" = "isbl/{{{issuekey}}}-{{{summary}}}";
     "python.analysis.typeCheckingMode" = "strict";
-    "yaml.schemas"."file:///nix/store/3wvs2g85k4qxp6nl7ndhn1gcr582fc4m-vscode-extension-atlassian-atlascode-3.0.9/share/vscode/extensions/atlassian.atlascode/resources/schemas/pipelines-schema.json" = "bitbucket-pipelines.yml";
     "[yaml]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
   };
 }
