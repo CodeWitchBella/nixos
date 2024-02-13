@@ -8,7 +8,7 @@
       sha256 = "0wvrqnsiqsxb0a7hyccri85f5pfh9biifq4x2bllpl8mg79l5m68";
     }
     {
-      name = "Nix";
+      name = "nix";
       publisher = "bbenoist";
       version = "1.0.1";
       sha256 = "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b";
@@ -32,8 +32,8 @@
       sha256 = "1vlh8jazpzc0a8zziyn4n2ifbkjn16r3hcw30d25x41p2n45nkg3";
     }
     {
-      name = "EditorConfig";
-      publisher = "EditorConfig";
+      name = "editorconfig";
+      publisher = "editorconfig";
       version = "0.16.4";
       sha256 = "0fa4h9hk1xq6j3zfxvf483sbb4bd17fjl5cdm3rll7z9kaigdqwg";
     }
@@ -57,7 +57,7 @@
     }
     {
       name = "openscad-language-support";
-      publisher = "Leathong";
+      publisher = "leathong";
       version = "1.2.5";
       sha256 = "17yqkl0yglxpsibjh3i50p4fg4bsfn61lnj49wjzclfxfl2z28pw";
     }
@@ -68,10 +68,16 @@
       sha256 = "1jmwqbbh5x5z7dscgcn4pb0g41k7zlhgf5i8syl3ipv6z270aq5v";
     }
     {
+      name = "mypy-type-checker";
+      publisher = "ms-python";
+      version = "2023.9.10221010";
+      sha256 = "0kp0pzjd5mi40hn3s1d3pfxykhy0qc9wnr11lvjg3kf6dv4kyjf2";
+    }
+    {
       name = "python";
       publisher = "ms-python";
-      version = "2024.1.10391007";
-      sha256 = "1zdg08w2sp2zllxnhsx9d5mxs7vn767q3y6dfy0h07cgjgbxkkpw";
+      version = "2024.1.10441005";
+      sha256 = "1xkmrlyppshqq2kzry05ji1yp0w122sy5syx8xwjqlgwmqhnkm6g";
     }
     {
       name = "vscode-pylance";
@@ -87,15 +93,15 @@
     }
     {
       name = "prisma";
-      publisher = "Prisma";
+      publisher = "prisma";
       version = "5.9.1";
       sha256 = "0danydrxq4qcjvlb86m486x6xqhyhbxxlwrg4gr18b9afzlcdp0v";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1834";
-      sha256 = "1syfvxdfay2kkfjgk16sq8i8nl5f3ayzz32z907i2cdxca17yqwm";
+      version = "0.4.1840";
+      sha256 = "11ys7qi7c8dn8l548qpk9gqh1grdl8bwzk4d5xkik67sl9g5y8jw";
     }
     {
       name = "rewrap";
@@ -111,7 +117,7 @@
     }
     {
       name = "vscode-nushell-lang";
-      publisher = "TheNuProjectContributors";
+      publisher = "thenuprojectcontributors";
       version = "1.8.0";
       sha256 = "1mpnb8grs9ga1r7qw9qixa6ikl48k40rxqjkysxr37p89gkwsbja";
     }
