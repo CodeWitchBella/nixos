@@ -37,6 +37,7 @@
   environment.systemPackages = with pkgs; [
     beekeeper-studio
     thunderbird
+    graphite-cli
   ];
 
   virtualisation.podman = {

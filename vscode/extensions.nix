@@ -20,6 +20,12 @@
       sha256 = "10z3gj6jcyszsg6nkqdsfvkl7jhcw5p55122g9515v20vdwqwg4y";
     }
     {
+      name = "ruff";
+      publisher = "charliermarsh";
+      version = "2024.10.0";
+      sha256 = "0jl0q6zprjb5ngrz1n7bygqybapnaa1x9yg224y9yb4bf2x4zp6w";
+    }
+    {
       name = "vscode-eslint";
       publisher = "dbaeumer";
       version = "2.4.4";
