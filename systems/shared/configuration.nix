@@ -4,12 +4,14 @@
   ...
 }: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  nix.settings.auto-optimise-store = true;
+  # nix.settings.auto-optimise-store = true; # On every build
+  nix.optimise.automatic = true; # on schedule
   nix.gc = {
     automatic = true;
     dates = "daily";
     options = "--delete-older-than 60d";
   };
+
   system.autoUpgrade = {
     enable = false;
     flake = "${config.users.users.isabella.home}/nixos";
