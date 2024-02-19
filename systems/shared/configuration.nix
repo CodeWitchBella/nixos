@@ -46,6 +46,7 @@
     firefox
     gitFull
     (nerdfonts.override {fonts = ["FiraCode"];})
+    b612
     gnome.gnome-tweaks
     dig
     mesa-demos
