@@ -23,7 +23,7 @@
       name = "ruff";
       publisher = "charliermarsh";
       version = "2024.10.0";
-      sha256 = "0jl0q6zprjb5ngrz1n7bygqybapnaa1x9yg224y9yb4bf2x4zp6w";
+      sha256 = "sha256-Ugbgxzm5wnUJbx7wAQGLFGrFeqPLxfgTgTCp6BLAA9s=";
     }
     {
       name = "vscode-eslint";
