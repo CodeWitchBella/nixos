@@ -24,6 +24,7 @@
     super-slicer-latest
     cura
     openscad
+    freecad
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
