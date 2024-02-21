@@ -64,6 +64,7 @@
     hunspellDicts.cs_CZ
     hunspellDicts.en_US-large
     hunspellDicts.en_GB-large
+    bind
   ];
   virtualisation.podman.enable = true;
 
