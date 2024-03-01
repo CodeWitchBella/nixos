@@ -50,6 +50,7 @@
     "git.confirmSync" = false;
     "git.autofetch" = true;
     "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "[typescript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.rulers" = [80 120];
