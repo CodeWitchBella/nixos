@@ -13,8 +13,10 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    # components that need to be in PATH
+    # environment packages
+    environment.pathsToLink = ["/share/cosmic"];
     environment.systemPackages = with pkgs; [
+      gnome.adwaita-icon-theme
       cosmic-applibrary
       cosmic-applets
       cosmic-bg
@@ -29,20 +31,49 @@ in {
       cosmic-panel
       cosmic-randr
       cosmic-screenshot
+      cosmic-session
       cosmic-settings
       cosmic-settings-daemon
       cosmic-term
       cosmic-workspaces-epoch
+      hicolor-icon-theme
+      pop-icon-theme
+      pop-launcher
     ];
 
-    # COSMIC portal doesn't support everything yet
-    xdg.portal.extraPortals = with pkgs; [
-      xdg-desktop-portal-cosmic
-      #xdg-desktop-portal-gtk
+    # xdg portal packages and config
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-cosmic
+        xdg-desktop-portal-gtk
+      ];
+      configPackages = with pkgs; [
+        xdg-desktop-portal-cosmic
+      ];
+    };
+
+    # fonts
+    fonts.packages = with pkgs; [
+      fira-mono
     ];
 
-    # session files for display manager and systemd
+    # required features
+    hardware.opengl.enable = true;
+    services.xserver.libinput.enable = true;
+
+    # optional features
+    #hardware.pulseaudio.enable = lib.mkDefault true;
+
+    # required dbus services
+    services.upower.enable = true;
+    security.polkit.enable = true;
+
+    # session packages
     services.xserver.displayManager.sessionPackages = with pkgs; [cosmic-session];
     systemd.packages = with pkgs; [cosmic-session];
+
+    # required for screen locker
+    security.pam.services.cosmic-greeter = {};
   };
 }
