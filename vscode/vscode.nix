@@ -15,6 +15,7 @@
           rust-lang.rust-analyzer
           kamadorueda.alejandra
           ms-vscode-remote.remote-ssh
+          charliermarsh.ruff
         ]
         ++ (
           map
@@ -32,6 +33,7 @@
                 != "rust-analyzer"
                 && ext.name != "alejandra"
                 && ext.name != "remote-ssh"
+                && ext.name != "ruff"
             )
             (import ../vscode/extensions.nix).extensions
           )
