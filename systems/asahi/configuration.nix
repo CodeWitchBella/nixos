@@ -54,7 +54,6 @@
   };
 
   #hardware.asahi.pkgsSystem = "x86_64-linux";
-  hardware.asahi.addEdgeKernelConfig = true;
   hardware.asahi.withRust = true;
   hardware.asahi.useExperimentalGPUDriver = true;
   #hardware.asahi.experimentalGPUInstallMode = "overlay";
