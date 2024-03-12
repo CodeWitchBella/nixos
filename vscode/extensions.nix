@@ -70,8 +70,8 @@
     {
       name = "direnv";
       publisher = "mkhl";
-      version = "0.16.0";
-      sha256 = "1jmwqbbh5x5z7dscgcn4pb0g41k7zlhgf5i8syl3ipv6z270aq5v";
+      version = "0.17.0";
+      sha256 = "1n2qdd1rspy6ar03yw7g7zy3yjg9j1xb5xa4v2q12b0y6dymrhgn";
     }
     {
       name = "mypy-type-checker";
@@ -100,8 +100,8 @@
     {
       name = "prisma";
       publisher = "prisma";
-      version = "5.10.2";
-      sha256 = "12vbarlq2cn8x72h1c068dh646m1cvi4jazmwmjr5fxgf20ykjck";
+      version = "5.11.0";
+      sha256 = "1l6vk8kkd4jzc9iwqrwkh78jrf9ks1ynkn5z8fgr3bykkbmqp0r4";
     }
     {
       name = "rust-analyzer";
@@ -142,8 +142,8 @@
     {
       name = "gitblame";
       publisher = "waderyan";
-      version = "10.9.0";
-      sha256 = "05ikbw71jki82crr960wfnvsl2d73pi9ilh14qpg87q06500wg22";
+      version = "10.10.0";
+      sha256 = "1qahqqdbqzagzka5qc6znf7imvgpcn5k4zk5cqnwcr1g2ckinrxm";
     }
     {
       name = "change-case";

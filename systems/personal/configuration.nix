@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  pkgs-stable,
   ...
 }: {
   imports = [../shared/configuration.nix];
@@ -21,10 +22,11 @@
     rbw
     pinentry
     pinentry-gnome
-    super-slicer-latest
+    pkgs-stable.super-slicer-latest
     cura
     openscad
     freecad
+    telegram-desktop
   ];
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;

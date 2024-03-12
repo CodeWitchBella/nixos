@@ -57,7 +57,6 @@
     usbutils
     wl-clipboard
     inkscape
-    orca-slicer
 
     libreoffice-qt
     hunspell
