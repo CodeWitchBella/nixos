@@ -16,8 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.48";
-      sha256 = "1kivvgrccd5yr5cgivn0q1c7p1vf8ls8jg2g7d0qdm7rr8p1vz6c";
+      version = "0.11.51";
+      sha256 = "1vb3xqvqs2s6zasfh9s943lx481a1ksfh14av59llvbbn5w4w4d6";
     }
     {
       name = "ruff";
@@ -82,14 +82,14 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.3.10681011";
-      sha256 = "0lx82p85qm2256qnzmb0mfsxfc3wzi94wamki0gyy202gv297yhj";
+      version = "2024.3.10742127";
+      sha256 = "187x6j7300wgvcxh2lcic6ivvavsllzhq0cayqiji943pw3z3k2r";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.2.106";
-      sha256 = "1kz337x9k0im2clrga8244wscfkwkz591i10q6mnlivphvc1qp1s";
+      version = "2024.3.100";
+      sha256 = "1wgzf4gjrs3lijrgl24bmkbsngyisw8dsyc1370yxspi3npdmj59";
     }
     {
       name = "remote-ssh";
@@ -106,8 +106,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1878";
-      sha256 = "13af325vh0sgi1vqgwv06w8ywhlmhpyhsy1ykdphkkaib4bcqpnz";
+      version = "0.4.1881";
+      sha256 = "1zjj0hhcjdc6f1g4yh1mximyqrpibfd5jmd7hjsp5ji10r8kk21n";
     }
     {
       name = "rewrap";
@@ -130,8 +130,8 @@
     {
       name = "vscode-mdx";
       publisher = "unifiedjs";
-      version = "1.8.1";
-      sha256 = "06lzj4iqr5n8bd785603kmq01liifrky2ab980rhnswdjgn1nv7z";
+      version = "1.8.2";
+      sha256 = "0m0xqhcxwmrvp57hcihwmp81jdypqg4xkz3ib54amhaw555szc0n";
     }
     {
       name = "vscode-icons";
