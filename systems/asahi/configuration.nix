@@ -46,8 +46,6 @@
   };
   services.sshd.enable = false;
 
-  isbl.cosmic.enable = true;
-
   networking.wireless.iwd = {
     enable = true;
     settings.General.EnableNetworkConfiguration = true;
