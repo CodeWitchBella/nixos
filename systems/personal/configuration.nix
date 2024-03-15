@@ -20,8 +20,6 @@
     obs-studio
     bitwarden-cli
     rbw
-    pinentry
-    pinentry-gnome
     pkgs-stable.super-slicer-latest
     cura
     openscad

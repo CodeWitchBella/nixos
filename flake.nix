@@ -39,8 +39,13 @@
         ./darwin/configuration.nix
       ];
     };
-    nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem {
+    nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
+      specialArgs = {
+        pkgs-stable = import nixpkgs-stable {
+          system = system;
+        };
+      };
       modules =
         (import ./modules/modules.nix)
         ++ [
