@@ -57,6 +57,7 @@
     usbutils
     wl-clipboard
     inkscape
+    vlc
 
     libreoffice-qt
     hunspell
