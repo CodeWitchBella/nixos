@@ -58,6 +58,7 @@
     wl-clipboard
     inkscape
     vlc
+    lshw
 
     libreoffice-qt
     hunspell
