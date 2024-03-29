@@ -16,8 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.51";
-      sha256 = "1vb3xqvqs2s6zasfh9s943lx481a1ksfh14av59llvbbn5w4w4d6";
+      version = "0.11.59";
+      sha256 = "1gsbjc8j2pg0shn0ncjzc09y2d4zr6vbjv7hn42ysl4d6kswn4in";
     }
     {
       name = "ruff";
@@ -34,8 +34,8 @@
     {
       name = "vscode-sqlfluff";
       publisher = "dorzey";
-      version = "2.4.4";
-      sha256 = "1vlh8jazpzc0a8zziyn4n2ifbkjn16r3hcw30d25x41p2n45nkg3";
+      version = "3.0.0";
+      sha256 = "17k85qc7jh0rbpynl98shjdd5nh1a5f7nqmbr8r1q0xzmzi06wp8";
     }
     {
       name = "editorconfig";
@@ -46,8 +46,8 @@
     {
       name = "prettier-vscode";
       publisher = "esbenp";
-      version = "10.1.0";
-      sha256 = "01s0vi2h917mqfpdrhqhp2ijwkibw95yk2js0l587wvajbbry2s9";
+      version = "10.4.0";
+      sha256 = "1iy7i0yxnhizz40llnc1dk9q8kk98rz6ki830sq7zj3ak9qp9vzk";
     }
     {
       name = "alejandra";
@@ -76,26 +76,26 @@
     {
       name = "mypy-type-checker";
       publisher = "ms-python";
-      version = "2023.9.10221010";
-      sha256 = "0kp0pzjd5mi40hn3s1d3pfxykhy0qc9wnr11lvjg3kf6dv4kyjf2";
+      version = "2023.9.10871012";
+      sha256 = "0h718lfh42bb0fnxa7lzghcwyha2wgnh7rqiscq1sl3j7l30qmjk";
     }
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.3.10742127";
-      sha256 = "187x6j7300wgvcxh2lcic6ivvavsllzhq0cayqiji943pw3z3k2r";
+      version = "2024.3.10871011";
+      sha256 = "0m5k7v434jqa9rxfzq20qdla1l9dsar942nbczcxxf2srv7dw44d";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.3.100";
-      sha256 = "1wgzf4gjrs3lijrgl24bmkbsngyisw8dsyc1370yxspi3npdmj59";
+      version = "2024.3.102";
+      sha256 = "1zwsgrq8xrl552p6103q49xclgj80cvh5v7j106j9rhjajxya5xk";
     }
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.110.2024030815";
-      sha256 = "1cagvj5jr6s01m3vk22yywmsqb4cmb77gf533xzl236r34ika1b6";
+      version = "0.111.2024032715";
+      sha256 = "1y0bx128djxsy3dkr12f89kzijq60pvgwd8pdg2x43fi0c3nnk42";
     }
     {
       name = "prisma";
@@ -106,8 +106,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1881";
-      sha256 = "1zjj0hhcjdc6f1g4yh1mximyqrpibfd5jmd7hjsp5ji10r8kk21n";
+      version = "0.4.1901";
+      sha256 = "10bqhsp4drq38qvswsviq42flm0cbasnl19m486j89pa3bxrxg24";
     }
     {
       name = "rewrap";
@@ -130,8 +130,8 @@
     {
       name = "vscode-mdx";
       publisher = "unifiedjs";
-      version = "1.8.2";
-      sha256 = "0m0xqhcxwmrvp57hcihwmp81jdypqg4xkz3ib54amhaw555szc0n";
+      version = "1.8.3";
+      sha256 = "03z8rrkcigzkv1g4p1wapiwwsrbrf5nbq8hgaxxli9b8p6b64m2q";
     }
     {
       name = "vscode-icons";
