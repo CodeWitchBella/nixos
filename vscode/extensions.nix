@@ -16,14 +16,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.59";
-      sha256 = "1gsbjc8j2pg0shn0ncjzc09y2d4zr6vbjv7hn42ysl4d6kswn4in";
-    }
-    {
-      name = "ruff";
-      publisher = "charliermarsh";
-      version = "2024.16.0";
-      sha256 = "0yqk44p4di0h9l2b5i06nndwr4ss7w6b6dlpmig1aw5f9zfdf6ja";
+      version = "0.11.60";
+      sha256 = "1kb6xzmjlr5gy2c5dzfkqfbki0cg54491i1zhxijhrq4948cxza1";
     }
     {
       name = "vscode-eslint";
@@ -106,8 +100,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1901";
-      sha256 = "10bqhsp4drq38qvswsviq42flm0cbasnl19m486j89pa3bxrxg24";
+      version = "0.4.1902";
+      sha256 = "1c1bma00c6pjwqidv9395j67w7332mrqw1f25ahxs30wswmbhpbi";
     }
     {
       name = "rewrap";
