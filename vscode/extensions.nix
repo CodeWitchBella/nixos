@@ -28,8 +28,8 @@
     {
       name = "vscode-sqlfluff";
       publisher = "dorzey";
-      version = "3.0.0";
-      sha256 = "17k85qc7jh0rbpynl98shjdd5nh1a5f7nqmbr8r1q0xzmzi06wp8";
+      version = "3.0.2";
+      sha256 = "1y3x1j301rigci3v1pc8i3q9qynagg5xkdbv7npy923aicri5plj";
     }
     {
       name = "editorconfig";
@@ -100,8 +100,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1902";
-      sha256 = "1c1bma00c6pjwqidv9395j67w7332mrqw1f25ahxs30wswmbhpbi";
+      version = "0.4.1907";
+      sha256 = "07nva6cbxi665kzry9vf0b1vjvfz01959a0dkdmzsl5fdaw67f41";
     }
     {
       name = "rewrap";

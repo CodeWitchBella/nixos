@@ -59,6 +59,7 @@
     inkscape
     vlc
     lshw
+    pciutils
 
     libreoffice-qt
     hunspell
