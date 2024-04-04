@@ -34,6 +34,10 @@
     pulse.enable = true;
   };
 
+  systemd.oomd = {
+    enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     beekeeper-studio
     thunderbird
