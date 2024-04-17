@@ -16,14 +16,14 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.11.60";
-      sha256 = "1kb6xzmjlr5gy2c5dzfkqfbki0cg54491i1zhxijhrq4948cxza1";
+      version = "0.11.63";
+      sha256 = "1rcx9a02j8jx0w0zwcnalrpcd4ding4hbaw1hvvl96rra3v5c1v3";
     }
     {
       name = "vscode-eslint";
       publisher = "dbaeumer";
-      version = "2.4.4";
-      sha256 = "1c10n36a3bxwwjgd4vhrf79wg14dm0hxvz9z23pqdyxzcwrar49l";
+      version = "3.0.5";
+      sha256 = "1cmkgi1i5c7qkrr8cif36i803yl6mrv87y9gmzfb701pcfg8yxx9";
     }
     {
       name = "vscode-sqlfluff";
@@ -70,38 +70,38 @@
     {
       name = "mypy-type-checker";
       publisher = "ms-python";
-      version = "2023.9.10871012";
-      sha256 = "0h718lfh42bb0fnxa7lzghcwyha2wgnh7rqiscq1sl3j7l30qmjk";
+      version = "2023.9.10961015";
+      sha256 = "0ndpgshv22f8cm5j741mqrlw6iksc6ny2qsb469v3wg4ga5dw5c3";
     }
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.3.10871011";
-      sha256 = "0m5k7v434jqa9rxfzq20qdla1l9dsar942nbczcxxf2srv7dw44d";
+      version = "2024.5.11021008";
+      sha256 = "11mnnbdl7cqr18s2cvv2132rrq1f5zslnihp5i2jpa2awjak8wjj";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.3.102";
-      sha256 = "1zwsgrq8xrl552p6103q49xclgj80cvh5v7j106j9rhjajxya5xk";
+      version = "2024.4.101";
+      sha256 = "13yi6v1l7k1g0r7fhw3gasv7drn03slh0lxp6pcmqlrajkp0cn1n";
     }
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.111.2024032715";
-      sha256 = "1y0bx128djxsy3dkr12f89kzijq60pvgwd8pdg2x43fi0c3nnk42";
+      version = "0.112.2024040915";
+      sha256 = "06cz4q82aw0nzlqc06dnkn7nx2hc66plw1pqbfsn42l42g35d1fz";
     }
     {
       name = "prisma";
       publisher = "prisma";
-      version = "5.11.0";
-      sha256 = "1l6vk8kkd4jzc9iwqrwkh78jrf9ks1ynkn5z8fgr3bykkbmqp0r4";
+      version = "5.12.1";
+      sha256 = "1362636pag1a0i241i08j4289skxgjafv14c4dwzk0lgb7j8vxvv";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.1907";
-      sha256 = "07nva6cbxi665kzry9vf0b1vjvfz01959a0dkdmzsl5fdaw67f41";
+      version = "0.4.1926";
+      sha256 = "0js1qsmx7m8s6vz9widpsnrmy9scqdwpxbrmgfasihn0i5vlqhkv";
     }
     {
       name = "rewrap";
