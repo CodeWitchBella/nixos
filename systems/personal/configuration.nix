@@ -20,7 +20,7 @@
     obs-studio
     bitwarden-cli
     rbw
-    pkgs-stable.super-slicer-latest
+    super-slicer-latest
     cura
     openscad
     freecad

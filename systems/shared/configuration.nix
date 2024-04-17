@@ -102,15 +102,16 @@
     desktopManager.gnome.enable = true;
     displayManager = {
       gdm.enable = true;
-
-      # Enable automatic login for the user, we're aiming to get to encrypted hard
-      # drive everywhere anyway.
-      autoLogin.enable = true;
-      autoLogin.user = "isabella";
     };
 
     # Enable touchpad support (enabled default in most desktopManager).
     libinput.enable = true;
+  };
+  services.displayManager = {
+    # Enable automatic login for the user, we're aiming to get to encrypted hard
+    # drive everywhere anyway.
+    autoLogin.enable = true;
+    autoLogin.user = "isabella";
   };
 
   # Set your time zone.
