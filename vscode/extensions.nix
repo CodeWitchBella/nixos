@@ -76,8 +76,8 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.5.11141012";
-      sha256 = "1ij802c95xxs7r5802nd5mn3a2hmiq6wqlv1qqq89p6blz6yh24p";
+      version = "2024.5.11021008";
+      sha256 = "11mnnbdl7cqr18s2cvv2132rrq1f5zslnihp5i2jpa2awjak8wjj";
     }
     {
       name = "vscode-pylance";
