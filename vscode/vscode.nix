@@ -10,38 +10,37 @@
   package =
     pkgs.vscode-with-extensions.override
     {
-      vscodeExtensions = with pkgs.vscode-extensions;
-        [
+      vscodeExtensions = let
+        nixpkgs-exts = with pkgs.vscode-extensions; [
           rust-lang.rust-analyzer
           kamadorueda.alejandra
           ms-vscode-remote.remote-ssh
-        ]
-        ++ (
+        ];
+        shared-exts =
+          builtins.filter
+          (
+            ext:
+              ext.name
+              != "rust-analyzer"
+              && ext.name != "alejandra"
+              && ext.name != "remote-ssh"
+              && ext.name != "ruff"
+          )
+          (import ../vscode/extensions.nix).extensions;
+        work-exts =
           if host == "work"
           then (import ./work-extensions.nix).extensions
-          else []
-        )
-        ++ (
-          map
-          (extension:
-            pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-              mktplcRef = {
-                inherit (extension) name publisher version sha256;
-              };
-            })
-          (
-            builtins.filter
-            (
-              ext:
-                ext.name
-                != "rust-analyzer"
-                && ext.name != "alejandra"
-                && ext.name != "remote-ssh"
-                && ext.name != "ruff"
-            )
-            (import ../vscode/extensions.nix).extensions
-          )
-        );
+          else [];
+        exts = shared-exts ++ work-exts;
+        build-extension = extension:
+          pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+            mktplcRef = {
+              inherit (extension) name publisher version sha256;
+            };
+          };
+      in
+        nixpkgs-exts
+        ++ (map build-extension exts);
     }
     // {pname = "vscode";};
   userSettings = {
