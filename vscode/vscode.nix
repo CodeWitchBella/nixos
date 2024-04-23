@@ -17,6 +17,11 @@
           ms-vscode-remote.remote-ssh
         ]
         ++ (
+          if host == "work"
+          then (import ./work-extensions.nix).extensions
+          else []
+        )
+        ++ (
           map
           (extension:
             pkgs.vscode-utils.buildVscodeMarketplaceExtension {
@@ -32,11 +37,7 @@
                 != "rust-analyzer"
                 && ext.name != "alejandra"
                 && ext.name != "remote-ssh"
-                && (
-                  if ext.name != "ruff"
-                  then true
-                  else host == "work"
-                )
+                && ext.name != "ruff"
             )
             (import ../vscode/extensions.nix).extensions
           )
