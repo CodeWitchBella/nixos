@@ -25,7 +25,7 @@
   users.users.isabella = {
     isNormalUser = true;
     description = "Isabella Skořepová";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp"];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout"];
     shell = pkgs.nushell;
   };
 
