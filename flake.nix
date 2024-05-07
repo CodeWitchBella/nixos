@@ -21,6 +21,16 @@
 
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
+
+    lix = {
+      url = "git+https://git@git.lix.systems/lix-project/lix?ref=refs/tags/2.90-beta.1";
+      flake = false;
+    };
+    lix-module = {
+      url = "git+https://git.lix.systems/lix-project/nixos-module";
+      inputs.lix.follows = "lix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -30,6 +40,7 @@
     asahi-firmware,
     nixos-apple-silicon,
     flake-utils,
+    lix-module,
     ...
   }: {
     darwinConfigurations."IsabellaM2" = darwin.lib.darwinSystem {
@@ -70,6 +81,7 @@
           ./systems/asahi/configuration.nix
           home-manager.nixosModules.home-manager
           nixos-apple-silicon.nixosModules.apple-silicon-support
+          lix-module.nixosModules.default
           {
             hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
             networking.hostName = "IsblAsahi";
