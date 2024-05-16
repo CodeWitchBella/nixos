@@ -33,7 +33,6 @@
     pkgs.htop
     pkgs.jq
     pkgs.gh
-    pkgs.awscli2
     pkgs.lastpass-cli
     pkgs.docker-compose
     pkgs.cachix
