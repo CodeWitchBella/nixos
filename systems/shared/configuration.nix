@@ -105,8 +105,8 @@
     };
 
     # Enable touchpad support (enabled default in most desktopManager).
-    libinput.enable = true;
   };
+  services.libinput.enable = true;
   services.displayManager = {
     # Enable automatic login for the user, we're aiming to get to encrypted hard
     # drive everywhere anyway.
