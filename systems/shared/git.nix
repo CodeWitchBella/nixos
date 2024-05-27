@@ -11,6 +11,28 @@
     commit.gpgsign = true;
     gpg.format = "ssh";
     alias.frp = "!bash -c \"git fetch --prune --tags ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`; git push --force\"";
+    alias.squash = ''      !bash -c '
+        if [ -z "$1" ]; then
+          echo "Usage: git squash [REF]"
+          echo "eg. git squash HEAD~3 would squash the last three commits"
+          exit 0
+        fi
+        echo "0: $0"
+        echo "1: $1"
+        echo "2: $2"
+        set -xe
+        BRANCH=`git symbolic-ref HEAD --short`
+        TRACKING=`git rev-parse --abbrev-ref --symbolic-full-name @{u}`
+        git branch -m "tmp/$BRANCH"
+        git checkout "$1"
+
+        git switch -c "$BRANCH"
+        git merge --squash "tmp/$BRANCH"
+        git commit --no-edit
+        git branch -D "tmp/$BRANCH"
+        git branch --set-upstream-to "$TRACKING"
+      ' - \
+    '';
     alias.fr = "!bash -c \"git fetch --prune --tags ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
     alias.ruff = ''      !bash -c "
               set -xe
