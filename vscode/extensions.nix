@@ -26,6 +26,12 @@
       sha256 = "03ii58jpvmbl5kwq34cmx0f2x08rla75sn32fv0xns5jprjxaaiy";
     }
     {
+      name = "biome";
+      publisher = "biomejs";
+      version = "2.3.0";
+      sha256 = "sha256-GrMyXn5yfxjbUi0YuioPX137P+8TWdh5V6HC0kvLFYE=";
+    }
+    {
       name = "vscode-sqlfluff";
       publisher = "dorzey";
       version = "3.0.2";
