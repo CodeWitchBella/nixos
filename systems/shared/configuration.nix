@@ -56,7 +56,7 @@
     gitFull
     (nerdfonts.override {fonts = ["FiraCode"];})
     b612
-    gnome.gnome-tweaks
+    gnome-tweaks
     dig
     mesa-demos
     zoxide
@@ -82,12 +82,12 @@
 
   environment.variables.EDITOR = "nvim";
   environment.shells = [pkgs.nushell];
-  environment.gnome.excludePackages = with pkgs.gnome; [
-    epiphany # web browser
-    totem # video player
-    geary # email client
-    seahorse # password manager
-    gnome-music
+  environment.gnome.excludePackages = [
+    pkgs.epiphany # web browser
+    pkgs.totem # video player
+    pkgs.geary # email client
+    pkgs.seahorse # password manager
+    pkgs.gnome.gnome-music
     pkgs.gnome-tour
     pkgs.gnome-console
   ];
@@ -95,7 +95,8 @@
   services.udev.packages = with pkgs; [gnome.gnome-settings-daemon]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
   i18n.inputMethod = {
-    enabled = "ibus";
+    enable = true;
+    type = "ibus";
     ibus.engines = with pkgs.ibus-engines; [uniemoji];
   };
 

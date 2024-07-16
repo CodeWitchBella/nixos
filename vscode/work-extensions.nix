@@ -3,8 +3,8 @@
     {
       name = "ruff";
       publisher = "charliermarsh";
-      version = "2024.22.0";
-      sha256 = "00iygcx5rmiyl47b1x98kf5w4mpd194k3i1ix92b328l7q4fbsdw";
+      version = "2024.30.0";
+      sha256 = "1r96a3r4iqj0501pnn2h9i1jqaksz40qvs3bra43xlmrfdvfrmiv";
     }
   ];
 }
