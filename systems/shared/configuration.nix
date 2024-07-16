@@ -69,6 +69,7 @@
     vlc
     lshw
     pciutils
+    gimp
 
     libreoffice-qt
     hunspell

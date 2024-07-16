@@ -75,5 +75,6 @@
     "python.analysis.autoFormatStrings" = true;
     "[yaml]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "workbench.tree.enableStickyScroll" = true;
+    "prisma.showPrismaDataPlatformNotification" = false;
   };
 }
