@@ -29,7 +29,6 @@
     options hid_apple fnmode=1
   '';
 
-  sound.enable = true;
   services.nix-serve = {
     enable = false;
     secretKeyFile = "/var/cache-priv-key.pem";
