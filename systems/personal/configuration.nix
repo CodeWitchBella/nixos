@@ -22,7 +22,6 @@
     rbw
     super-slicer-latest
     openscad
-    freecad
     telegram-desktop
     inkscape
     valent
