@@ -76,5 +76,6 @@
     "[yaml]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "workbench.tree.enableStickyScroll" = true;
     "prisma.showPrismaDataPlatformNotification" = false;
+    "git.postCommitCommand" = "push";
   };
 }
