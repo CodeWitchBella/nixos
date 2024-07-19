@@ -21,7 +21,6 @@
     bitwarden-cli
     rbw
     super-slicer-latest
-    cura
     openscad
     freecad
     telegram-desktop
