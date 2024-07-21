@@ -18,6 +18,8 @@
   boot.supportedFilesystems = ["ntfs"];
   boot.loader.systemd-boot.configurationLimit = 120;
 
+  #boot.kernelPackages = pkgs.linuxPackages_5_4;
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -42,8 +44,6 @@
     LC_TIME = "cs_CZ.UTF-8";
   };
 
-  # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
