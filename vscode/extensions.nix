@@ -37,12 +37,6 @@
       sha256 = "0np0yzrqi8pv3ja0d5dsy9b4vrc7vqg6085yr34bcavsgksrrmms";
     }
     {
-      name = "vscode-sqlfluff";
-      publisher = "dorzey";
-      version = "3.1.1";
-      sha256 = "07q3kbc4shmsv00d3a4y2rnb7adhfjqkbad45s8rb5ibrb7wa51w";
-    }
-    {
       name = "editorconfig";
       publisher = "editorconfig";
       version = "0.16.4";
