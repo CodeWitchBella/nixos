@@ -53,7 +53,7 @@
   #hardware.asahi.pkgsSystem = "x86_64-linux";
   hardware.asahi.withRust = true;
   hardware.asahi.useExperimentalGPUDriver = true;
-  #hardware.asahi.experimentalGPUInstallMode = "overlay";
+  hardware.asahi.experimentalGPUInstallMode = "overlay";
 
   boot.initrd.systemd.enable = true;
   boot.initrd.verbose = false;
