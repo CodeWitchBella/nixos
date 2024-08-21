@@ -79,6 +79,7 @@
         (import ./modules/modules.nix)
         ++ [
           ./systems/asahi/configuration.nix
+          #inputs.nixos-cosmic.nixosModules.default
           home-manager.nixosModules.home-manager
           nixos-apple-silicon.nixosModules.apple-silicon-support
           lix-module.nixosModules.default

@@ -8,7 +8,7 @@
   ...
 }: {
   imports = [
-    # Include the results of the hardware scan.
+    ./cosmic.nix
     ./hardware-configuration.nix
     ../personal/configuration.nix
   ];
