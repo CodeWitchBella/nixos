@@ -26,6 +26,10 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.90.0.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -55,6 +59,7 @@
       modules =
         (import ./modules/modules.nix)
         ++ [
+          inputs.nixos-cosmic.nixosModules.default
           ./systems/desktop/configuration.nix
           home-manager.nixosModules.home-manager
           {

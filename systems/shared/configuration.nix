@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  imports = [./cosmic.nix];
   nix.settings.experimental-features = ["nix-command" "flakes"];
   # nix.settings.auto-optimise-store = true; # On every build
   nix.optimise.automatic = true; # on schedule
@@ -86,7 +87,7 @@
     pkgs.epiphany # web browser
     pkgs.totem # video player
     pkgs.geary # email client
-    pkgs.seahorse # password manager
+    # pkgs.seahorse # password manager
     pkgs.gnome.gnome-music
     pkgs.gnome-tour
     pkgs.gnome-console
@@ -105,26 +106,6 @@
   systemd.services."autovt@tty1".enable = false;
 
   programs.nix-ld.enable = true;
-
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-
-    # Enable GNOME and KDE
-    desktopManager.gnome.enable = true;
-    displayManager = {
-      gdm.enable = true;
-    };
-
-    # Enable touchpad support (enabled default in most desktopManager).
-  };
-  services.libinput.enable = true;
-  services.displayManager = {
-    # Enable automatic login for the user, we're aiming to get to encrypted hard
-    # drive everywhere anyway.
-    autoLogin.enable = true;
-    autoLogin.user = "isabella";
-  };
 
   # Set your time zone.
   time.timeZone = "Europe/Prague";
