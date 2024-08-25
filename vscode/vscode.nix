@@ -15,6 +15,7 @@
           rust-lang.rust-analyzer
           kamadorueda.alejandra
           ms-vscode-remote.remote-ssh
+          # ms-python.python
         ];
         shared-exts =
           builtins.filter
@@ -25,6 +26,7 @@
               && ext.name != "alejandra"
               && ext.name != "remote-ssh"
               && ext.name != "ruff"
+              && ext.publisher != "ms-python"
           )
           (import ../vscode/extensions.nix).extensions;
         work-exts =

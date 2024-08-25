@@ -29,20 +29,6 @@
     options hid_apple fnmode=1
   '';
 
-  services.nix-serve = {
-    enable = false;
-    secretKeyFile = "/var/cache-priv-key.pem";
-  };
-  services.nginx = {
-    enable = false;
-    recommendedProxySettings = true;
-    virtualHosts = {
-      # ... existing hosts config etc. ...
-      "asahi.isbl.cz" = {
-        locations."/".proxyPass = "http://${config.services.nix-serve.bindAddress}:${toString config.services.nix-serve.port}";
-      };
-    };
-  };
   services.sshd.enable = false;
 
   networking.wireless.iwd = {

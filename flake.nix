@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-23.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -33,7 +32,6 @@
   };
   outputs = inputs @ {
     nixpkgs,
-    nixpkgs-stable,
     home-manager,
     darwin,
     asahi-firmware,
@@ -51,11 +49,6 @@
     };
     nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem rec {
       system = "x86_64-linux";
-      specialArgs = {
-        pkgs-stable = import nixpkgs-stable {
-          system = system;
-        };
-      };
       modules =
         (import ./modules/modules.nix)
         ++ [
@@ -70,16 +63,11 @@
     };
     nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem rec {
       system = "aarch64-linux";
-      specialArgs = {
-        pkgs-stable = import nixpkgs-stable {
-          system = system;
-        };
-      };
       modules =
         (import ./modules/modules.nix)
         ++ [
           ./systems/asahi/configuration.nix
-          #inputs.nixos-cosmic.nixosModules.default
+          inputs.nixos-cosmic.nixosModules.default
           home-manager.nixosModules.home-manager
           nixos-apple-silicon.nixosModules.apple-silicon-support
           lix-module.nixosModules.default

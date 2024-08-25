@@ -11,7 +11,13 @@
 in
   lib.recursiveUpdate shared {
     # https://rycee.gitlab.io/home-manager/options.html
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfreePredicate = pkg:
+      builtins.elem (lib.getName pkg) [
+        "vscode-with-extensions"
+        "vscode"
+        "vscode-extension-ms-vscode-remote-remote-ssh"
+      ];
+
     programs.git.extraConfig = {
       #"gpg \"ssh\"".program = "op-ssh-sign";
     };
