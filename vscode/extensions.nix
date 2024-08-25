@@ -73,30 +73,6 @@
       sha256 = "1n2qdd1rspy6ar03yw7g7zy3yjg9j1xb5xa4v2q12b0y6dymrhgn";
     }
     {
-      name = "debugpy";
-      publisher = "ms-python";
-      version = "2024.11.2024081401";
-      sha256 = "sha256-zyLzt94RTCfnp/sDBCvYuOImWPz7gHyNQWHtO+9y38c=";
-    }
-    {
-      name = "mypy-type-checker";
-      publisher = "ms-python";
-      version = "2023.9.12151008";
-      sha256 = "0lwvjhf9mjpp21vyqds3vbw54mm4p3cqsbbcvkvsfkdlkcwa0a4f";
-    }
-    {
-      name = "python";
-      publisher = "ms-python";
-      version = "2024.13.2024082001";
-      sha256 = "0721g9ssy1wgasc8vshaf0bl8jlpsa9gwaqv6p6rgmj93l5chb2n";
-    }
-    {
-      name = "vscode-pylance";
-      publisher = "ms-python";
-      version = "2024.8.101";
-      sha256 = "0b4fxpwkp7avcmva4z5pbrvxc5ihm7ppxvh0n0m43kzczma3d60d";
-    }
-    {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
       version = "0.114.2024081215";
