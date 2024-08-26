@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   # Enable COSMIC Epoch
   nix.settings = {
     substituters = ["https://cosmic.cachix.org/"];
@@ -10,4 +14,8 @@
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.lightdm.enableGnomeKeyring = true;
   programs.ssh.startAgent = true;
+
+  systemd.tmpfiles.rules = [
+    "L /usr/share/X11/xkb/rules/base.xml - - - - ${pkgs.xkeyboard_config}/share/X11/xkb/rules/base.xml"
+  ];
 }
