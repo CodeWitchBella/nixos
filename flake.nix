@@ -82,6 +82,7 @@
       system = "x86_64-linux";
       modules = [
         ./systems/work/configuration.nix
+        inputs.nixos-cosmic.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           networking.hostName = "IsblWork";
