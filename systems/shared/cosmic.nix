@@ -11,14 +11,11 @@
   services.desktopManager.cosmic.enable = true;
   services.displayManager.cosmic-greeter.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
-  security.pam.services.lightdm.enableGnomeKeyring = true;
-  programs.ssh.startAgent = true;
-
   systemd.tmpfiles.rules = [
     "L /usr/share/X11/xkb/rules/base.xml - - - - ${pkgs.xkeyboard_config}/share/X11/xkb/rules/base.xml"
   ];
 
+  programs.ssh.startAgent = true;
   environment.variables.SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
   systemd.user.services.preload-ssh-key = {
     after = ["ssh-agent.service"];
