@@ -37,13 +37,6 @@
     extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout"];
     shell = pkgs.nushell;
   };
-  systemd.user.services.my-ssh-agent = {
-    after = ["ssh-agent.service"];
-    wants = ["ssh-agent.service"];
-    script = with pkgs; ''
-      ${openssh}/bin/ssh-add ~/.ssh/id_ed25519
-    '';
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -90,7 +83,6 @@
 
   environment.variables = {
     EDITOR = "nvim";
-    SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
   };
   environment.shells = [pkgs.nushell];
   environment.gnome.excludePackages = [
