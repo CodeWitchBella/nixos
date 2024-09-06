@@ -26,15 +26,6 @@
     enableNushellIntegration = true;
     nix-direnv.enable = true;
   };
-  programs.wezterm = {
-    enable = true;
-    extraConfig = ''
-      local custom = dofile('/home/isabella/nixos/wezterm/custom.lua');
-      local config = wezterm.config_builder();
-      custom.apply_to_config(config);
-      return config;
-    '';
-  };
 
   programs.neovim = import ../../neovim/neovim.nix {inherit pkgs;};
 }
