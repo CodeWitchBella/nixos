@@ -3,7 +3,10 @@
   pkgs,
   ...
 }: {
-  imports = [./cosmic.nix];
+  imports = [
+    ./cosmic.nix
+    ./kde.nix
+  ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
   # nix.settings.auto-optimise-store = true; # On every build
   nix.optimise.automatic = true; # on schedule

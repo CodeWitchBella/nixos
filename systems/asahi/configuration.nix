@@ -9,7 +9,6 @@
 }: {
   imports = [
     ./cosmic.nix
-    ./kde.nix
     ./hardware-configuration.nix
     ../personal/configuration.nix
   ];
