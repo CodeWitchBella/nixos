@@ -101,11 +101,11 @@
   services.xserver.excludePackages = [pkgs.xterm];
   services.udev.packages = with pkgs; [gnome-settings-daemon]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
-  i18n.inputMethod = {
-    enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [uniemoji];
-  };
+  # i18n.inputMethod = {
+  #   enable = true;
+  #   type = "ibus";
+  #   ibus.engines = with pkgs.ibus-engines; [uniemoji];
+  # };
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
