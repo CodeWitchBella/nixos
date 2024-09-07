@@ -40,6 +40,7 @@
     extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout"];
     shell = pkgs.nushell;
   };
+  security.sudo.wheelNeedsPassword = false;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
