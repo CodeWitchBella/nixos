@@ -17,6 +17,7 @@
     ];
     files = [
       "/etc/machine-id"
+      "/etc/shadow" # passwords...
     ];
     users.isabella = {
       directories = [
