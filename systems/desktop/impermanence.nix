@@ -32,11 +32,11 @@
           mode = "0700";
         }
         ".local/share/direnv"
+        ".mozilla"
       ];
       files = [
         ".config/Code/User/globalStorage/storage.json" # recent workspaces
         ".config/nushell/history.txt"
-        ".mozilla" # firefox
       ];
     };
   };
