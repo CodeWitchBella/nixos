@@ -37,7 +37,8 @@
       files = [
         ".config/Code/User/globalStorage/storage.json" # recent workspaces
         ".config/nushell/history.txt"
-        "~/.config/kwalletrc" # so that it stays disabled
+        ".config/kwalletrc" # so that it stays disabled
+        ".config/kxkbrc" # keyboard layouts
       ];
     };
   };
