@@ -29,6 +29,7 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    impermanence.url = "github:nix-community/impermanence";
   };
   outputs = inputs @ {
     nixpkgs,
@@ -54,6 +55,7 @@
         ++ [
           inputs.nixos-cosmic.nixosModules.default
           ./systems/desktop/configuration.nix
+          inputs.impermanence.nixosModules.impermanence
           home-manager.nixosModules.home-manager
           {
             networking.hostName = "IsblDesktop";

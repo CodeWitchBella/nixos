@@ -7,6 +7,7 @@
   ...
 }: {
   imports = [
+    ./impermanence.nix
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../personal/configuration.nix
