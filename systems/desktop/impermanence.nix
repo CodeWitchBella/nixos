@@ -33,7 +33,9 @@
         }
         ".local/share/direnv"
       ];
-      files = [];
+      files = [
+        ".config/Code/User/globalStorage/storage.json" # recent workspaces
+      ];
     };
   };
   boot.initrd.postDeviceCommands = let
