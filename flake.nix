@@ -30,6 +30,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence.url = "github:nix-community/impermanence";
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
   outputs = inputs @ {
     nixpkgs,
@@ -59,6 +64,7 @@
           home-manager.nixosModules.home-manager
           {
             networking.hostName = "IsblDesktop";
+            home-manager.sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
             home-manager.users.isabella = import ./systems/desktop/home.nix;
           }
         ];
