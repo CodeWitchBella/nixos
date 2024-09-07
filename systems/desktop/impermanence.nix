@@ -40,6 +40,9 @@
       ];
     };
   };
+  systemd.tmpfiles.rules = [
+    "L /etc/nixos/flake.nix - - - - /home/isabella/nixos/flake.nix"
+  ];
   boot.initrd.postDeviceCommands = let
     disk = config.fileSystems."/".device;
     btrfs = "${pkgs.btrfs-progs}/bin/btrfs";
