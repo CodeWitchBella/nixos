@@ -20,8 +20,6 @@
       okular
       kate
       khelpcenter
-      dolphin
-      dolphin-plugins
       spectacle
       ffmpegthumbs
       krdp
