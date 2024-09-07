@@ -77,6 +77,7 @@
     "python.analysis.autoFormatStrings" = true;
     "[yaml]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "workbench.tree.enableStickyScroll" = true;
+    "security.workspace.trust.enabled" = false; # doesn't play well with impermanence
     "prisma.showPrismaDataPlatformNotification" = false;
     "git.postCommitCommand" = "push";
   };
