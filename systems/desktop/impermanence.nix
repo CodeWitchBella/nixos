@@ -42,10 +42,10 @@
     lib.mkAfter ''
       mkdir /btrfs_tmp
       mount ${disk} /btrfs_tmp
-      if [[ -e /btrfs_tmp/root ]]; then
+      if [[ -e /btrfs_tmp/rootfs ]]; then
           mkdir -p /btrfs_tmp/old_roots
-          timestamp=$(date --date="@$(stat -c %Y /btrfs_tmp/root)" "+%Y-%m-%-d_%H:%M:%S")
-          mv /btrfs_tmp/root "/btrfs_tmp/old_roots/$timestamp"
+          timestamp=$(date --date="@$(stat -c %Y /btrfs_tmp/rootfs)" "+%Y-%m-%-d_%H:%M:%S")
+          mv /btrfs_tmp/rootfs "/btrfs_tmp/old_roots/$timestamp"
       fi
 
       delete_subvolume_recursively() {
@@ -60,7 +60,7 @@
           delete_subvolume_recursively "$i"
       done
 
-      ${btrfs} subvolume create /btrfs_tmp/root
+      ${btrfs} subvolume create /btrfs_tmp/rootfs
       umount /btrfs_tmp
       rmdir /btrfs_tmp
     '';
