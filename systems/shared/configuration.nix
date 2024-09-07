@@ -74,7 +74,7 @@
     lshw
     pciutils
     gimp
-    gnome.gnome-disk-utility
+    gnome-disk-utility
 
     libreoffice-qt
     hunspell
