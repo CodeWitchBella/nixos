@@ -98,7 +98,7 @@
     pkgs.gnome-console
   ];
   services.xserver.excludePackages = [pkgs.xterm];
-  services.udev.packages = with pkgs; [gnome.gnome-settings-daemon]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
+  services.udev.packages = with pkgs; [gnome-settings-daemon]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
   i18n.inputMethod = {
     enable = true;
