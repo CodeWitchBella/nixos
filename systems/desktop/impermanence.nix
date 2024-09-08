@@ -3,7 +3,22 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  homeFiles = [
+    ".config/Code/User/globalStorage/storage.json" # recent workspaces
+    ".config/nushell/history.txt"
+    ".config/kwalletrc" # so that it stays disabled
+    ".local/share/kwalletd" # it gets triggered anyways
+    ".config/kxkbrc" # keyboard layouts
+    ".config/plasma-org.kde.plasma.desktop-appletsrc" # pinned apps among other things
+  ];
+  getParents = path: let
+    segments = lib.lists.flatten (builtins.split "/" path);
+    takes = lib.lists.range 1 (builtins.length segments - 1);
+    parents = builtins.map (len: lib.lists.take len segments) takes;
+  in
+    builtins.map (segments: builtins.concatStringsSep "/" segments) parents;
+in {
   environment.persistence."/persistent" = {
     enable = true; # NB: Defaults to true, not needed
     hideMounts = true;
@@ -34,18 +49,23 @@
         ".local/share/direnv"
         ".mozilla"
       ];
-      files = [
-        ".config/Code/User/globalStorage/storage.json" # recent workspaces
-        ".config/nushell/history.txt"
-        ".config/kwalletrc" # so that it stays disabled
-        ".local/share/kwalletd" # it gets triggered anyways
-        ".config/kxkbrc" # keyboard layouts
-      ];
+      files = homeFiles;
     };
   };
-  systemd.tmpfiles.rules = [
-    "L /etc/nixos/flake.nix - - - - /home/isabella/nixos/flake.nix"
-  ];
+  systemd.tmpfiles.rules =
+    [
+      "d /persistent/home/isabella 0700 isabella users - -"
+      "L+ /etc/nixos/flake.nix - - - - /home/isabella/nixos/flake.nix"
+    ]
+    # make sure the files exist with proper permissions
+    ++ lib.lists.unique (builtins.concatMap (
+        homeFile:
+          builtins.map
+          (dir: "d /persistent/home/isabella/${dir} 0755 isabella users - -")
+          (getParents homeFile)
+      )
+      homeFiles)
+    ++ (builtins.map (file: "f /persistent/home/isabella/${file} 0600 isabella users - -") homeFiles);
   boot.initrd.postDeviceCommands = let
     disk = config.fileSystems."/".device;
     btrfs = "${pkgs.btrfs-progs}/bin/btrfs";
