@@ -56,7 +56,6 @@
     wget
     htop
     gnomeExtensions.appindicator
-    ungoogled-chromium
     firefox
     gitFull
     (nerdfonts.override {fonts = ["FiraCode"];})

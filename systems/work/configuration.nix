@@ -41,6 +41,7 @@
     beekeeper-studio
     thunderbird
     graphite-cli
+    ungoogled-chromium
   ];
 
   virtualisation.podman = {
