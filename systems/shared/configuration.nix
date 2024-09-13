@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -131,4 +132,14 @@
     LC_TELEPHONE = "cs_CZ.UTF-8";
     LC_TIME = "cs_CZ.UTF-8";
   };
+
+  services.openssh.enable = config.isbl.impermanence.enable;
+  services.openssh.hostKeys = [
+    {
+      path = "/persistent/etc/ssh/ssh_host_ed25519_key";
+      type = "ed25519";
+    }
+  ];
+  age.secrets.password.file = lib.mkIf config.isbl.impermanence.enable ../../secrets/password.age;
+  users.users.isabella.hashedPasswordFile = lib.mkIf config.isbl.impermanence.enable config.age.secrets.password.path;
 }
