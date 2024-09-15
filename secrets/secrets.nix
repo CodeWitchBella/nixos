@@ -1,3 +1,3 @@
 with (import ./keys.nix); {
-  "password.age".publicKeys = users ++ [system.desktop];
+  "password.age".publicKeys = users ++ (builtins.attrValues system);
 }

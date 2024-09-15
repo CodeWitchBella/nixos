@@ -8,6 +8,7 @@
   ...
 }: {
   imports = [
+    ./impermanence.nix
     ./hardware-configuration.nix
     ../personal/configuration.nix
   ];
