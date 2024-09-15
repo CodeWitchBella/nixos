@@ -8,7 +8,7 @@ for input in $inputs {
     if $hostname != "IsblAsahi" and ($input == "asahi-firmware" or $input == "nixos-apple-silicon") {
         continue
     }
-    nix flake lock --update-input $input
+    nix flake update $input
 }
 
 nu vscode/gen-extensions.nu

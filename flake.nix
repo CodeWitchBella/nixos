@@ -11,10 +11,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/x86_64-linux";
-    flake-utils = {
-      url = "github:numtide/flake-utils";
-      inputs.systems.follows = "systems";
-    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
     devshell = {
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -38,10 +35,9 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    ragenix = {
-      url = "github:yaxitech/ragenix";
+    agenix = {
+      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
     };
   };
   outputs = inputs @ {
@@ -49,11 +45,28 @@
     home-manager,
     asahi-firmware,
     nixos-apple-silicon,
-    flake-utils,
     lix-module,
     ...
   }:
-    {
+    (inputs.flake-parts.lib.mkFlake {inherit inputs;} {
+      imports = [inputs.devshell.flakeModule];
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
+
+      perSystem = {
+        pkgs,
+        system,
+        ...
+      }: {
+        formatter = inputs.alejandra.defaultPackage.${system};
+        devshells.default = {
+          packages = [inputs.agenix.packages."${system}".default];
+        };
+      };
+    })
+    // {
       nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
@@ -64,7 +77,7 @@
             ./systems/desktop/configuration.nix
             inputs.impermanence.nixosModules.impermanence
             home-manager.nixosModules.home-manager
-            inputs.ragenix.nixosModules.default
+            inputs.agenix.nixosModules.default
             {
               networking.hostName = "IsblDesktop";
               home-manager.sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
@@ -82,6 +95,7 @@
             home-manager.nixosModules.home-manager
             nixos-apple-silicon.nixosModules.apple-silicon-support
             lix-module.nixosModules.default
+            inputs.agenix.nixosModules.default
             {
               hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
               networking.hostName = "IsblAsahi";
@@ -101,20 +115,5 @@
           }
         ];
       };
-      formatter.aarch64-linux = inputs.alejandra.defaultPackage.aarch64-linux;
-      formatter.x86_64-linux = inputs.alejandra.defaultPackage.x86_64-linux;
-    }
-    // (inputs.flake-utils.lib.eachDefaultSystem (
-      system: let
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [inputs.devshell.overlays.default];
-        };
-      in {
-        formatter = inputs.alejandra.defaultPackage.${system};
-        devShell = pkgs.devshell.mkShell {
-          packages = [inputs.ragenix.packages."${system}".default];
-        };
-      }
-    ));
+    };
 }
