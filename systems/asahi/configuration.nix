@@ -8,7 +8,6 @@
   ...
 }: {
   imports = [
-    ./cosmic.nix
     ./hardware-configuration.nix
     ../personal/configuration.nix
   ];
