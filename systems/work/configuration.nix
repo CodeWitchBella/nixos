@@ -40,7 +40,6 @@
   environment.systemPackages = with pkgs; [
     beekeeper-studio
     thunderbird
-    graphite-cli
     ungoogled-chromium
   ];
 

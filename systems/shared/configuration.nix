@@ -16,14 +16,7 @@
     dates = "daily";
     options = "--delete-older-than 60d";
   };
-
-  nix.settings.extra-substituters = [
-    "https://cache.lix.systems"
-  ];
-
-  nix.settings.trusted-public-keys = [
-    "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
-  ];
+  nix.package = pkgs.lix;
 
   system.autoUpgrade = {
     enable = false;
@@ -140,6 +133,6 @@
       type = "ed25519";
     }
   ];
-  age.secrets.password.file = ../../secrets/password.age;
-  users.users.isabella.hashedPasswordFile = config.age.secrets.password.path;
+  # age.secrets.password.file = ../../secrets/password.age;
+  # users.users.isabella.hashedPasswordFile = config.age.secrets.password.path;
 }

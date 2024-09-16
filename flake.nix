@@ -20,10 +20,6 @@
     alejandra.url = "github:kamadorueda/alejandra/3.0.0";
     alejandra.inputs.nixpkgs.follows = "nixpkgs";
 
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.90.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +41,6 @@
     home-manager,
     asahi-firmware,
     nixos-apple-silicon,
-    lix-module,
     ...
   }:
     (inputs.flake-parts.lib.mkFlake {inherit inputs;} {
@@ -95,7 +90,6 @@
             inputs.impermanence.nixosModules.impermanence
             home-manager.nixosModules.home-manager
             nixos-apple-silicon.nixosModules.apple-silicon-support
-            lix-module.nixosModules.default
             inputs.agenix.nixosModules.default
             {
               hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;

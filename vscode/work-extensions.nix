@@ -22,7 +22,7 @@
       name = "python";
       publisher = "ms-python";
       version = "2024.13.2024082001";
-      sha256 = "0721g9ssy1wgasc8vshaf0bl8jlpsa9gwaqv6p6rgmj93l5chb2n";
+      sha256 = "sha256-cXu34PjqB5QJ/v+pWYilptXHd5B2oo5aZZprT5nC8DE=";
     }
     {
       name = "vscode-pylance";
