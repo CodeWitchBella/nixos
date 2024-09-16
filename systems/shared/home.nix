@@ -28,4 +28,9 @@
   };
 
   programs.neovim = import ../../neovim/neovim.nix {inherit pkgs;};
+
+  home.file = {
+    ".config/kwalletrc".source = ./home/-config/kwalletrc;
+    ".config/kxkbrc".source = ./home/-config/kxkbrc;
+  };
 }

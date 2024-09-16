@@ -26,10 +26,8 @@
     homeFiles = [
       ".config/Code/User/globalStorage/storage.json" # recent workspaces
       ".config/nushell/history.txt"
-      ".config/kwalletrc" # so that it stays disabled
       ".local/share/kwalletd/kdewallet.salt" # it gets triggered anyways
       ".local/share/kwalletd/kdewallet.kwl"
-      ".config/kxkbrc" # keyboard layouts
       ".config/plasma-org.kde.plasma.desktop-appletsrc" # pinned apps among other things
     ];
     homeDirectories = [
