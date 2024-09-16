@@ -32,7 +32,7 @@
     isNormalUser = true;
     description = "Isabella Skořepová";
     extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout"];
-    # shell = pkgs.nushell;
+    shell = pkgs.nushell;
   };
   security.sudo.wheelNeedsPassword = false;
 
