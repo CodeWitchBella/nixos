@@ -42,7 +42,15 @@
     asahi-firmware,
     nixos-apple-silicon,
     ...
-  }:
+  }: let
+    modules =
+      (import ./modules/modules.nix)
+      ++ [
+        inputs.nixos-cosmic.nixosModules.default
+        home-manager.nixosModules.home-manager
+        inputs.agenix.nixosModules.default
+      ];
+  in
     (inputs.flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [inputs.devshell.flakeModule];
       systems = [
@@ -62,17 +70,14 @@
       };
     })
     // {
-      nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem rec {
+      nixosConfigurations."IsblDesktop" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules =
-          (import ./modules/modules.nix)
+          modules
           ++ [
-            inputs.nixos-cosmic.nixosModules.default
             ./systems/desktop/configuration.nix
             inputs.impermanence.nixosModules.impermanence
-            home-manager.nixosModules.home-manager
-            inputs.agenix.nixosModules.default
             {
               networking.hostName = "IsblDesktop";
               home-manager.sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
@@ -80,17 +85,14 @@
             }
           ];
       };
-      nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem rec {
+      nixosConfigurations."IsblAsahi" = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         modules =
-          (import ./modules/modules.nix)
+          modules
           ++ [
-            inputs.nixos-cosmic.nixosModules.default
             ./systems/asahi/configuration.nix
             inputs.impermanence.nixosModules.impermanence
-            home-manager.nixosModules.home-manager
             nixos-apple-silicon.nixosModules.apple-silicon-support
-            inputs.agenix.nixosModules.default
             {
               hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
               networking.hostName = "IsblAsahi";
@@ -102,8 +104,6 @@
         system = "x86_64-linux";
         modules = [
           ./systems/work/configuration.nix
-          inputs.nixos-cosmic.nixosModules.default
-          home-manager.nixosModules.home-manager
           {
             networking.hostName = "IsblWork";
             home-manager.users.isabella = import ./systems/work/home.nix;
