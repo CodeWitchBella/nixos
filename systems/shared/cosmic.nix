@@ -5,18 +5,18 @@
   ...
 }: {
   nix.settings = {
-    substituters = ["https://cosmic.cachix.org/"];
+    extra-substituters = ["https://cosmic.cachix.org/"];
     trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
   };
-  specialisation.cosmic.configuration = {
-    # Enable COSMIC Epoch
-    services.desktopManager.cosmic.enable = true;
-    services.displayManager.cosmic-greeter.enable = true;
+  # specialisation.cosmic.configuration = {
+  #   # Enable COSMIC Epoch
+  #   services.desktopManager.cosmic.enable = true;
+  #   services.displayManager.cosmic-greeter.enable = true;
 
-    systemd.tmpfiles.rules = [
-      "L /usr/share/X11/xkb/rules/base.xml - - - - ${pkgs.xkeyboard_config}/share/X11/xkb/rules/base.xml"
-    ];
-  };
+  #   systemd.tmpfiles.rules = [
+  #     "L /usr/share/X11/xkb/rules/base.xml - - - - ${pkgs.xkeyboard_config}/share/X11/xkb/rules/base.xml"
+  #   ];
+  # };
   environment.systemPackages = with pkgs; [cosmic-term];
 
   programs.ssh.startAgent = true;

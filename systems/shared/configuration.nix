@@ -32,7 +32,7 @@
     isNormalUser = true;
     description = "Isabella Skořepová";
     extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout"];
-    shell = pkgs.nushell;
+    # shell = pkgs.nushell;
   };
   security.sudo.wheelNeedsPassword = false;
 
@@ -45,6 +45,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    nushell
     traceroute
     vim
     wget

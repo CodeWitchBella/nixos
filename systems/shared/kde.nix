@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: {
-  config = lib.mkIf (config.specialisation != {}) {
+  config = lib.mkIf (config.specialisation != {} or true) {
     services.xserver.enable = true;
     services.desktopManager.plasma6.enable = true;
     services.displayManager = {
@@ -16,7 +16,7 @@
 
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration
-      konsole
+      # konsole
       (lib.getBin qttools) # Expose qdbus in PATH
       ark
       elisa
