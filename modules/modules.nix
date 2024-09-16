@@ -1,3 +1,4 @@
 [
   ./impermanence.nix
+  ./sunshine.nix
 ]
