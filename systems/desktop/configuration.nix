@@ -66,6 +66,8 @@
   ];
 
   isbl.services.sunshine.enable = true;
+  programs.steam.enable = true;
+  systemd.user.services.sunshine.environment.WAYLAND_DISPLAY = "wayland-0";
 
   system.stateVersion = "23.05"; # Did you read the comment?
 }

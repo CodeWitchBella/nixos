@@ -31,7 +31,7 @@
   users.users.isabella = {
     isNormalUser = true;
     description = "Isabella Skořepová";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout"];
+    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout" "input"];
     shell = pkgs.nushell;
   };
   security.sudo.wheelNeedsPassword = false;

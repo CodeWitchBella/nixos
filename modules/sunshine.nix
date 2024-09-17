@@ -11,18 +11,16 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    networking.firewall.allowedTCPPortRanges = [
-      {
-        from = 47984;
-        to = 48010;
-      }
-    ];
-    networking.firewall.allowedUDPPortRanges = [
-      {
-        from = 47998;
-        to = 48010;
-      }
-    ];
+    networking.firewall = {
+      allowedTCPPorts = [47984 47989 47990 48010];
+      allowedUDPPortRanges = [
+        {
+          from = 47998;
+          to = 48000;
+        }
+      ];
+    };
+
     security.wrappers.sunshine = {
       owner = "root";
       group = "root";
