@@ -49,6 +49,7 @@
         inputs.nixos-cosmic.nixosModules.default
         home-manager.nixosModules.home-manager
         inputs.agenix.nixosModules.default
+        inputs.impermanence.nixosModules.impermanence
       ];
   in
     (inputs.flake-parts.lib.mkFlake {inherit inputs;} {
@@ -77,7 +78,6 @@
           modules
           ++ [
             ./systems/desktop/configuration.nix
-            inputs.impermanence.nixosModules.impermanence
             {
               networking.hostName = "IsblDesktop";
               home-manager.sharedModules = [inputs.plasma-manager.homeManagerModules.plasma-manager];
@@ -91,7 +91,7 @@
           modules
           ++ [
             ./systems/asahi/configuration.nix
-            inputs.impermanence.nixosModules.impermanence
+
             nixos-apple-silicon.nixosModules.apple-silicon-support
             {
               hardware.asahi.peripheralFirmwareDirectory = asahi-firmware;
@@ -102,13 +102,15 @@
       };
       nixosConfigurations."IsblWork" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [
-          ./systems/work/configuration.nix
-          {
-            networking.hostName = "IsblWork";
-            home-manager.users.isabella = import ./systems/work/home.nix;
-          }
-        ];
+        modules =
+          modules
+          ++ [
+            ./systems/work/configuration.nix
+            {
+              networking.hostName = "IsblWork";
+              home-manager.users.isabella = import ./systems/work/home.nix;
+            }
+          ];
       };
     };
 }
