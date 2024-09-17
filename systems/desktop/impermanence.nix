@@ -27,6 +27,7 @@
       ".config/Code/User/globalStorage/storage.json" # recent workspaces
       ".config/nushell/history.txt"
       ".config/plasma-org.kde.plasma.desktop-appletsrc" # pinned apps among other things
+      ".config/kwinoutputconfig.json" # screen settings
     ];
     homeDirectories = [
       "Downloads"
@@ -41,6 +42,8 @@
       }
       ".local/share/direnv"
       ".mozilla"
+      ".config/sunshine"
+      ".local/share/Steam"
     ];
   };
 }
