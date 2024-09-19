@@ -30,7 +30,6 @@
       ".local/share/kwalletd/kdewallet.kwl"
       ".config/plasma-org.kde.plasma.desktop-appletsrc" # pinned apps among other things
       ".config/kwinoutputconfig.json" # screen settings
-      ".config/SuperSlicer"
     ];
     homeDirectories = [
       "Downloads"
@@ -45,6 +44,7 @@
       }
       ".local/share/direnv"
       ".mozilla"
+      ".config/SuperSlicer"
     ];
   };
 }
