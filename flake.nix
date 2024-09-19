@@ -5,7 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    asahi-firmware.url = "git+file:/etc/nixos/firmware?ref=main";
+    asahi-firmware.url = "git+file:/persistent/firmware?ref=main";
     nixos-apple-silicon = {
       url = "github:tpwrules/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";

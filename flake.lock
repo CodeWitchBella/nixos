@@ -48,18 +48,18 @@
     },
     "asahi-firmware": {
       "locked": {
-        "lastModified": 1700177567,
-        "narHash": "sha256-ScWash60kdIxgw2wxVn0aotysCrsmBxh+QpCZlOVI/8=",
+        "lastModified": 1726603349,
+        "narHash": "sha256-PYRWhOwzaRZ7IXhvyzOy77FGKiY+Fnm50sERPujlgJI=",
         "ref": "main",
-        "rev": "8bd0b562887c916e619ed6f45e4b6dbbb350afcd",
-        "revCount": 2,
+        "rev": "542f9174b27bf7addc8cdccaa004d6cba6e5efff",
+        "revCount": 4,
         "type": "git",
-        "url": "file:/etc/nixos/firmware"
+        "url": "file:/persistent/firmware"
       },
       "original": {
         "ref": "main",
         "type": "git",
-        "url": "file:/etc/nixos/firmware"
+        "url": "file:/persistent/firmware"
       }
     },
     "darwin": {
