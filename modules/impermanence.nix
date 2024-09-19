@@ -62,6 +62,7 @@ in {
 
     boot.initrd.systemd.enable = true;
     boot.initrd.systemd.services.rollback = {
+      enable = false;
       description = "Rollback root filesystem to a pristine state on boot";
       wantedBy = [
         "initrd.target"
