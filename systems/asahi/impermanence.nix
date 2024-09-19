@@ -29,6 +29,7 @@
       ".local/share/kwalletd/kdewallet.salt" # it gets triggered anyways
       ".local/share/kwalletd/kdewallet.kwl"
       ".config/plasma-org.kde.plasma.desktop-appletsrc" # pinned apps among other things
+      ".config/kwinoutputconfig.json" # screen settings
       ".config/SuperSlicer"
     ];
     homeDirectories = [
