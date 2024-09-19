@@ -13,6 +13,7 @@
     rootDirectories = [
       "/var/lib/nixos" # stuff like uid maps
       "/var/lib/bluetooth" # so that I don't have to pair everything
+      "/var/lib/iwd" # networks
 
       # Note that stuff like (below) can be accessed via the old snapshots
       #  - "/var/log"
