@@ -20,6 +20,9 @@
   boot.supportedFilesystems = ["ntfs"];
   boot.loader.systemd-boot.configurationLimit = 120;
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   #boot.kernelPackages = pkgs.linuxPackages_5_4;
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
