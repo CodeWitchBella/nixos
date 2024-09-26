@@ -78,6 +78,7 @@
     hunspellDicts.en_GB-large
     bind
     evince
+    spectacle
   ];
   virtualisation.podman.enable = true;
 
