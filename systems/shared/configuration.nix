@@ -77,6 +77,7 @@
     hunspellDicts.en_US-large
     hunspellDicts.en_GB-large
     bind
+    evince
   ];
   virtualisation.podman.enable = true;
 
