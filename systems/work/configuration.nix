@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -8,6 +9,8 @@
     ./hardware-configuration.nix
     ../shared/configuration.nix
   ];
+  isbl.impermanence.enable = lib.mkForce false;
+  hardware.bluetooth.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -46,6 +49,28 @@
   virtualisation.podman = {
     enable = true;
   };
+
+  # nix.buildMachines = [
+  #   # let's use the big hunk of metal I have under my desk
+  #   {
+  #     hostName = "desktop.isbl.cz";
+  #     sshUser = "isabella";
+  #     sshKey = "/home/isabella/.ssh/id_ed25519";
+  #     system = "x86_64-linux";
+  #     protocol = "ssh-ng";
+  #     maxJobs = 3;
+  #     speedFactor = 2;
+  #     supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
+  #     mandatoryFeatures = [];
+  #   }
+  # ];
+  nix.distributedBuilds = true;
+  nix.settings = {
+    builders-use-substitutes = true;
+  };
+  systemd.tmpfiles.rules = [
+    "L+ /root/.ssh/id_ed25519 - - - - /home/isabella/.ssh/id_ed25519"
+  ];
 
   system.stateVersion = "23.05";
 }
