@@ -66,6 +66,7 @@
 
   environment.systemPackages = with pkgs; [
     bitwarden # missing aarch64 and it does not really do much anyways
+    ungoogled-chromium
   ];
 
   isbl.services.sunshine.enable = true;
