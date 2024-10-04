@@ -3,14 +3,25 @@
   lib,
   config,
   host,
-}: {
+}: let
+  zoxide-nushell = pkgs.stdenv.mkDerivation {
+    name = "zoxide-nushell";
+    version = "${pkgs.nushell.version}-${pkgs.zoxide.version}";
+    unpackPhase = "true";
+    buildInputs = [pkgs.nushell pkgs.zoxide];
+    buildPhase = ''
+      zoxide init nushell > $out
+    '';
+    installPhase = "";
+  };
+in {
   programs.vscode = import ../../vscode/vscode.nix {inherit pkgs host;};
   programs.git = import ./git.nix {inherit pkgs;};
   programs.nushell = {
     enable = true;
     extraConfig = ''
       $env.config.show_banner = false
-      source ~/nixos/nushell/zoxide.nu
+      source ${zoxide-nushell}
     '';
     extraEnv = ''
       $env.EDITOR = "nvim"
