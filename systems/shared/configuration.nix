@@ -79,6 +79,7 @@
     bind
     evince
     spectacle
+    rink
   ];
   virtualisation.podman.enable = true;
 
