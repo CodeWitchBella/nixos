@@ -15,16 +15,16 @@
     };
 
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
-      plasma-browser-integration
+      # plasma-browser-integration
       # konsole
       (lib.getBin qttools) # Expose qdbus in PATH
-      ark
+      # ark
       elisa
-      gwenview
+      # gwenview
       okular
       kate
       khelpcenter
-      spectacle
+      # spectacle
       ffmpegthumbs
       krdp
     ];
