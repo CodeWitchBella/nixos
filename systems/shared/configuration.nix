@@ -137,6 +137,4 @@
       type = "ed25519";
     }
   ];
-  age.secrets.password.file = ../../secrets/password.age;
-  users.users.isabella.hashedPasswordFile = config.age.secrets.password.path;
 }

@@ -13,6 +13,6 @@
     # cat /persistent/etc/ssh/ssh_host_ed25519_key.pub on IsblAsahi
     asahi = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOB4THzrUqU+715hzsH4N8cL6V1+B85+FF3djNJwTWTO";
     # cat /persistent/etc/ssh/ssh_host_ed25519_key.pub on IsblWork
-    asahi = "";
+    work = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFdnboyu2d48xmmTQsP4VK1378RGlBJ8CUXhL9zLacxk";
   };
 }

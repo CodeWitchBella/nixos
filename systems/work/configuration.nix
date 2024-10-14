@@ -72,5 +72,8 @@
     "L+ /root/.ssh/id_ed25519 - - - - /home/isabella/.ssh/id_ed25519"
   ];
 
+  age.secrets.password.file = ../../secrets/password-work.age;
+  users.users.isabella.hashedPasswordFile = config.age.secrets.password.path;
+
   system.stateVersion = "23.05";
 }

@@ -42,4 +42,7 @@
   };
   hardware.sane.extraBackends = with pkgs; [sane-airscan];
   services.ipp-usb.enable = true;
+
+  age.secrets.password.file = ../../secrets/password.age;
+  users.users.isabella.hashedPasswordFile = config.age.secrets.password.path;
 }
