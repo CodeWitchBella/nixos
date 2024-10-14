@@ -46,6 +46,7 @@
       ".local/share/direnv"
       ".mozilla"
       ".config/SuperSlicer"
+      ".local/share/zoxide"
     ];
   };
 }

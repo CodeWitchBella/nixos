@@ -5,6 +5,11 @@
 }: {
   imports = [../shared/configuration.nix];
 
+  services.tailscale.enable = true;
+  isbl.impermanence.rootDirectories = [
+    "/var/lib/tailscale"
+  ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
   hardware.sane = {

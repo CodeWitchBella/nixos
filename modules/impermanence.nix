@@ -5,6 +5,18 @@
   ...
 }: let
   cfg = config.isbl.impermanence;
+  prepersist = pkgs.writeTextFile {
+    name = "prepersist";
+    executable = true;
+    destination = "/bin/prepersist";
+    text = ''
+      #!${pkgs.bash}/bin/bash
+      set -xe
+      pth=`realpath $1`
+      mv $1 /persistent$pth
+      ln -s /persistent$pth $1
+    '';
+  };
 in {
   options = {
     isbl.impermanence = with lib; {
@@ -36,6 +48,7 @@ in {
     in
       builtins.map (segments: builtins.concatStringsSep "/" segments) parents;
   in {
+    environment.systemPackages = [prepersist];
     environment.persistence."/persistent" = {
       enable = true; # NB: Defaults to true, not needed
       hideMounts = true;

@@ -44,6 +44,7 @@
       ".mozilla"
       ".config/sunshine"
       ".local/share/Steam"
+      ".local/share/zoxide"
     ];
   };
 }
