@@ -22,7 +22,10 @@
         echo "2: $2"
         set -xe
         BRANCH=`git symbolic-ref HEAD --short`
-        TRACKING=`git rev-parse --abbrev-ref --symbolic-full-name @{u}`
+        if git rev-parse --abbrev-ref --symbolic-full-name @{u}
+        then TRACKING=`git rev-parse --abbrev-ref --symbolic-full-name @{u}`
+        else TRACKING=""
+        fi
         git branch -m "tmp/$BRANCH"
         git checkout "$1"
 
@@ -30,7 +33,9 @@
         git merge --squash "tmp/$BRANCH"
         git commit --no-edit
         git branch -D "tmp/$BRANCH"
-        git branch --set-upstream-to "$TRACKING"
+        if [ ! -z "$TRACKING" ]
+        then git branch --set-upstream-to "$TRACKING"
+        fi
       ' - \
     '';
     alias.fr = "!bash -c \"git fetch --prune --tags ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
