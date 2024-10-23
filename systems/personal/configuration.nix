@@ -29,6 +29,7 @@
     telegram-desktop
     inkscape
     valent
+    ktailctl
   ];
 
   networking.firewall = rec {
