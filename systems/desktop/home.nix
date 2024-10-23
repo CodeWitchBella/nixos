@@ -29,4 +29,16 @@ in
     programs.plasma.kwin.nightLight.location.longitude = "14.4341414";
     programs.plasma.kwin.nightLight.temperature.night = 4500;
     programs.plasma.kwin.scripts.polonium.enable = true;
+
+    home.file.".config/powerdevilrc" = {
+      text = ''
+        [AC][SuspendAndShutdown]
+        AutoSuspendAction=0
+      '';
+      target = ".config/powerdevilrc";
+    };
+    home.file."plasma-org.kde.plasma.desktop-appletsrc".text = ''
+      [Containments][24][Applets][28][Configuration][General]
+      launchers=applications:systemsettings.desktop,preferred://filemanager,applications:firefox.desktop,applications:org.kde.konsole.desktop
+    '';
   }
