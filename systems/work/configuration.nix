@@ -44,6 +44,7 @@
     beekeeper-studio
     thunderbird
     ungoogled-chromium
+    lens
   ];
 
   virtualisation.podman = {
