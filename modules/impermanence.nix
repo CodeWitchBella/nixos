@@ -36,6 +36,9 @@ in {
       homeDirectories = mkOption {
         type = types.listOf types.anything;
       };
+      copiedOnBoot = mkOption {
+        type = types.listOf types.str;
+      };
     };
   };
 
@@ -72,6 +75,14 @@ in {
         )
         homeFiles)
       ++ (builtins.map (file: "f /persistent/home/isabella/${file} 0600 isabella users - -") homeFiles);
+
+    systemd.tmpfiles.settings."10-resetting" = builtins.listToAttrs (
+      builtins.map (file: {
+        name = file;
+        value.C.argument = "/persistent${file}";
+      })
+      cfg.copiedOnBoot
+    );
 
     boot.initrd.systemd.enable = true;
     boot.initrd.systemd.services.rollback = {
