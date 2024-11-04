@@ -30,6 +30,7 @@
     inkscape
     valent
     ktailctl
+    gnome.simple-scan
   ];
 
   networking.firewall = rec {
