@@ -18,7 +18,6 @@
   boot.kernelParams = [
     "mem_sleep_default=deep"
   ];
-  services.fwupd.enable = true;
 
   # Enable networking
   networking.networkmanager.enable = true;
