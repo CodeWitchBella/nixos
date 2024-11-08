@@ -47,6 +47,7 @@
       ".mozilla"
       ".config/SuperSlicer"
       ".local/share/zoxide"
+      ".local/share/TelegramDesktop"
     ];
   };
 }
