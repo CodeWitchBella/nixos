@@ -31,6 +31,11 @@ in {
         initialize = true;
         exclude = [
           "/persistent/@backup-snapshot"
+          "node_modules"
+          ".local/share/Steam"
+          "home/isabella/Downloads"
+          "target/debug"
+          "home/isabella/Documents/nixpkgs"
         ];
         passwordFile = config.age.secrets.restic-password.path;
         repository = "sftp://${user}@${box}.your-storagebox.de${cfg.folder}";
@@ -39,7 +44,6 @@ in {
         ];
         extraOptions = [
           "sftp.command='${pkgs.sshpass}/bin/sshpass -f ${config.age.secrets.restic-storage-password.path} -- ssh -4 ${box}.your-storagebox.de -l ${user} -s sftp'"
-          "--exclude-file=${./excludes.txt}"
           "--verbose"
         ];
         timerConfig = {
