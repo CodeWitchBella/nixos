@@ -70,6 +70,11 @@
   ];
 
   isbl.services.sunshine.enable = true;
+  isbl.backup-restic = {
+    enable = true;
+    passwordFile = ../../secrets/restic-desktop.age;
+    folder = "/desktop";
+  };
   programs.steam.enable = true;
   systemd.user.services.sunshine.environment.WAYLAND_DISPLAY = "wayland-0";
 

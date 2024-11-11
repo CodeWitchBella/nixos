@@ -1,0 +1,5 @@
+node_modules
+.local/share/Steam
+home/isabella/Downloads
+target/debug
+home/isabella/Documents/nixpkgs
