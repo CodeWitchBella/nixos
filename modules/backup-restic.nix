@@ -48,6 +48,7 @@ in {
         ];
         timerConfig = {
           OnCalendar = "02:05";
+          Persistent = true;
         };
         backupPrepareCommand = ''
           set -Eeuxo pipefail
