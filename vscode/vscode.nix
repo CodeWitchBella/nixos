@@ -80,5 +80,6 @@
     "security.workspace.trust.enabled" = false; # doesn't play well with impermanence
     "prisma.showPrismaDataPlatformNotification" = false;
     "git.postCommitCommand" = "push";
+    "biome.requireConfigFile" = true;
   };
 }
