@@ -28,7 +28,8 @@
     ];
 
     homeFiles = [
-      ".config/Code/User/globalStorage/storage.json" # recent workspaces
+      ".config/Code/User/globalStorage"
+      ".config/Code/User/workplaceStorage"
       ".config/nushell/history.txt"
       ".config/kwinoutputconfig.json" # screen settings
     ];
