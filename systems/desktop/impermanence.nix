@@ -28,12 +28,12 @@
     ];
 
     homeFiles = [
-      ".config/Code/User/globalStorage"
-      ".config/Code/User/workplaceStorage"
-      ".config/nushell/history.txt"
+     ".config/nushell/history.txt"
       ".config/kwinoutputconfig.json" # screen settings
     ];
     homeDirectories = [
+      ".config/Code/User/globalStorage"
+      ".config/Code/User/workplaceStorage"
       "Downloads"
       # "Music" - I don't use this one
       # "Pictures" - screenshot dumping ground
