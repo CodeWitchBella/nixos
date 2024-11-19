@@ -63,6 +63,7 @@
     "editor.rulers" = [80 120];
     "diffEditor.ignoreTrimWhitespace" = false;
     "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "[json]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
     "mypy-type-checker.importStrategy" = "fromEnvironment";
