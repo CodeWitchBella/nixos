@@ -21,7 +21,7 @@
     krita
     vlc
     ffmpeg
-    obs-studio
+    # obs-studio
     bitwarden-cli
     rbw
     super-slicer-latest

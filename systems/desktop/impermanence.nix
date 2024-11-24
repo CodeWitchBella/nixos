@@ -28,7 +28,7 @@
     ];
 
     homeFiles = [
-     ".config/nushell/history.txt"
+      ".config/nushell/history.txt"
       ".config/kwinoutputconfig.json" # screen settings
     ];
     homeDirectories = [
