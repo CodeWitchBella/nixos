@@ -24,8 +24,11 @@
       #"/etc/shadow" # passwords..., meh
     ];
 
+    copiedOnBoot = [
+      "/home/isabella/.config/plasma-org.kde.plasma.desktop-appletsrc" # pinned apps among other things
+    ];
+
     homeFiles = [
-      ".config/Code/User/globalStorage/storage.json" # recent workspaces
       ".config/nushell/history.txt"
       ".local/share/kwalletd/kdewallet.salt" # it gets triggered anyways
       ".local/share/kwalletd/kdewallet.kwl"
@@ -33,6 +36,8 @@
       ".config/kwinoutputconfig.json" # screen settings
     ];
     homeDirectories = [
+      ".config/Code/User/globalStorage"
+      ".config/Code/User/workplaceStorage"
       "Downloads"
       # "Music" - I don't use this one
       # "Pictures" - screenshot dumping ground
