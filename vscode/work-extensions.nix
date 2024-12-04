@@ -10,7 +10,7 @@
       name = "debugpy";
       publisher = "ms-python";
       version = "2024.13.2024112901";
-      sha256 = "0k7sgs0nvydc9w8r2irk81fsc9b2h75bfi1kgazm9qayv2bsqxvq";
+      sha256 = "sha256-Zd3h3aszooBYjNRmUuJZHwpWpdFCRIy7aPXbmZ1DQvA=";
     }
     {
       name = "mypy-type-checker";
