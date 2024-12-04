@@ -15,8 +15,8 @@
     {
       name = "biome";
       publisher = "biomejs";
-      version = "2024.11.211321";
-      sha256 = "0rcd263n9qx6l0aky9zjria90dbnp6prdnj1lf9ydn9mjhr2jngd";
+      version = "2024.12.22126";
+      sha256 = "0nyj88zhzj1d8l2pz464iijplhpn7pj8ky1i78iwl70khgscnr84";
     }
     {
       name = "vscode-tailwindcss";
@@ -63,20 +63,20 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.116.2024112219";
-      sha256 = "0h3k4m0lifmaacrf4vqr0qsavyjiwlc5437q710il7s2rg8s19fl";
+      version = "0.116.2024120415";
+      sha256 = "16qpmr069pl14kgdi9v9h3idlhs94pwwsxhwffb8l4sj9xkhpy3d";
     }
     {
       name = "prisma";
       publisher = "prisma";
-      version = "5.22.0";
-      sha256 = "1p9yxb05avjwk9m91jn4migkv38sqj889gd21b4712sys0syqs36";
+      version = "6.0.0";
+      sha256 = "1p44mmjp84c0zcmcgvsj05dxv1j42lg7ksd9xlflx9718dc3iisx";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2194";
-      sha256 = "0crxdj1nl9xdhq06iphzi3yk2vbgvgscq95hc9xql1i9vzkkydd6";
+      version = "0.4.2206";
+      sha256 = "0838nb3sllfx2ylwc0f59rsllrjbz4a7a754v1vh6jm9wz5g8jj2";
     }
     {
       name = "rewrap";
