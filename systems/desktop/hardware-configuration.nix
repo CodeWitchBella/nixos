@@ -7,20 +7,29 @@
   pkgs,
   modulesPath,
   ...
-}: {
+}:
+{
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
-  boot.initrd.availableKernelModules = ["thunderbolt" "xhci_pci" "ahci" "usbhid" "nvme" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-amd"];
-  boot.extraModulePackages = [];
+  boot.initrd.availableKernelModules = [
+    "thunderbolt"
+    "xhci_pci"
+    "ahci"
+    "usbhid"
+    "nvme"
+    "usb_storage"
+    "sd_mod"
+  ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/426400d9-5b4c-4957-8f29-fe43c391ab92";
     fsType = "btrfs";
-    options = ["subvol=rootfs"];
+    options = [ "subvol=rootfs" ];
   };
 
   boot.initrd.luks.devices."luks-a1f7c9fc-b483-4851-87ad-29e56d103c3c".device = "/dev/disk/by-uuid/a1f7c9fc-b483-4851-87ad-29e56d103c3c";
@@ -28,13 +37,13 @@
   fileSystems."/nix" = {
     device = "/dev/disk/by-uuid/426400d9-5b4c-4957-8f29-fe43c391ab92";
     fsType = "btrfs";
-    options = ["subvol=nix"];
+    options = [ "subvol=nix" ];
   };
 
   fileSystems."/persistent" = {
     device = "/dev/disk/by-uuid/426400d9-5b4c-4957-8f29-fe43c391ab92";
     fsType = "btrfs";
-    options = ["subvol=persistent"];
+    options = [ "subvol=persistent" ];
     neededForBoot = true;
   };
 

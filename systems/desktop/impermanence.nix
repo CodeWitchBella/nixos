@@ -3,7 +3,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   systemd.tmpfiles.rules = [
     "L+ /etc/nixos/flake.nix - - - - /home/isabella/nixos/flake.nix"
   ];

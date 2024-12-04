@@ -6,7 +6,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./impermanence.nix
     ./hardware-configuration.nix
@@ -16,13 +17,13 @@
   nixpkgs.overlays = [
     (import ./widevine.nix)
   ];
-  environment.sessionVariables.MOZ_GMP_PATH = ["${pkgs.widevine}/gmp-widevinecdm/system-installed"];
+  environment.sessionVariables.MOZ_GMP_PATH = [ "${pkgs.widevine}/gmp-widevinecdm/system-installed" ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
 
-  boot.kernelModules = ["hid-apple"];
+  boot.kernelModules = [ "hid-apple" ];
   boot.extraModprobeConfig = ''
     options hid_apple swap_opt_cmd=1
     options hid_apple swap_fn_leftctrl=1
@@ -48,7 +49,10 @@
     theme = "bgrt";
   };
   boot.consoleLogLevel = 0;
-  boot.kernelParams = ["quiet" "udev.log_level=0"];
+  boot.kernelParams = [
+    "quiet"
+    "udev.log_level=0"
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

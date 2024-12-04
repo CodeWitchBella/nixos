@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   enable = true;
   lfs.enable = true;
   userName = "Isabella Skořepová";
@@ -11,7 +12,8 @@
     commit.gpgsign = true;
     gpg.format = "ssh";
     alias.frp = "!bash -c \"git fetch --prune --tags ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`; git push --force\"";
-    alias.squash = ''      !bash -c '
+    alias.squash = ''
+      !bash -c '
         if [ -z "$1" ]; then
           echo "Usage: git squash [REF]"
           echo "eg. git squash HEAD~3 would squash the last three commits"
@@ -39,7 +41,8 @@
       ' - \
     '';
     alias.fr = "!bash -c \"git fetch --prune --tags ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
-    alias.ruff = ''      !bash -c "
+    alias.ruff = ''
+      !bash -c "
               set -xe
               if [ -z \"`git status --porcelain`\" ]; then
                 if ruff format --check && ruff check; then

@@ -3,8 +3,9 @@
   lib,
   pkgs,
   ...
-}: {
-  config = lib.mkIf (config.specialisation != {} || true) {
+}:
+{
+  config = lib.mkIf (config.specialisation != { } || true) {
     services.xserver.enable = true;
     services.desktopManager.plasma6.enable = true;
     services.displayManager = {

@@ -3,16 +3,23 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.isbl.services.sunshine;
-in {
+in
+{
   options.isbl.services.sunshine = with lib; {
     enable = mkEnableOption "sunshine";
   };
 
   config = lib.mkIf cfg.enable {
     networking.firewall = {
-      allowedTCPPorts = [47984 47989 47990 48010];
+      allowedTCPPorts = [
+        47984
+        47989
+        47990
+        48010
+      ];
       allowedUDPPortRanges = [
         {
           from = 47998;

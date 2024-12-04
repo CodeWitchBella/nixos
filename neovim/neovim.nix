@@ -1,4 +1,5 @@
-{pkgs}: {
+{ pkgs }:
+{
   enable = true;
 
   plugins = with pkgs.vimPlugins; [

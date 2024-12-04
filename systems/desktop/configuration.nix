@@ -6,7 +6,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./impermanence.nix
     # Include the results of the hardware scan.
@@ -17,7 +18,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.supportedFilesystems = ["ntfs"];
+  boot.supportedFilesystems = [ "ntfs" ];
   boot.loader.systemd-boot.configurationLimit = 120;
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth

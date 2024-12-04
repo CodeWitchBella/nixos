@@ -3,10 +3,11 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   nix.settings = {
-    extra-substituters = ["https://cosmic.cachix.org/"];
-    trusted-public-keys = ["cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="];
+    extra-substituters = [ "https://cosmic.cachix.org/" ];
+    trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
   };
   # specialisation.cosmic.configuration = {
   #   # Enable COSMIC Epoch
@@ -17,14 +18,14 @@
   #     "L /usr/share/X11/xkb/rules/base.xml - - - - ${pkgs.xkeyboard_config}/share/X11/xkb/rules/base.xml"
   #   ];
   # };
-  environment.systemPackages = with pkgs; [cosmic-term];
+  environment.systemPackages = with pkgs; [ cosmic-term ];
 
   programs.ssh.startAgent = true;
   environment.variables.SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
   systemd.user.services.preload-ssh-key = {
-    after = ["ssh-agent.service"];
-    wants = ["ssh-agent.service"];
-    wantedBy = ["default.target"];
+    after = [ "ssh-agent.service" ];
+    wants = [ "ssh-agent.service" ];
+    wantedBy = [ "default.target" ];
     environment.SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
     script = with pkgs; ''
       ${openssh}/bin/ssh-add ~/.ssh/id_ed25519

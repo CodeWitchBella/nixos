@@ -2,8 +2,9 @@
   config,
   pkgs,
   ...
-}: {
-  imports = [../shared/configuration.nix];
+}:
+{
+  imports = [ ../shared/configuration.nix ];
 
   services.tailscale.enable = true;
   isbl.impermanence.rootDirectories = [
@@ -42,7 +43,7 @@
     ];
     allowedUDPPortRanges = allowedTCPPortRanges;
   };
-  hardware.sane.extraBackends = with pkgs; [sane-airscan];
+  hardware.sane.extraBackends = with pkgs; [ sane-airscan ];
   services.ipp-usb.enable = true;
 
   age.secrets.password.file = ../../secrets/password.age;

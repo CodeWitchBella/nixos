@@ -3,12 +3,16 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     ./cosmic.nix
     ./kde.nix
   ];
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # nix.settings.auto-optimise-store = true; # On every build
   nix.optimise.automatic = true; # on schedule
   nix.gc = {
@@ -31,7 +35,14 @@
   users.users.isabella = {
     isNormalUser = true;
     description = "Isabella Skořepová";
-    extraGroups = ["networkmanager" "wheel" "scanner" "lp" "dialout" "input"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "scanner"
+      "lp"
+      "dialout"
+      "input"
+    ];
     shell = pkgs.nushell;
   };
   security.sudo.wheelNeedsPassword = false;
@@ -53,7 +64,7 @@
     gnomeExtensions.appindicator
     firefox
     gitFull
-    (nerdfonts.override {fonts = ["FiraCode"];})
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
     b612
     gnome-tweaks
     dig
@@ -86,7 +97,7 @@
   environment.variables = {
     EDITOR = "nvim";
   };
-  environment.shells = [pkgs.nushell];
+  environment.shells = [ pkgs.nushell ];
   environment.gnome.excludePackages = [
     pkgs.epiphany # web browser
     pkgs.totem # video player
@@ -96,8 +107,8 @@
     pkgs.gnome-tour
     pkgs.gnome-console
   ];
-  services.xserver.excludePackages = [pkgs.xterm];
-  services.udev.packages = with pkgs; [gnome-settings-daemon]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
+  services.xserver.excludePackages = [ pkgs.xterm ];
+  services.udev.packages = with pkgs; [ gnome-settings-daemon ]; # https://nixos.wiki/wiki/GNOME#Systray_Icons
 
   # i18n.inputMethod = {
   #   enable = true;
