@@ -14,14 +14,12 @@
         let
           nixpkgs-exts = with pkgs.vscode-extensions; [
             rust-lang.rust-analyzer
-            kamadorueda.alejandra
             ms-vscode-remote.remote-ssh
             # ms-python.python
           ];
           shared-exts = builtins.filter (
             ext:
             ext.name != "rust-analyzer"
-            && ext.name != "alejandra"
             && ext.name != "remote-ssh"
             && ext.name != "ruff"
             && ext.publisher != "ms-python"

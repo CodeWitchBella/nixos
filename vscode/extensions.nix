@@ -43,12 +43,6 @@
       sha256 = "1fcz8f4jgnf24kblf8m8nwgzd5pxs2gmrv235cpdgmqz38kf9n54";
     }
     {
-      name = "alejandra";
-      publisher = "kamadorueda";
-      version = "1.0.0";
-      sha256 = "1ncjzhrc27c3cwl2cblfjvfg23hdajasx8zkbnwx5wk6m2649s88";
-    }
-    {
       name = "kdl";
       publisher = "kdl-org";
       version = "1.3.1";
