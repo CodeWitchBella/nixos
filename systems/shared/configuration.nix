@@ -64,7 +64,7 @@
     gnomeExtensions.appindicator
     firefox
     gitFull
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    nerd-fonts.fira-code
     b612
     gnome-tweaks
     dig

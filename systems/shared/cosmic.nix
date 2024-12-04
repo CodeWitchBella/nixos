@@ -18,7 +18,7 @@
   #     "L /usr/share/X11/xkb/rules/base.xml - - - - ${pkgs.xkeyboard_config}/share/X11/xkb/rules/base.xml"
   #   ];
   # };
-  environment.systemPackages = with pkgs; [ cosmic-term ];
+  # environment.systemPackages = with pkgs; [ cosmic-term ];
 
   programs.ssh.startAgent = true;
   environment.variables.SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
