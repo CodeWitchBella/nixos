@@ -17,9 +17,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
-
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -64,7 +61,7 @@
         system,
         ...
       }: {
-        formatter = inputs.alejandra.defaultPackage.${system};
+        formatter = pkgs.nixfmt-rfc-style;
         devshells.default = {
           packages = [inputs.agenix.packages."${system}".default];
         };
