@@ -53,6 +53,8 @@ in
           timerConfig = {
             OnCalendar = "02:05";
             Persistent = true;
+            After = "network-online.target";
+            OnBootSec = "15min";
           };
           backupPrepareCommand = ''
             set -Eeuxo pipefail
