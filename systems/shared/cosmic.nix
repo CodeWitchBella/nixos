@@ -3,12 +3,11 @@
   pkgs,
   lib,
   ...
-}:
-{
-  nix.settings = {
-    extra-substituters = [ "https://cosmic.cachix.org/" ];
-    trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-  };
+}: {
+  # nix.settings = {
+  #   extra-substituters = [ "https://cosmic.cachix.org/" ];
+  #   trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+  # };
   # specialisation.cosmic.configuration = {
   #   # Enable COSMIC Epoch
   #   services.desktopManager.cosmic.enable = true;
@@ -23,9 +22,9 @@
   programs.ssh.startAgent = true;
   environment.variables.SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
   systemd.user.services.preload-ssh-key = {
-    after = [ "ssh-agent.service" ];
-    wants = [ "ssh-agent.service" ];
-    wantedBy = [ "default.target" ];
+    after = ["ssh-agent.service"];
+    wants = ["ssh-agent.service"];
+    wantedBy = ["default.target"];
     environment.SSH_AUTH_SOCK = "/run/user/1000/ssh-agent";
     script = with pkgs; ''
       ${openssh}/bin/ssh-add ~/.ssh/id_ed25519
