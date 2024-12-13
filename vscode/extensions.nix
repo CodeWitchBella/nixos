@@ -21,8 +21,8 @@
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.13.59";
-      sha256 = "1c5h29m8hkflyfgq7n8pgkypffgfclnk0mwrgnr2cvw0vpazcinr";
+      version = "0.13.62";
+      sha256 = "146p3bms8cn1h0p0yqjfid7hgf6093mgfjalrw7c9948v68xxc8p";
     }
     {
       name = "vscode-eslint";
@@ -63,8 +63,8 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.116.2024120415";
-      sha256 = "16qpmr069pl14kgdi9v9h3idlhs94pwwsxhwffb8l4sj9xkhpy3d";
+      version = "0.117.2024121215";
+      sha256 = "1mkhz6garn97hz5ign9d1p2ycqnvwb07rprvhdbsga5dyy7sczg9";
     }
     {
       name = "prisma";
@@ -75,8 +75,8 @@
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2206";
-      sha256 = "0838nb3sllfx2ylwc0f59rsllrjbz4a7a754v1vh6jm9wz5g8jj2";
+      version = "0.4.2216";
+      sha256 = "1mq3xr7ksdjq21ym0b2q0hyj0vr6a56l29bwlks1p2lnpcglzinz";
     }
     {
       name = "rewrap";

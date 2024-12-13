@@ -27,7 +27,8 @@
     options = [ "subvol=rootfs" ];
   };
 
-  boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/639416b0-623f-4cd2-bd75-052f1bb5cea2";
+  boot.initrd.luks.devices."cryptroot".device =
+    "/dev/disk/by-uuid/639416b0-623f-4cd2-bd75-052f1bb5cea2";
 
   fileSystems."/nix" = {
     device = "/dev/disk/by-uuid/8f530f2d-5916-4e82-82f1-d206059d1c97";

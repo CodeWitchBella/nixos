@@ -87,5 +87,6 @@
     "prisma.showPrismaDataPlatformNotification" = false;
     "git.postCommitCommand" = "push";
     "biome.requireConfigFile" = true;
+    "python.locator" = "js";
   };
 }
