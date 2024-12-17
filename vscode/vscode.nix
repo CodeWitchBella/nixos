@@ -55,17 +55,17 @@
     "window.zoomLevel" = 1;
     "git.confirmSync" = false;
     "git.autofetch" = true;
-    "[typescriptreact]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-    "[typescript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-    "[javascript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-    "[html]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "[typescriptreact]"."editor.defaultFormatter" = "biomejs.biome";
+    "[typescript]"."editor.defaultFormatter" = "biomejs.biome";
+    "[javascript]"."editor.defaultFormatter" = "biomejs.biome";
+    "[html]"."editor.defaultFormatter" = "biomejs.biome";
     "editor.rulers" = [
       80
       120
     ];
     "diffEditor.ignoreTrimWhitespace" = false;
-    "[css]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-    "[json]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
+    "[css]"."editor.defaultFormatter" = "biomejs.biome";
+    "[json]"."editor.defaultFormatter" = "biomejs.biome";
     "editor.formatOnSave" = true;
     "vsicons.dontShowNewVersionMessage" = true;
     "mypy-type-checker.importStrategy" = "fromEnvironment";
