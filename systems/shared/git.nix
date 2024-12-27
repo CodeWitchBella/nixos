@@ -40,15 +40,21 @@
         fi
       ' - \
     '';
-    alias.prune = ''
-      !bash -c '
-        set -e
-        git fetch -p
-        for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do
-          git branch -D $branch
-        done
-      ' - \
-    '';
+    alias.fprune =
+      let
+        bin = pkgs.writeShellScriptBin "fp" ''
+          set -e
+
+          echo "fetching"
+          git fetch -p
+          echo "fetched"
+
+          for branch in $(git for-each-ref --format "%(refname) %(upstream:track)" refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do
+            git branch -D "$branch"
+          done
+        '';
+      in
+      "!${bin}/bin/fp";
     alias.fr = "!bash -c \"git fetch --prune --tags ; git rebase `git symbolic-ref refs/remotes/origin/HEAD --short`\"";
     alias.ruff = ''
       !bash -c "
