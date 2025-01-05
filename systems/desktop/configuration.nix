@@ -7,6 +7,14 @@
   inputs,
   ...
 }:
+let
+  m = {
+    unitConfig = {
+      FailureAction = "poweroff-force";
+      StartLimitAction = "poweroff-force";
+    };
+  };
+in
 {
   imports = [
     ./impermanence.nix
@@ -79,6 +87,36 @@
   };
   programs.steam.enable = true;
   systemd.user.services.sunshine.environment.WAYLAND_DISPLAY = "wayland-0";
+
+  # systemd.enableEmergencyMode = false;
+  # boot.initrd.systemd.services."dev-nvme0n1p1.device" = m;
+  # boot.initrd.systemd.services."systemd-ask-password-console.service" = m;
+  # boot.initrd.systemd.services."dev-disk-by\\x2duuid-426400d9\\x2d5b4c\\x2d4957\\x2d8f29\\x2dfe43c391ab92.device" = m;
+  # boot.initrd.systemd.services."dev-mapper-luks\\x2da1f7c9fc\\x2db483\\x2d4851\\x2d87ad\\x2d29e56d103c3c.device" = m;
+  # boot.initrd.systemd.services."dev-disk-by\\x2duuid-a1f7c9fc\\x2db483\\x2d4851\\x2d87ad\\x2d29e56d103c3c.device" = m;
+
+  # boot.initrd.systemd.services.timeout-shutdown = {
+  #   description = "Shutdown the system on password timeout";
+  #   wantedBy = [
+  #     "initrd.target"
+  #   ];
+  #   after = [
+  #     "dev-mapper-cryptroot.device"
+  #     "cryptsetup.target"
+  #     "initrd-switch-root.target"
+  #   ];
+  #   before = [
+  #     "initrd-switch-root.target"
+  #     "run-agenix.d.mount"
+  #     "systemd-remount-fs.service"
+  #   ];
+  #   unitConfig.DefaultDependencies = "no";
+  #   serviceConfig.Type = "oneshot";
+  #   script = ''
+  #     set -xe
+  #     if [ ! -e ${config.fileSystems."/".device} ]; then shutdown ; fi
+  #   '';
+  # };
 
   system.stateVersion = "23.05"; # Did you read the comment?
 }
