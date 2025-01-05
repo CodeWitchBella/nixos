@@ -54,6 +54,21 @@
     "udev.log_level=0"
   ];
 
+  boot.initrd.systemd.services.timeout-shutdown = {
+    description = "Shutdown the system on password timeout";
+    wantedBy = [
+      "initrd.target"
+    ];
+    unitConfig.DefaultDependencies = "no";
+    serviceConfig.Type = "oneshot";
+    script = ''
+      set -xe
+      sleep 60
+      if [ ! -e ${config.fileSystems."/".device} ]; then poweroff ; fi
+    '';
+  };
+
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It's perfectly fine and recommended to leave
