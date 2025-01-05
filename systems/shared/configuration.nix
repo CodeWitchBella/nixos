@@ -120,6 +120,9 @@
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
 
+  systemd.extraConfig = "DefaultTimeoutStopSec=15s";
+  systemd.user.extraConfig = "DefaultTimeoutStopSec=15s";
+
   programs.nix-ld.enable = true;
 
   # Set your time zone.
