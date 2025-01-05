@@ -14,6 +14,7 @@
     ./hardware-configuration.nix
     ../personal/configuration.nix
   ];
+  nix.gc.automatic = false;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

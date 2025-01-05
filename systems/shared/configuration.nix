@@ -16,7 +16,7 @@
   # nix.settings.auto-optimise-store = true; # On every build
   nix.optimise.automatic = true; # on schedule
   nix.gc = {
-    automatic = true;
+    automatic = lib.mkDefault true;
     dates = "daily";
     options = "--delete-older-than 60d";
   };
