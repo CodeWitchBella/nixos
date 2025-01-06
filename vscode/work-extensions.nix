@@ -9,8 +9,8 @@
     {
       name = "debugpy";
       publisher = "ms-python";
-      version = "2024.15.2024121301";
-      sha256 = "sha256-pOBu0UFdn55AuWQp2NIJDYENnDTkIuw+TzzpXvb+ndU=";
+      version = "2024.15.2024121701";
+      sha256 = "12qlsfhhxn34gy3ypfh5mdpccz8xhv9jy94zxw4zp11rvddby9bf";
     }
     {
       name = "mypy-type-checker";
@@ -21,14 +21,14 @@
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.23.2024121301";
-      sha256 = "1dhd26zy0dk5jr0hd4kbrr09nmnc45wp2izxvl2lky9dpywadm3v";
+      version = "2024.23.2024121901";
+      sha256 = "1b7rbyssbr18lk4w59z200q7yscz0l452j5jw6d2jcvlvnzh0zy1";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.12.1";
-      sha256 = "05gwlrdvdd7w3mahb59207766m0pvwq0asjwczazl7jmv1gdp49f";
+      version = "2024.12.100";
+      sha256 = "167cj9r476whfjg474s4nf7zi8v7cj58vrqiw86y4vcgl57v4h50";
     }
   ];
 }

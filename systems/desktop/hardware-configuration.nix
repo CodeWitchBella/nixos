@@ -11,8 +11,8 @@
 let
   # Use /dev/mapper to prevent timeout:
   # https://github.com/NixOS/nixpkgs/issues/250003#issuecomment-1724708072
+  # encryptedDevice = "/dev/disk/by-uuid/426400d9-5b4c-4957-8f29-fe43c391ab92";
   encryptedDevice = "/dev/mapper/luks-a1f7c9fc-b483-4851-87ad-29e56d103c3c";
-  #   encryptedDevice = "/dev/disk/by-uuid/426400d9-5b4c-4957-8f29-fe43c391ab92";
 in
 {
   imports = [
