@@ -45,6 +45,16 @@
     setupAsahiSound = true;
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    # input.General.ClassicBondedOnly = false; #see https://discourse.nixos.org/t/nix-channel-23-11-bluez-and-bluezfull/37285/17
+    powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  };
+  # Note that the following two need to be either both enabled, or disabled,
+  # otherwise it doesn't boot.
+  settings.General.Experimental = true;
+  services.blueman.enable = true;
+
   boot.initrd.systemd.enable = true;
   boot.initrd.verbose = false;
   boot.plymouth = {
