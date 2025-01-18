@@ -51,6 +51,7 @@
       ".local/share/Steam"
       ".local/share/zoxide"
       ".factorio"
+      ".local/share/Terraria"
     ];
   };
 }
