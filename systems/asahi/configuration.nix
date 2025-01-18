@@ -44,6 +44,7 @@
     experimentalGPUInstallMode = "replace";
     setupAsahiSound = true;
   };
+  hardware.bluetooth.enable = true;
 
   boot.initrd.systemd.enable = true;
   boot.initrd.verbose = false;

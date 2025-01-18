@@ -7,7 +7,7 @@
     };
     asahi-firmware.url = "git+file:/persistent/firmware?ref=main";
     nixos-apple-silicon = {
-      url = "github:marcusramberg/nixos-apple-silicon/mesa";
+      url = "github:oliverbestmann/nixos-apple-silicon";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     systems.url = "github:nix-systems/x86_64-linux";
