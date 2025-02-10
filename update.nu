@@ -8,6 +8,7 @@ for input in $inputs {
     if $hostname != "IsblAsahi" and ($input == "asahi-firmware" or $input == "nixos-apple-silicon") {
         continue
     }
+    print $"updating input: ($input)"
     nix flake update $input
 }
 

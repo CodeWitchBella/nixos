@@ -15,14 +15,14 @@
     {
       name = "biome";
       publisher = "biomejs";
-      version = "2024.12.22126";
-      sha256 = "0nyj88zhzj1d8l2pz464iijplhpn7pj8ky1i78iwl70khgscnr84";
+      version = "2025.2.72227";
+      sha256 = "0r53k39jzbc22y91a0j81adzyb674dky77m7rgs4wv885xbpwgif";
     }
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.13.64";
-      sha256 = "14962pavlbdmqki6m7y7k9nvz1pcicrn3dw10lrcq8vxbj2bc416";
+      version = "0.14.3";
+      sha256 = "1y5x82ngia7xx67jizik4n3bqn0rwff96y8kkhk2cflbv4jbjsmp";
     }
     {
       name = "vscode-eslint";
@@ -33,8 +33,8 @@
     {
       name = "editorconfig";
       publisher = "editorconfig";
-      version = "0.16.4";
-      sha256 = "0fa4h9hk1xq6j3zfxvf483sbb4bd17fjl5cdm3rll7z9kaigdqwg";
+      version = "0.16.7";
+      sha256 = "154xgkqsfm2cky0h7cq76ry3k084w33ydwn7s7c82a0f34f8rchf";
     }
     {
       name = "prettier-vscode";
@@ -45,8 +45,8 @@
     {
       name = "kdl";
       publisher = "kdl-org";
-      version = "2.0.1";
-      sha256 = "10ncifzn3skpgyzlbnlbsvg2ys99siki2bf5p56mrgjnwr95yj38";
+      version = "2.1.3";
+      sha256 = "1cx5jaacsw2027jym90ggfklmhm8l2h4iib2jrb07bihk9pjdjr6";
     }
     {
       name = "openscad-language-support";
@@ -63,20 +63,20 @@
     {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.117.2024121915";
-      sha256 = "00mri2cv9agcl1xi34yi9bcwhalp1m3nb37qh66x903y7973l75s";
+      version = "0.118.2025021015";
+      sha256 = "1m1lfd29vzfsv3iw0bhvnqqdm55hnlxpglc92ibbavzwy09kpg0d";
     }
     {
       name = "prisma";
       publisher = "prisma";
-      version = "6.1.0";
-      sha256 = "1m4i60hm62m1bl6nn4pk0l54ph7zf0c3ppvx4qc4bwpqv82k7xv1";
+      version = "6.3.1";
+      sha256 = "0vrx9qfa0y2sbll6g0ic8k7rddf0p9v0i5h9xpfjbs30bg31qqdh";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2244";
-      sha256 = "1jpc3y6igzkscxmb4limh8scxcpabil8lj6igyvrg1yagj6smcsd";
+      version = "0.4.2298";
+      sha256 = "166rjqbadak6m18snc4iggfnkr3gfrnqw21scnjpqvrbd2w8qiww";
     }
     {
       name = "rewrap";
@@ -105,8 +105,8 @@
     {
       name = "vscode-icons";
       publisher = "vscode-icons-team";
-      version = "12.10.0";
-      sha256 = "0amxr1i2vif47h65700ha6q0j9gg4s41gfaxs77xs97frjxcpl0q";
+      version = "12.11.0";
+      sha256 = "1lw91chc0jmqdx9akjim1kkk54jhhfhx5hnv04bi1ajbj0f856s6";
     }
     {
       name = "gitblame";

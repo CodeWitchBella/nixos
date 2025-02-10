@@ -3,32 +3,50 @@
     {
       name = "ruff";
       publisher = "charliermarsh";
-      version = "2024.56.0";
-      sha256 = "1mpqjx7n2mi9ic0z7ps94pphzq62w0394l0s42vnik40qdvsh0ql";
+      version = "2025.8.0";
+      sha256 = "15dfi4s84h7m0za7j4ba4g1gzwlwp3gili59p5yc9nlqb57cf40s";
     }
     {
       name = "debugpy";
       publisher = "ms-python";
-      version = "2024.15.2024121701";
-      sha256 = "12qlsfhhxn34gy3ypfh5mdpccz8xhv9jy94zxw4zp11rvddby9bf";
+      version = "2025.1.2025020701";
+      sha256 = "sha256-W0AFkBqp+LbNu2Nj5pJCExYO8TlgfjhR+gafxtmXD9U=";
     }
     {
       name = "mypy-type-checker";
       publisher = "ms-python";
-      version = "2024.1.13171012";
-      sha256 = "0dslmrhp7flmp6kd69zmpimmayd0n8r5k74c0v81rb1v3wnblvhz";
+      version = "2025.1.10381011";
+      sha256 = "1vja2nw27wdnh1wrnh6mndr2slw3479zrmvwsx7h50c0ng2990kf";
     }
     {
       name = "python";
       publisher = "ms-python";
-      version = "2024.23.2024121901";
-      sha256 = "1b7rbyssbr18lk4w59z200q7yscz0l452j5jw6d2jcvlvnzh0zy1";
+      version = "2025.1.2025021001";
+      sha256 = "1sjivk5b1v55hk5f1bwr6prasbrw281y47vqwyb4md83rkwsgwhs";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2024.12.100";
-      sha256 = "167cj9r476whfjg474s4nf7zi8v7cj58vrqiw86y4vcgl57v4h50";
+      version = "2025.2.1";
+      sha256 = "1aqdjgambg74zjmcmdsdsvd6c12ilw64aa9my2gany0hmmmsxapi";
+    }
+    {
+      name = "jupyter";
+      publisher = "ms-toolsai";
+      version = "2025.2.2025020701";
+      sha256 = "09mm0bw5dnmrfssp55h73k28bryhq5mrx2f1ds5k4n6bqiw7pjp5";
+    }
+    {
+      name = "jupyter-renderers";
+      publisher = "ms-toolsai";
+      version = "1.1.2025012901";
+      sha256 = "1wmjcf5s1vxa6bgsvn8j4ba6b8nl7zpkfqcad755727p82vr4qid";
+    }
+    {
+      name = "vscode-pull-request-github";
+      publisher = "github";
+      version = "0.105.2025021010";
+      sha256 = "1mlhdr99y9bk4ygd0j9cyjh5da13crpbbasqlx8bdxf0hd1f6p4q";
     }
   ];
 }
