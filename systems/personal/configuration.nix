@@ -23,7 +23,7 @@
     vlc
     ffmpeg
     # obs-studio
-    bitwarden-cli
+    # bitwarden-cli
     rbw
     super-slicer-latest
     openscad
