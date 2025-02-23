@@ -52,6 +52,7 @@
       ".local/share/zoxide"
       ".factorio"
       ".local/share/Terraria"
+      ".local/share/TelegramDesktop"
     ];
   };
 }

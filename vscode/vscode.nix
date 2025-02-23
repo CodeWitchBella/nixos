@@ -88,5 +88,6 @@
     "git.postCommitCommand" = "push";
     "biome.requireConfigFile" = true;
     "python.locator" = "js";
+    "biome.lsp.bin" = "${pkgs.biome}/bin/biome";
   };
 }
