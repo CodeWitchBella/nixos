@@ -89,7 +89,7 @@
     hunspellDicts.en_GB-large
     bind
     evince
-    spectacle
+    kdePackages.spectacle
     rink
   ];
   virtualisation.podman.enable = true;

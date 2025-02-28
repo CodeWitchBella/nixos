@@ -3,50 +3,50 @@
     {
       name = "ruff";
       publisher = "charliermarsh";
-      version = "2025.8.0";
-      sha256 = "15dfi4s84h7m0za7j4ba4g1gzwlwp3gili59p5yc9nlqb57cf40s";
+      version = "2025.12.0";
+      sha256 = "1mdc93msfaksrai21vmmgp9lzs2rlh0d9mzrd73sxlwsyy5kkbsk";
+    }
+    {
+      name = "vscode-pull-request-github";
+      publisher = "github";
+      version = "0.105.2025022704";
+      sha256 = "0dc48mr9j6qq1lkrr4f1xfp3a2dznkj28n0gscjf0n7d48z6w0sa";
     }
     {
       name = "debugpy";
       publisher = "ms-python";
-      version = "2025.1.2025020701";
-      sha256 = "sha256-W0AFkBqp+LbNu2Nj5pJCExYO8TlgfjhR+gafxtmXD9U=";
+      version = "2025.1.2025022401";
+      sha256 = "sha256-EXCsViTGiSiGeAbKVWZruGLlslcZuJ06Qe3qjqy/WTI=";
     }
     {
       name = "mypy-type-checker";
       publisher = "ms-python";
-      version = "2025.1.10381011";
-      sha256 = "1vja2nw27wdnh1wrnh6mndr2slw3479zrmvwsx7h50c0ng2990kf";
+      version = "2025.1.10581009";
+      sha256 = "08bz2dbf2v6k903x58x4kizcrpa8hmlb2yh3gvav6wf2kgqapyra";
     }
     {
       name = "python";
       publisher = "ms-python";
-      version = "2025.1.2025021001";
-      sha256 = "1sjivk5b1v55hk5f1bwr6prasbrw281y47vqwyb4md83rkwsgwhs";
+      version = "2025.1.2025022501";
+      sha256 = "0rimj3zrz12q1956ak9z8sh50v4dc6hhgnx6000lx8iglprm7xc4";
     }
     {
       name = "vscode-pylance";
       publisher = "ms-python";
-      version = "2025.2.1";
-      sha256 = "1aqdjgambg74zjmcmdsdsvd6c12ilw64aa9my2gany0hmmmsxapi";
+      version = "2025.2.102";
+      sha256 = "0p9bh3zrp2148zibwy0ngl7a8wc89babnr7c3jsymmadr8bh7dj7";
     }
     {
       name = "jupyter";
       publisher = "ms-toolsai";
-      version = "2025.2.2025020701";
-      sha256 = "09mm0bw5dnmrfssp55h73k28bryhq5mrx2f1ds5k4n6bqiw7pjp5";
+      version = "2025.2.2025021801";
+      sha256 = "1331sav634vbac79laz65zzw31jq56gwk1q055p8hm5hcbrl7mbl";
     }
     {
       name = "jupyter-renderers";
       publisher = "ms-toolsai";
       version = "1.1.2025012901";
       sha256 = "1wmjcf5s1vxa6bgsvn8j4ba6b8nl7zpkfqcad755727p82vr4qid";
-    }
-    {
-      name = "vscode-pull-request-github";
-      publisher = "github";
-      version = "0.105.2025021010";
-      sha256 = "1mlhdr99y9bk4ygd0j9cyjh5da13crpbbasqlx8bdxf0hd1f6p4q";
     }
   ];
 }

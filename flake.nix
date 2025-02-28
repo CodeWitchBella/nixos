@@ -31,6 +31,7 @@
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
   };
   outputs =
@@ -77,7 +78,7 @@
           ./systems/desktop/configuration.nix
           {
             networking.hostName = "IsblDesktop";
-            home-manager.sharedModules = [ inputs.plasma-manager.homeManagerModules.plasma-manager ];
+            home-manager.sharedModules = [ ];
             home-manager.users.isabella = import ./systems/desktop/home.nix;
           }
         ];
