@@ -52,8 +52,8 @@
   };
   # Note that the following two need to be either both enabled, or disabled,
   # otherwise it doesn't boot.
-  settings.General.Experimental = true;
-  services.blueman.enable = true;
+  # settings.General.Experimental = true;
+  # services.blueman.enable = true;
 
   boot.initrd.systemd.enable = true;
   boot.initrd.verbose = false;
