@@ -4,7 +4,7 @@
       name = "ruff";
       publisher = "charliermarsh";
       version = "2025.12.0";
-      sha256 = "1mdc93msfaksrai21vmmgp9lzs2rlh0d9mzrd73sxlwsyy5kkbsk";
+      sha256 = "sha256-tvNKNjdklwInhEYGicNgFyOnms8WElzy2dw/zIDyNs0=";
     }
     {
       name = "vscode-pull-request-github";
@@ -40,7 +40,7 @@
       name = "jupyter";
       publisher = "ms-toolsai";
       version = "2025.2.2025021801";
-      sha256 = "1331sav634vbac79laz65zzw31jq56gwk1q055p8hm5hcbrl7mbl";
+      sha256 = "sha256-RURAVo4sfGxpA8ES7WIZMsSNEDsZD2bPN5LZ7tXIptM=";
     }
     {
       name = "jupyter-renderers";
