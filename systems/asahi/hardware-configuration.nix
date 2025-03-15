@@ -8,6 +8,12 @@
   modulesPath,
   ...
 }:
+let
+  # Use /dev/mapper to prevent timeout:
+  # https://github.com/NixOS/nixpkgs/issues/250003#issuecomment-1724708072
+  # encryptedDevice = "/dev/disk/by-uuid/8f530f2d-5916-4e82-82f1-d206059d1c97";
+  encryptedDevice = "/dev/mapper/cryptroot";
+in
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -22,7 +28,7 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/8f530f2d-5916-4e82-82f1-d206059d1c97";
+    device = encryptedDevice;
     fsType = "btrfs";
     options = [ "subvol=rootfs" ];
   };
@@ -31,7 +37,7 @@
     "/dev/disk/by-uuid/639416b0-623f-4cd2-bd75-052f1bb5cea2";
 
   fileSystems."/nix" = {
-    device = "/dev/disk/by-uuid/8f530f2d-5916-4e82-82f1-d206059d1c97";
+    device = encryptedDevice;
     fsType = "btrfs";
     options = [ "subvol=nix" ];
   };
@@ -46,7 +52,7 @@
   };
 
   fileSystems."/persistent" = {
-    device = "/dev/disk/by-uuid/8f530f2d-5916-4e82-82f1-d206059d1c97";
+    device = encryptedDevice;
     fsType = "btrfs";
     options = [ "subvol=persistent" ];
     neededForBoot = true;
