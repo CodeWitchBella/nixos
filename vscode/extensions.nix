@@ -15,14 +15,20 @@
     {
       name = "biome";
       publisher = "biomejs";
-      version = "2025.2.72227";
-      sha256 = "0r53k39jzbc22y91a0j81adzyb674dky77m7rgs4wv885xbpwgif";
+      version = "2025.3.151143";
+      sha256 = "1nzgyl41n9a98dfcgpvqyfxrxgmy4any44yphw07fylwspq8i8qv";
     }
     {
       name = "vscode-tailwindcss";
       publisher = "bradlc";
-      version = "0.14.8";
-      sha256 = "1m8znn9cdg14vgcr05kiwh88c33m7x1d7qx8gbqs7kxsr6ggrw10";
+      version = "0.14.12";
+      sha256 = "12y0nivh74s7s6xyivpbr3rfz0a6dfnn1r6ri2mn98aqwvk9jzqf";
+    }
+    {
+      name = "ruff";
+      publisher = "charliermarsh";
+      version = "2025.22.0";
+      sha256 = "17ldg6hs1754dnmillldpwnv6d1dbc3vfzdivf5p6l2mkx62ymw7";
     }
     {
       name = "vscode-eslint";
@@ -33,14 +39,20 @@
     {
       name = "editorconfig";
       publisher = "editorconfig";
-      version = "0.17.1";
-      sha256 = "0al61nfnq3zsir5m3mp7a2kgi2lwvdk59rj132h0888zpm5aw2xq";
+      version = "0.17.2";
+      sha256 = "1s0a2zgxk6qxl6lzw6klkn8xhsxk0l87vcbms2k8535kvscbwbay";
     }
     {
       name = "prettier-vscode";
       publisher = "esbenp";
       version = "11.0.0";
       sha256 = "1fcz8f4jgnf24kblf8m8nwgzd5pxs2gmrv235cpdgmqz38kf9n54";
+    }
+    {
+      name = "vscode-pull-request-github";
+      publisher = "github";
+      version = "0.107.2025032704";
+      sha256 = "0d4xpaicmxvvkkw6090rvf590ihz5sjiy3sfckcfs6ix0hc3vf3l";
     }
     {
       name = "kdl";
@@ -61,22 +73,58 @@
       sha256 = "1n2qdd1rspy6ar03yw7g7zy3yjg9j1xb5xa4v2q12b0y6dymrhgn";
     }
     {
+      name = "debugpy";
+      publisher = "ms-python";
+      version = "2025.5.2025031101";
+      sha256 = "1smy4hq0ygrl56mw9vggr4lf9nk2iwv56b276xbxaa6lp76mpp52";
+    }
+    {
+      name = "mypy-type-checker";
+      publisher = "ms-python";
+      version = "2025.3.10801012";
+      sha256 = "1bfzyvyq213k3lsi3jp50h91dcgfa7l4ijzynvqyg4zi0dhkbsyi";
+    }
+    {
+      name = "python";
+      publisher = "ms-python";
+      version = "2025.3.2025032601";
+      sha256 = "0r650d7s0whanlliwwbbff6p243qb1glzf7dvhwq7xpdqqinq7w7";
+    }
+    {
+      name = "vscode-pylance";
+      publisher = "ms-python";
+      version = "2025.3.105";
+      sha256 = "0157nlvahc1k2dwiwcmkmvarbxl8rz4y4lw3m70w8jndg5ryzm41";
+    }
+    {
+      name = "jupyter";
+      publisher = "ms-toolsai";
+      version = "2025.3.2025032101";
+      sha256 = "0sh8glmxfbkdrrcys7dl0y6kzkp4irsn8g3n1dfndc19cqjs56gd";
+    }
+    {
+      name = "jupyter-renderers";
+      publisher = "ms-toolsai";
+      version = "1.1.2025012901";
+      sha256 = "1wmjcf5s1vxa6bgsvn8j4ba6b8nl7zpkfqcad755727p82vr4qid";
+    }
+    {
       name = "remote-ssh";
       publisher = "ms-vscode-remote";
-      version = "0.118.2025022515";
-      sha256 = "1n5gqbm7v38xqq6qfy2j2hhmpiz9j0akg8mqz7q99j56l1mas6vf";
+      version = "0.119.2025033120";
+      sha256 = "0h7ar9mlbp1fmy3fpanxzk0ppnb5da66pdbc2n99nrv2hqr3b8ci";
     }
     {
       name = "prisma";
       publisher = "prisma";
-      version = "6.4.1";
-      sha256 = "0vl2i033aqjnh680bjkrfncigxn4jynhwvi39fdg37gyl486dyvi";
+      version = "6.5.0";
+      sha256 = "14c0s6wvhng2g9n71wc5sx37kynhgxxm89br1c8pn805avq5d9nm";
     }
     {
       name = "rust-analyzer";
       publisher = "rust-lang";
-      version = "0.4.2323";
-      sha256 = "0irm19xik33ci0n2548mnpvr3dwcpnir77kn44jdf2i7jnr26riq";
+      version = "0.4.2364";
+      sha256 = "100ldnc9a9iydamy12jgnach8mhpii4jmvb2l9f4vils1hqyv2af";
     }
     {
       name = "rewrap";
@@ -105,8 +153,8 @@
     {
       name = "vscode-icons";
       publisher = "vscode-icons-team";
-      version = "12.11.0";
-      sha256 = "1lw91chc0jmqdx9akjim1kkk54jhhfhx5hnv04bi1ajbj0f856s6";
+      version = "12.12.0";
+      sha256 = "1m3506iwq6d6qpfmvm4yxzczyrapn1k2wxzmdmrmpxj9cnkdkg8b";
     }
     {
       name = "gitblame";

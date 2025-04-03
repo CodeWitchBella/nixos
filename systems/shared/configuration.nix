@@ -123,7 +123,12 @@
   systemd.extraConfig = "DefaultTimeoutStopSec=15s";
   systemd.user.extraConfig = "DefaultTimeoutStopSec=15s";
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+    ];
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Prague";

@@ -44,6 +44,8 @@
     thunderbird
     ungoogled-chromium
     lens
+    config.boot.kernelPackages.perf
+    hotspot
   ];
 
   virtualisation.podman = {
@@ -71,6 +73,12 @@
   systemd.tmpfiles.rules = [
     "L+ /root/.ssh/id_ed25519 - - - - /home/isabella/.ssh/id_ed25519"
   ];
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc
+    ];
+  };
 
   age.secrets.password.file = ../../secrets/password-work.age;
   users.users.isabella.hashedPasswordFile = config.age.secrets.password.path;
