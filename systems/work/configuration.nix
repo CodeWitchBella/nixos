@@ -47,6 +47,9 @@
     config.boot.kernelPackages.perf
     hotspot
   ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "beekeeper-studio-5.1.5"
+  ];
 
   virtualisation.podman = {
     enable = true;
