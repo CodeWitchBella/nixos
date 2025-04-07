@@ -23,6 +23,7 @@
           && ext.name != "ruff"
           && ext.name != "vscode-pull-request-github"
           && ext.publisher != "ms-python"
+          && ext.publisher != "ms-toolsai"
         ) (import ../vscode/extensions.nix).extensions;
         work-exts = if host == "work" then (import ./work-extensions.nix).extensions else [ ];
         exts = shared-exts ++ work-exts;

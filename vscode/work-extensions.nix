@@ -39,8 +39,8 @@
     {
       name = "jupyter";
       publisher = "ms-toolsai";
-      version = "2025.2.2025021801";
-      sha256 = "sha256-RURAVo4sfGxpA8ES7WIZMsSNEDsZD2bPN5LZ7tXIptM=";
+      version = "2025.3.2025032101";
+      sha256 = "0sh8glmxfbkdrrcys7dl0y6kzkp4irsn8g3n1dfndc19cqjs56gd";
     }
     {
       name = "jupyter-renderers";
