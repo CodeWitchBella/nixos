@@ -17,6 +17,8 @@
   nix.optimise.automatic = true; # on schedule
   nix.gc = {
     automatic = lib.mkDefault true;
+    persistent = true;
+    randomizedDelaySec = "1min";
     dates = "daily";
     options = "--delete-older-than 60d";
   };
