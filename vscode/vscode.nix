@@ -14,6 +14,8 @@
         nixpkgs-exts = with pkgs.vscode-extensions; [
           rust-lang.rust-analyzer
           ms-vscode-remote.remote-ssh
+          ms-toolsai.jupyter
+          ms-toolsai.jupyter-renderers
           # ms-python.python
         ];
         shared-exts = builtins.filter (
