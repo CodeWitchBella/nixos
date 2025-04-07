@@ -21,6 +21,7 @@
           ext.name != "rust-analyzer"
           && ext.name != "remote-ssh"
           && ext.name != "ruff"
+          && ext.name != "vscode-pull-request-github"
           && ext.publisher != "ms-python"
         ) (import ../vscode/extensions.nix).extensions;
         work-exts = if host == "work" then (import ./work-extensions.nix).extensions else [ ];

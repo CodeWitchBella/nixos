@@ -9,8 +9,8 @@
     {
       name = "vscode-pull-request-github";
       publisher = "github";
-      version = "0.105.2025022704";
-      sha256 = "0dc48mr9j6qq1lkrr4f1xfp3a2dznkj28n0gscjf0n7d48z6w0sa";
+      version = "0.107.2025032704";
+      sha256 = "0d4xpaicmxvvkkw6090rvf590ihz5sjiy3sfckcfs6ix0hc3vf3l";
     }
     {
       name = "debugpy";
