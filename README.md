@@ -1,5 +1,11 @@
 # isbl-nixos
 
+> [!WARNING]  
+> I moved from nixos back to fedora recently. Mostly because Asahi linux works better and I like all my linux to be same.
+> HOWEVER, I still use nixos for my "dotfiles" via home-manager. See my [nix-home] repo
+
+[nix-home]: https://github.com/CodeWitchBella/nix-home
+
 This repo currently contains my desktop nixos setup.
 
 ## Getting Started
