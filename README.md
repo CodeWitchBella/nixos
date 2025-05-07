@@ -2,9 +2,11 @@
 
 > [!WARNING]  
 > I moved from nixos back to fedora recently. Mostly because Asahi linux works better and I like all my linux to be same.
-> HOWEVER, I still use nixos for my "dotfiles" via home-manager. See my [nix-home] repo
+> HOWEVER, I still use nixos for my "dotfiles" via home-manager. See my [nix-home] repo.
+> My server setup can be found at [nixos-servers]
 
 [nix-home]: https://github.com/CodeWitchBella/nix-home
+[nixos-servers]: https://github.com/CodeWitchBella/nixos-servers
 
 This repo currently contains my desktop nixos setup.
 
